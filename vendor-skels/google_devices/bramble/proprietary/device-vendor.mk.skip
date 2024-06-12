@@ -13,6 +13,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.product.model_for_attestation= \
     ro.product.brand_for_attestation= \
     ro.product.name_for_attestation= \
+    ro.product.vndk.version=34 \
     ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.lito.api30 \
     graphics.gpu.profiler.support=true \
     graphics.gpu.profiler.vulkan_layer_apk=com.google.pixel.redbull.gpuprofiling.vulkanlayer
@@ -23,6 +24,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.product.name_for_attestation= \
     ro.build.expect.bootloader=b5-0.6-10489838 \
     ro.build.expect.baseband=g7250-00264-230619-B-10346159 \
+    ro.vndk.version=34 \
     ro.vendor.build.svn=76 \
     ro.crypto.dm_default_key.options_format.version=2 \
     ro.crypto.volume.metadata.method=dm-default-key \
@@ -58,10 +60,16 @@ PRODUCT_PACKAGES += \
     android.frameworks.stats@1.0.vendor:64 \
     android.hardware.audio.common-V1-ndk.vendor \
     android.hardware.audio.common-V2-ndk \
+    android.hardware.audio.common@4.0 \
+    android.hardware.audio.common@4.0-util \
     android.hardware.audio.core-V1-ndk \
     android.hardware.audio.core.sounddose-V1-ndk \
     android.hardware.audio.effect-V1-ndk \
+    android.hardware.audio.effect@4.0 \
+    android.hardware.audio.effect@4.0-util \
     android.hardware.audio.sounddose-V1-ndk \
+    android.hardware.audio@4.0 \
+    android.hardware.audio@4.0-util \
     android.hardware.authsecret-impl.nos \
     android.hardware.authsecret-service.citadel \
     android.hardware.authsecret-service.citadel__2 \
@@ -79,10 +87,13 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.common-V1-ndk:64 \
     android.hardware.camera.common@1.0.vendor:64 \
     android.hardware.camera.device-V2-ndk:64 \
+    android.hardware.camera.device-V2-ndk.vendor:64 \
     android.hardware.camera.device@1.0.vendor:64 \
     android.hardware.camera.device@3.2.vendor:64 \
     android.hardware.camera.metadata-V2-ndk:64 \
+    android.hardware.camera.metadata-V2-ndk.vendor:64 \
     android.hardware.camera.provider-V2-ndk:64 \
+    android.hardware.camera.provider-V2-ndk.vendor:64 \
     android.hardware.camera.provider@2.4:64 \
     android.hardware.camera.provider@2.4.vendor:64 \
     android.hardware.camera.provider@2.5:64 \
@@ -141,6 +152,7 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1-service.citadel \
     android.hardware.keymaster@4.1-service.citadel__2 \
     android.hardware.keymaster@4.1.vendor:32 \
+    android.hardware.media.bufferpool2-V1-ndk \
     android.hardware.media.bufferpool2-V1-ndk.vendor \
     android.hardware.media.c2@1.0.vendor \
     android.hardware.net.nlinterceptor-V1-ndk:64 \
@@ -150,6 +162,10 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3-service-qti \
     android.hardware.neuralnetworks@1.3-service-qti__2 \
     android.hardware.neuralnetworks@1.3.vendor:64 \
+    android.hardware.nfc-V1-ndk:64 \
+    android.hardware.nfc@1.0:64 \
+    android.hardware.nfc@1.1:64 \
+    android.hardware.nfc@1.2:64 \
     android.hardware.oemlock-impl.nos \
     android.hardware.oemlock-service.citadel \
     android.hardware.oemlock-service.citadel__2 \
@@ -158,7 +174,7 @@ PRODUCT_PACKAGES += \
     android.hardware.oemlock@1.0.vendor:64 \
     android.hardware.power-V1-ndk.vendor:32 \
     android.hardware.power-V3-ndk.vendor:64 \
-    android.hardware.power-V4-cpp \
+    android.hardware.power-V4-cpp__system \
     android.hardware.power-V4-ndk \
     android.hardware.power-V4-ndk.vendor:64 \
     android.hardware.power@1.0.vendor \
@@ -185,8 +201,8 @@ PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor:64 \
     android.hardware.tetheroffload.control@1.0.vendor:64 \
     android.hardware.thermal-V1-ndk \
-    android.hardware.thermal@1.0.vendor:32 \
-    android.hardware.thermal@2.0.vendor:32 \
+    android.hardware.thermal@1.0.vendor \
+    android.hardware.thermal@2.0.vendor \
     android.hardware.tv.input-V1-ndk \
     android.hardware.weaver-impl.nos \
     android.hardware.weaver-service.citadel \
@@ -208,6 +224,7 @@ PRODUCT_PACKAGES += \
     android.security.legacykeystore-ndk:64 \
     android.security.maintenance-ndk:64 \
     android.system.keystore2-V1-ndk:64 \
+    android.system.keystore2-V3-ndk:64 \
     android.system.net.netd@1.0.vendor:64 \
     android.system.net.netd@1.1.vendor:64 \
     android.system.suspend@1.0:64 \
@@ -380,6 +397,7 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne.server@2.0__system_ext \
     com.quicinc.cne.server@2.1__system_ext \
     com.quicinc.cne.server@2.2__system_ext \
+    compatibility_matrix.4 \
     datastatusnotification \
     device_symlinks \
     deviceInfoServiceModule \
@@ -477,6 +495,7 @@ PRODUCT_PACKAGES += \
     libaudioalsa \
     libaudioconfigstore \
     libaudioflinger:64 \
+    libaudiohal@4.0__system \
     libaudioparsers \
     libaudiopolicyservice:64 \
     libaudiozoom \
@@ -490,6 +509,7 @@ PRODUCT_PACKAGES += \
     libbitml_nsp_skel \
     libbitmlengine \
     libbluetooth_audio_session_qti \
+    libbssl_ffi.dylib__system \
     libbtnv \
     libC2D2 \
     libc2d30_bltlib \
@@ -689,7 +709,7 @@ PRODUCT_PACKAGES += \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
-    libkeystore-engine__system \
+    libkeystore-engine:64 \
     liblayerext.qti__system_ext \
     liblayers_proto:64 \
     liblbs_core \
@@ -745,6 +765,7 @@ PRODUCT_PACKAGES += \
     libnetmgr_common \
     libnetmgr_nr_fusion \
     libnetmgr_rmnet_ext \
+    libnfc-nci:64 \
     libnfnetlink:64 \
     libnlnetmgr \
     libnn_preproc \
@@ -783,6 +804,7 @@ PRODUCT_PACKAGES += \
     libOpenCL-pixel \
     libopenvx \
     libops \
+    libopus.vendor:32 \
     libos \
     libpdmapper \
     libpdnotifier \
@@ -910,9 +932,36 @@ PRODUCT_PACKAGES += \
     libstabilitydomain_skel \
     libstabilitydomain_skel__2 \
     libstagefright_aidl_bufferpool2.vendor \
+    libstagefright_amrnb_common.vendor:32 \
     libstagefright_bufferpool@2.0.1.vendor \
+    libstagefright_enc_common.vendor:32 \
+    libstagefright_flacdec.vendor:32 \
+    libstagefright_soft_aacdec \
+    libstagefright_soft_aacenc \
+    libstagefright_soft_amrdec \
+    libstagefright_soft_amrnbenc \
+    libstagefright_soft_amrwbenc \
+    libstagefright_soft_avcdec \
+    libstagefright_soft_avcenc \
+    libstagefright_soft_flacdec \
+    libstagefright_soft_flacenc \
+    libstagefright_soft_g711dec \
+    libstagefright_soft_gsmdec \
+    libstagefright_soft_hevcdec \
+    libstagefright_soft_mp3dec \
+    libstagefright_soft_mpeg2dec \
+    libstagefright_soft_mpeg4dec \
+    libstagefright_soft_mpeg4enc \
+    libstagefright_soft_opusdec \
+    libstagefright_soft_rawdec \
+    libstagefright_soft_vorbisdec \
+    libstagefright_soft_vpxdec \
+    libstagefright_soft_vpxenc \
+    libstagefright_softomx_plugin.vendor:32 \
+    libstagefright_softomx.vendor:32 \
     libstagefrighthw \
     libstatic_assertions:64 \
+    libstatslog_nfc:64 \
     libStDrvInt \
     libstpreprocess20 \
     libstreamparser \
@@ -950,6 +999,7 @@ PRODUCT_PACKAGES += \
     libTrustedInput \
     libTrustedInputTZ \
     libtzdrmgenprov \
+    libupdate_engine_stable-V1-cpp:64 \
     libupdateprof.qti__system_ext \
     libvideooptfeature \
     libvideoutils \
@@ -957,6 +1007,7 @@ PRODUCT_PACKAGES += \
     libVkLayer_q3dtools \
     libvndfwk_detect_jni.qti \
     libvolumelistener \
+    libvorbisidec.vendor:32 \
     libvpp_aie \
     libvpp_frc \
     libvpp_mcnr \
@@ -969,6 +1020,7 @@ PRODUCT_PACKAGES += \
     libvpt_action_recognition \
     libvpt_preproc \
     libvpt_preproc_postproc \
+    libvpx.vendor:32 \
     libvr_amb_engine__system_ext \
     libvr_object_engine__system_ext \
     libvsc \
@@ -1013,6 +1065,7 @@ PRODUCT_PACKAGES += \
     lowi-server \
     manifest_android.hardware.drm-service.widevine-v17 \
     manifest_input.processor-service \
+    manifest_media_c2_software \
     memtrack.lito \
     modem_svc \
     motiondetector \
@@ -1020,6 +1073,7 @@ PRODUCT_PACKAGES += \
     mtpd \
     netd_aidl_interface-V13-cpp:64 \
     netmgrd \
+    NfcNci \
     nos_app_avb:64 \
     nos_app_identity:64 \
     nos_app_keymaster:64 \
@@ -1033,8 +1087,9 @@ PRODUCT_PACKAGES += \
     pm-service \
     port-bridge \
     pppd \
-    pppol2tp-android:64 \
-    pppopptp-android:64 \
+    pppol2tp-android__system \
+    pppopptp-android__system \
+    product_34.0.cil \
     qcrild \
     qcrild_librilutils \
     qcrilhook \

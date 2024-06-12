@@ -43,9 +43,9 @@ android_app_import {
 }
 
 android_app_import {
-    name: "PixelCameraServicesB3",
+    name: "PixelCameraServices",
     owner: "google_devices",
-    apk: "product/priv-app/PixelCameraServicesB3/PixelCameraServicesB3.apk",
+    apk: "product/priv-app/PixelCameraServices/PixelCameraServices.apk",
     presigned: true,
     preprocessed: true,
     privileged: true,
@@ -66,6 +66,15 @@ android_app_import {
     name: "PersistentBackgroundCameraServices",
     owner: "google_devices",
     apk: "system_ext/app/PersistentBackgroundCameraServices/PersistentBackgroundCameraServices.apk",
+    certificate: "platform",
+    dex_preopt: { enabled: false },
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "PersistentBackgroundServices",
+    owner: "google_devices",
+    apk: "system_ext/app/PersistentBackgroundServices/PersistentBackgroundServices.apk",
     certificate: "platform",
     dex_preopt: { enabled: false },
     system_ext_specific: true,
@@ -220,11 +229,11 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.google.edgetpu_app_service-V2-ndk__system_ext",
+    name: "com.google.edgetpu_app_service-V3-ndk__system_ext",
     owner: "google_devices",
-    stem: "com.google.edgetpu_app_service-V2-ndk",
+    stem: "com.google.edgetpu_app_service-V3-ndk",
     target: {
-        android_arm64: { srcs: [ "system_ext/lib64/com.google.edgetpu_app_service-V2-ndk.so" ] }
+        android_arm64: { srcs: [ "system_ext/lib64/com.google.edgetpu_app_service-V3-ndk.so" ] }
     },
     compile_multilib: "64",
     check_elf_files: false,
@@ -399,6 +408,16 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "aocxd",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/aocxd" ],
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "bipchmgr",
     owner: "google_devices",
     srcs: [ "vendor/bin/bipchmgr" ],
@@ -412,16 +431,6 @@ cc_prebuilt_binary {
     name: "cbd",
     owner: "google_devices",
     srcs: [ "vendor/bin/cbd" ],
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "chre",
-    owner: "google_devices",
-    srcs: [ "vendor/bin/chre" ],
     check_elf_files: false,
     prefer: true,
     strip: { none: true },
@@ -475,6 +484,17 @@ cc_prebuilt_binary {
     name: "android.hardware.confirmationui-service.trusty.vendor",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/android.hardware.confirmationui-service.trusty.vendor" ],
+    relative_install_path: "hw",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.contexthub-service.generic",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/hw/android.hardware.contexthub-service.generic" ],
     relative_install_path: "hw",
     check_elf_files: false,
     prefer: true,
@@ -681,9 +701,9 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "samsung.hardware.media.c2@1.0-service",
+    name: "samsung.hardware.media.c2@1.2-service",
     owner: "google_devices",
-    srcs: [ "vendor/bin/hw/samsung.hardware.media.c2@1.0-service" ],
+    srcs: [ "vendor/bin/hw/samsung.hardware.media.c2@1.2-service" ],
     relative_install_path: "hw",
     check_elf_files: false,
     prefer: true,
@@ -1186,11 +1206,11 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.google.edgetpu_app_service-V2-ndk",
+    name: "com.google.edgetpu_app_service-V3-ndk",
     owner: "google_devices",
     target: {
-        android_arm: { srcs: [ "vendor/lib/com.google.edgetpu_app_service-V2-ndk.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/com.google.edgetpu_app_service-V2-ndk.so" ] }
+        android_arm: { srcs: [ "vendor/lib/com.google.edgetpu_app_service-V3-ndk.so" ] },
+        android_arm64: { srcs: [ "vendor/lib64/com.google.edgetpu_app_service-V3-ndk.so" ] }
     },
     compile_multilib: "both",
     check_elf_files: false,
@@ -1407,6 +1427,20 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: { srcs: [ "vendor/lib/libaoctuningdecoder.so" ] },
         android_arm64: { srcs: [ "vendor/lib64/libaoctuningdecoder.so" ] }
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaocx",
+    owner: "google_devices",
+    target: {
+        android_arm: { srcs: [ "vendor/lib/libaocx.so" ] },
+        android_arm64: { srcs: [ "vendor/lib64/libaocx.so" ] }
     },
     compile_multilib: "both",
     check_elf_files: false,
@@ -2412,6 +2446,17 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "com.google.input-V3-ndk",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/com.google.input-V3-ndk.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "fp_utils",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/fp_utils.so" ] } },
@@ -2693,17 +2738,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.google.wifi_ext-V1-ndk",
-    owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/vendor.google.wifi_ext-V1-ndk.so" ] } },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
 prebuilt_etc_xml {
     name: "com.google.pixel.camera.services@1.0-service-google",
     owner: "google_devices",
@@ -2744,6 +2778,15 @@ prebuilt_etc_xml {
     name: "android.hardware.confirmationui-service.trusty.vendor__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/android.hardware.confirmationui-service.trusty.vendor.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "android.hardware.contexthub-service.generic__2",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/android.hardware.contexthub-service.generic.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,

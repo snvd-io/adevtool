@@ -36,6 +36,8 @@
   <string name="dream_no_screen_saver_preview_caption">Eco-friendly</string>
   <string name="dream_secondary_button_title">Skip</string>
   <string name="edge_to_edge_navigation_summary">To go home, quick-swipe up from the bottom. To access the Taskbar, slow-swipe up from the bottom. To switch apps, swipe up from the bottom, hold, and release. To go back, swipe from the left or right edge.</string>
+  <string name="fast_pair_device_not_found_other_device_description">Move this device closer to your Pixel Tablet and try again.</string>
+  <string name="fast_pair_device_not_found_tws_headphone_description">Open the earbuds case and move it closer to your Pixel Tablet, then try again.</string>
   <string name="fingerprint_unlock_set_unlock_password">Password • Fingerprint</string>
   <string name="fingerprint_unlock_set_unlock_pattern">Pattern • Fingerprint</string>
   <string name="fingerprint_unlock_set_unlock_pin">PIN • Fingerprint</string>
@@ -79,6 +81,8 @@ Note: You can’t use your fingerprint to unlock this device. For more informati
   <string name="security_settings_sfps_enroll_find_sensor_message">The fingerprint sensor is on the power button. It’s the shorter button on the side of the phone.</string>
   <string name="security_settings_sfps_enroll_finger_center_title_immobile_overlay">Move your finger slightly each time</string>
   <string name="security_settings_sfps_enroll_fingertip_title_immobile_overlay">Keep moving to capture other areas of your fingerprint</string>
+  <string name="security_settings_sfps_enroll_finish_rest_to_unlock_desc">This makes accidental unlocking less likely. When this setting is turned off, briefly touching the sensor will unlock.</string>
+  <string name="security_settings_sfps_enroll_finish_rest_to_unlock_title">Rest on sensor to unlock</string>
   <string name="security_settings_sfps_enroll_left_edge_title_immobile_overlay">Touch the sensor from another angle</string>
   <string name="security_settings_sfps_enroll_right_edge_title_immobile_overlay">Move your finger to capture other areas of your fingerprint</string>
   <string name="security_settings_sfps_enroll_start_message">"Touch the sensor without pressing it. Lift your finger after each touch.

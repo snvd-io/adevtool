@@ -20,6 +20,11 @@ AB_OTA_PARTITIONS += \
 
 TARGET_BOARD_INFO_FILE := vendor/google_devices/bramble/firmware/android-info.txt
 
+# Missing system_ext SELinux context: persist.bootanim.color1 u:object_r:bootanim_system_prop:s0 exact int
+# Missing system_ext SELinux context: persist.bootanim.color2 u:object_r:bootanim_system_prop:s0 exact int
+# Missing system_ext SELinux context: persist.bootanim.color3 u:object_r:bootanim_system_prop:s0 exact int
+# Missing system_ext SELinux context: persist.bootanim.color4 u:object_r:bootanim_system_prop:s0 exact int
+
 # Missing product SELinux context: user=_app seinfo=wfcactivation name=com.google.android.wfcactivation domain=wfc_activation_app levelFrom=all
 # Missing product SELinux context: user=_app isPrivApp=true seinfo=platform name=com.google.android.hiddenmenu domain=sprint_hidden_menu type=app_data_file levelFrom=all
 # Missing product SELinux context: user=_app isPrivApp=true seinfo=platform name=com.google.omadm.trigger domain=vzw_omadm_trigger type=app_data_file levelFrom=all

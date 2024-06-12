@@ -10,7 +10,7 @@
   <array name="config_za_compensation_opr_thresholds">
     <item>0.4</item>
   </array>
-  <array name="config_za_condition1_brightness_thresholds">
+  <array name="config_za_primary_display_condition1_brightness_thresholds">
     <item>0.60714</item>
     <item>0.625</item>
     <item>0.64286</item>
@@ -21,7 +21,7 @@
     <item>0.92857</item>
     <item>1</item>
   </array>
-  <array name="config_za_condition2_brightness_thresholds">
+  <array name="config_za_primary_display_condition2_brightness_thresholds">
     <item>0.60714</item>
     <item>0.625</item>
     <item>0.71429</item>

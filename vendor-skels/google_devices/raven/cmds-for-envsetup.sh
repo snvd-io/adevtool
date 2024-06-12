@@ -1,2 +1,2 @@
-export BUILD_ID_raven="AP1A.240505.004"
+export BUILD_ID_raven="AP2A.240605.024"
 unset PLATFORM_SECURITY_PATCH_raven

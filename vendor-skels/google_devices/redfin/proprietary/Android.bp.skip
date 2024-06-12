@@ -4187,6 +4187,14 @@ android_app_import {
     system_ext_specific: true,
 }
 
+android_app_import {
+    name: "NfcNci",
+    owner: "google_devices",
+    apk: "system/system/app/NfcNci/NfcNci.apk",
+    certificate: "platform",
+    dex_preopt: { enabled: false },
+}
+
 cc_prebuilt_binary {
     name: "btfloader",
     owner: "google_devices",
@@ -4215,6 +4223,15 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "pppd",
+    owner: "google_devices",
+    srcs: [ "system/system/bin/pppd" ],
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_binary {
     name: "racoon",
     owner: "google_devices",
     srcs: [ "system/system/bin/racoon" ],
@@ -4227,6 +4244,34 @@ cc_prebuilt_binary {
     name: "viewcompiler",
     owner: "google_devices",
     srcs: [ "system/system/bin/viewcompiler" ],
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.power-V4-cpp__system",
+    owner: "google_devices",
+    stem: "android.hardware.power-V4-cpp",
+    target: {
+        android_arm: { srcs: [ "system/system/lib/android.hardware.power-V4-cpp.so" ] },
+        android_arm64: { srcs: [ "system/system/lib64/android.hardware.power-V4-cpp.so" ] }
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiohal@4.0__system",
+    owner: "google_devices",
+    stem: "libaudiohal@4.0",
+    target: {
+        android_arm: { srcs: [ "system/system/lib/libaudiohal@4.0.so" ] },
+        android_arm64: { srcs: [ "system/system/lib64/libaudiohal@4.0.so" ] }
+    },
+    compile_multilib: "both",
     check_elf_files: false,
     prefer: true,
     strip: { none: true },
@@ -4251,6 +4296,17 @@ cc_prebuilt_library_shared {
     owner: "google_devices",
     stem: "libaaudioservice",
     target: { android_arm64: { srcs: [ "system/system/lib64/libaaudioservice.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "libbssl_ffi.dylib__system",
+    owner: "google_devices",
+    stem: "libbssl_ffi.dylib",
+    target: { android_arm64: { srcs: [ "system/system/lib64/libbssl_ffi.dylib.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -4335,10 +4391,10 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libkeystore-engine__system",
+    name: "libvkjson__system",
     owner: "google_devices",
-    stem: "libkeystore-engine",
-    target: { android_arm64: { srcs: [ "system/system/lib64/libkeystore-engine.so" ] } },
+    stem: "libvkjson",
+    target: { android_arm64: { srcs: [ "system/system/lib64/libvkjson.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -4346,10 +4402,21 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvkjson__system",
+    name: "pppol2tp-android__system",
     owner: "google_devices",
-    stem: "libvkjson",
-    target: { android_arm64: { srcs: [ "system/system/lib64/libvkjson.so" ] } },
+    stem: "pppol2tp-android",
+    target: { android_arm64: { srcs: [ "system/system/lib64/pppol2tp-android.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "pppopptp-android__system",
+    owner: "google_devices",
+    stem: "pppopptp-android",
+    target: { android_arm64: { srcs: [ "system/system/lib64/pppopptp-android.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -10266,6 +10333,237 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libstagefright_soft_aacdec",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_aacdec.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_aacenc",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_aacenc.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_amrdec",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_amrdec.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_amrnbenc",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_amrnbenc.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_amrwbenc",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_amrwbenc.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_avcdec",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_avcdec.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_avcenc",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_avcenc.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_flacdec",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_flacdec.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_flacenc",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_flacenc.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_g711dec",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_g711dec.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_gsmdec",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_gsmdec.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_hevcdec",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_hevcdec.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_mp3dec",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_mp3dec.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_mpeg2dec",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_mpeg2dec.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_mpeg4dec",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_mpeg4dec.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_mpeg4enc",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_mpeg4enc.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_opusdec",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_opusdec.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_rawdec",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_rawdec.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_vorbisdec",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_vorbisdec.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_vpxdec",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_vpxdec.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_vpxenc",
+    owner: "google_devices",
+    target: { android_arm: { srcs: [ "vendor/lib/libstagefright_soft_vpxenc.so" ] } },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libstagefrighthw",
     owner: "google_devices",
     target: {
@@ -14910,6 +15208,22 @@ prebuilt_etc_xml {
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     system_ext_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "compatibility_matrix.4",
+    owner: "google_devices",
+    src: "system/system/etc/vintf/compatibility_matrix.4.xml",
+    filename_from_src: true,
+    sub_dir: "vintf",
+}
+
+prebuilt_etc_xml {
+    name: "manifest_media_c2_software",
+    owner: "google_devices",
+    src: "system/system/etc/vintf/manifest/manifest_media_c2_software.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
 }
 
 prebuilt_etc_xml {

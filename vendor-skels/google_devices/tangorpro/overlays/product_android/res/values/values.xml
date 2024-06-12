@@ -26,6 +26,8 @@
   <string name="face_recalibrate_notification_content">Face unlock may not work until you re-enroll</string>
   <string name="face_recalibrate_notification_name">Face unlock</string>
   <string name="face_recalibrate_notification_title">Please re-enroll your face</string>
+  <string name="fingerprint_acquired_immobile">Reposition finger. You already touched with this area of your fingerprint.</string>
+  <string name="fingerprint_acquired_immobile_short">Reposition finger. You already touched with this area.</string>
   <string name="fingerprint_acquired_partial">Make sure your finger covers the sensor</string>
   <string name="fingerprint_acquired_power_press">To continue setup, lightly touch the sensor</string>
   <string name="fingerprint_acquired_too_fast">Keep your finger on the sensor a little longer</string>
@@ -103,6 +105,7 @@
   <bool name="config_lockscreenWeatherEnabledByDefault">true</bool>
   <bool name="config_orderUnlockAndWake">true</bool>
   <bool name="config_performantAuthDefault">true</bool>
+  <bool name="config_repairModeSupported">true</bool>
   <bool name="config_resetScreenTimeoutOnUnexpectedDreamExit">true</bool>
   <bool name="config_reverseDefaultRotation">true</bool>
   <bool name="config_safetyProtectionEnabled">true</bool>

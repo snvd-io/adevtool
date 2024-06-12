@@ -1,3 +1,5 @@
+android:string/fingerprint_acquired_immobile = Reposition finger. You already touched with this area of your fingerprint.
+android:string/fingerprint_acquired_immobile_short = Reposition finger. You already touched with this area.
 com.android.settings:bool/config_clear_calling_enabled = true
 com.google.euiccpixel:string-array/config_state_busy_intent_list = intent:#Intent;action=com.google.android.gms.dck.action.SE_STATE_CHANGED;i.com.google.android.gms.dck.extra.SE_STATE=1;end,intent:#Intent;action=com.qorvo.uwb.action.SE_STATE_CHANGED;i.com.qorvo.uwb.extra.SE_STATE=1;end
 com.google.euiccpixel:string-array/config_state_ready_intent_list = intent:#Intent;action=com.google.android.gms.dck.action.SE_STATE_CHANGED;i.com.google.android.gms.dck.extra.SE_STATE=0;end,intent:#Intent;action=com.qorvo.uwb.action.SE_STATE_CHANGED;i.com.qorvo.uwb.extra.SE_STATE=0;end
@@ -150,6 +152,8 @@ com.android.settings:string/security_settings_fingerprint_v2_enroll_introduction
 com.android.settings:string/security_settings_sfps_enroll_find_sensor_message = The fingerprint sensor is on the power button. It’s the shorter button on the side of the phone.
 com.android.settings:string/security_settings_sfps_enroll_finger_center_title_immobile_overlay = Move your finger slightly each time
 com.android.settings:string/security_settings_sfps_enroll_fingertip_title_immobile_overlay = Keep moving to capture other areas of your fingerprint
+com.android.settings:string/security_settings_sfps_enroll_finish_rest_to_unlock_desc = This makes accidental unlocking less likely. When this setting is turned off, briefly touching the sensor will unlock.
+com.android.settings:string/security_settings_sfps_enroll_finish_rest_to_unlock_title = Rest on sensor to unlock
 com.android.settings:string/security_settings_sfps_enroll_left_edge_title_immobile_overlay = Touch the sensor from another angle
 com.android.settings:string/security_settings_sfps_enroll_right_edge_title_immobile_overlay = Move your finger to capture other areas of your fingerprint
 com.android.settings:string/security_settings_work_fingerprint_preference_title = Fingerprint Unlock for work
@@ -248,6 +252,7 @@ android:string-array/config_perDeviceStateRotationLockDefaults = 0:1,1:0:2,2:2,3
 android:integer-array/config_rearDisplayDeviceStates = 3
 android:integer-array/non_removable_euicc_slots = 0
 android:bool/config_allowDisablingAssistDisclosure = true
+android:bool/config_fold_lock_behavior = true
 android:bool/config_isWindowManagerCameraCompatSplitScreenAspectRatioEnabled = true
 android:bool/config_is_powerbutton_fps = true
 android:bool/config_keyguardUserSwitcher = false

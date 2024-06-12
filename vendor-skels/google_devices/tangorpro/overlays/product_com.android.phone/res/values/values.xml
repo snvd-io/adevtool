@@ -59,4 +59,6 @@
   <bool name="config_support_simless_emergency_rtt">true</bool>
   <bool name="hac_enabled">true</bool>
   <bool name="vvm3_enabled">true</bool>
+  <string name="phone_info_label">Tablet info</string>
+  <string name="phoneAppLabel">Mobile Data</string>
 </resources>

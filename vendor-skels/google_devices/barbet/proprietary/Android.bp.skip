@@ -200,6 +200,15 @@ android_app_import {
 }
 
 android_app_import {
+    name: "PersistentBackgroundServices",
+    owner: "google_devices",
+    apk: "system_ext/app/PersistentBackgroundServices/PersistentBackgroundServices.apk",
+    certificate: "platform",
+    dex_preopt: { enabled: false },
+    system_ext_specific: true,
+}
+
+android_app_import {
     name: "QtiTelephonyService",
     owner: "google_devices",
     apk: "system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
@@ -13124,9 +13133,9 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.google.input-V2-ndk",
+    name: "com.google.input-V3-ndk",
     owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/com.google.input-V2-ndk.so" ] } },
+    target: { android_arm64: { srcs: [ "vendor/lib64/com.google.input-V3-ndk.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,

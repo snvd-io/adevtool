@@ -18,6 +18,7 @@ LOCAL_MODULE_STEM := .device_symlinks
 LOCAL_SRC_FILES := Android.mk
 LOCAL_POST_INSTALL_CMD := \
     mkdir -p $(PRODUCT_OUT)/system_ext/priv-app/ims/lib/arm64; \
+    mkdir -p $(PRODUCT_OUT)/system/app/NfcNci/lib/arm64; \
     mkdir -p $(PRODUCT_OUT)/vendor/app/CneApp/lib/arm64; \
     mkdir -p $(PRODUCT_OUT)/vendor/lib; \
     mkdir -p $(PRODUCT_OUT)/vendor/lib64; \
@@ -50,6 +51,7 @@ LOCAL_POST_INSTALL_CMD := \
     mkdir -p $(PRODUCT_OUT)/vendor/rfs/msm/slpi/readonly/vendor; \
     ln -sf /system_ext/lib64/libimscamera_jni.so $(PRODUCT_OUT)/system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so; \
     ln -sf /system_ext/lib64/libimsmedia_jni.so $(PRODUCT_OUT)/system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so; \
+    ln -sf /system/lib64/libnfc_nci_jni.so $(PRODUCT_OUT)/system/app/NfcNci/lib/arm64/libnfc_nci_jni.so; \
     ln -sf /vendor/lib64/libvndfwk_detect_jni.qti.so $(PRODUCT_OUT)/vendor/app/CneApp/lib/arm64/libvndfwk_detect_jni.qti.so; \
     ln -sf egl/libEGL_adreno.so $(PRODUCT_OUT)/vendor/lib/libEGL_adreno.so; \
     ln -sf egl/libGLESv2_adreno.so $(PRODUCT_OUT)/vendor/lib/libGLESv2_adreno.so; \
