@@ -1,5 +1,5 @@
 canonical_name: "lum_ca"
-version: 56000000004
+version: 56000000005
 apns {
   apn {
     name: "Lum"
@@ -66,10 +66,6 @@ configs {
   }
   config {
     key: "carrier_volte_available_bool"
-    bool_value: true
-  }
-  config {
-    key: "carrier_wfc_ims_available_bool"
     bool_value: true
   }
   config {
@@ -276,5 +272,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1707895836
+  seconds: 1717463401
 }
