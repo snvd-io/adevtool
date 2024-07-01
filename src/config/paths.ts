@@ -28,4 +28,4 @@ export const VENDOR_MODULE_SPECS_DIR = path.join(ADEVTOOL_DIR, 'vendor-specs')
 export const VENDOR_MODULE_SKELS_DIR = path.join(ADEVTOOL_DIR, 'vendor-skels')
 
 export const CARRIER_SETTINGS_DIR = path.join(ADEVTOOL_DIR, 'carrier-settings')
-export const CARRIER_SETTINGS_VENDOR_DIR = 'product/etc/CarrierSettings'
+export const CARRIER_SETTINGS_FACTORY_PATH = 'product/etc/CarrierSettings'

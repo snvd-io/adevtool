@@ -7,7 +7,7 @@ import { forEachDevice } from '../frontend/devices'
 import { BuildIndex, loadBuildIndex } from '../images/build-index'
 import { prepareFactoryImages } from '../frontend/source'
 import { exists } from '../util/fs'
-import { VENDOR_MODULE_SKELS_DIR, CARRIER_SETTINGS_VENDOR_DIR } from '../config/paths'
+import { CARRIER_SETTINGS_FACTORY_PATH, VENDOR_MODULE_SKELS_DIR } from '../config/paths'
 import assert from 'assert'
 
 export default class DumpCarrierSettings extends Command {
@@ -36,13 +36,13 @@ export default class DumpCarrierSettings extends Command {
           const build_id = flags.buildId ?? config.device.build_id
           const images = await prepareFactoryImages(index, [config], [build_id])
           const deviceImages = images.get(getDeviceBuildId(config, build_id))!
-          const stockCsPath = path.join(deviceImages.unpackedFactoryImageDir, CARRIER_SETTINGS_VENDOR_DIR)
+          const stockCsPath = path.join(deviceImages.unpackedFactoryImageDir, CARRIER_SETTINGS_FACTORY_PATH)
           const defaultOutDir = path.join(
             VENDOR_MODULE_SKELS_DIR,
             config.device.vendor,
             config.device.name,
             'proprietary',
-            CARRIER_SETTINGS_VENDOR_DIR,
+            CARRIER_SETTINGS_FACTORY_PATH,
           )
           const outDir = flags.out !== undefined ? path.join(flags.out, config.device.name) : defaultOutDir
           assert(await exists(stockCsPath))

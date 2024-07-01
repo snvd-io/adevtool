@@ -11,10 +11,11 @@ import { DEVICE_CONFIG_FLAGS, DeviceBuildId, DeviceConfig, getDeviceBuildId, loa
 import {
   ADEVTOOL_DIR,
   CARRIER_SETTINGS_DIR,
+  CARRIER_SETTINGS_FACTORY_PATH,
   COLLECTED_SYSTEM_STATE_DIR,
+  OS_CHECKOUT_DIR,
   VENDOR_MODULE_SKELS_DIR,
   VENDOR_MODULE_SPECS_DIR,
-  CARRIER_SETTINGS_VENDOR_DIR,
 } from '../config/paths'
 import { forEachDevice } from '../frontend/devices'
 import {
@@ -342,7 +343,7 @@ export default class GenerateFull extends Command {
           await cpSkelPromise
           await decodeConfigs(
             getCarrierSettingsVendorDir(vendorDirs),
-            path.join(getVendorModuleSkelDir(config), 'proprietary', CARRIER_SETTINGS_VENDOR_DIR),
+            path.join(getVendorModuleSkelDir(config), 'proprietary', CARRIER_SETTINGS_FACTORY_PATH),
           )
         } else {
           try {
@@ -487,7 +488,7 @@ function getVendorModuleSkelDir(config: DeviceConfig) {
 }
 
 function getCarrierSettingsVendorDir(dirs: VendorDirectories) {
-  return path.join(dirs.proprietary, CARRIER_SETTINGS_VENDOR_DIR)
+  return path.join(dirs.proprietary, CARRIER_SETTINGS_FACTORY_PATH)
 }
 
 // soong detects .bp, .mk files everywhere in OS checkout dir, add '.skip' suffix to the ones in vendor-skels/ dir
