@@ -132,7 +132,7 @@ export async function decodeConfigs(cfgPath: string, outDir: string) {
   if (await exists(cfgPath)) {
     if (!(await exists(outDir))) await fs.mkdir(outDir, { recursive: true })
     for await (let file of listFilesRecursive(cfgPath)) {
-      if (path.extname(file) != '.pb') {
+      if (path.extname(file) !== '.pb') {
         continue
       }
       const filename = path.parse(file).name
@@ -166,7 +166,7 @@ export async function getVersionsMap(dir: string): Promise<Map<string, number>> 
   assert(await exists(dir))
   let versions = new Map<string, number>()
   for await (let file of listFilesRecursive(dir)) {
-    if (path.extname(file) != '.pb') {
+    if (path.extname(file) !== '.pb') {
       continue
     }
     const filename = path.parse(file).name
