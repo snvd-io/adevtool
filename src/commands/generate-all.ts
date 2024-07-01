@@ -322,14 +322,14 @@ export default class GenerateFull extends Command {
               if (path.extname(file) !== '.pb') {
                 continue
               }
-              const carrier = path.parse(file).name
-              let destFile = path.join(dstCsDir, path.basename(file))
-              const srcVer = srcVersions.has(carrier) ? (srcVersions.get(carrier) as number) : 0
-              const dstVer = dstVersions.has(carrier) ? (dstVersions.get(carrier) as number) : 0
+              const carrierName = path.parse(file).name
+              const srcVer = srcVersions.get(carrierName) ?? 0
+              const dstVer = dstVersions.get(carrierName) ?? 0
               if (srcVer < dstVer) {
                 console.log(`skipping copying ${file} due to older version (${srcVer}<${dstVer})`)
                 continue
               }
+              const destFile = path.join(dstCsDir, path.basename(file))
               await fs.rm(destFile, { force: true })
               await fs.copyFile(file, destFile)
             }

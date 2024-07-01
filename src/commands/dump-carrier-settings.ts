@@ -33,7 +33,7 @@ export default class DumpCarrierSettings extends Command {
       false,
       async config => {
         if (config.device.has_cellular) {
-          const build_id = flags.buildId !== undefined ? flags.buildId : config.device.build_id
+          const build_id = flags.buildId ?? config.device.build_id
           const images = await prepareFactoryImages(index, [config], [build_id])
           const deviceImages = images.get(getDeviceBuildId(config, build_id))!
           const stockCsPath = path.join(deviceImages.unpackedFactoryImageDir, CARRIER_SETTINGS_VENDOR_DIR)
@@ -51,7 +51,7 @@ export default class DumpCarrierSettings extends Command {
           this.log(`${config.device.name} is not supported due to lack of mobile connectivity`)
         }
       },
-      config => `${config.device.name} ${flags.buildId !== undefined ? flags.buildId : config.device.build_id}`,
+      config => `${config.device.name} ${flags.buildId ?? config.device.build_id}`,
     )
   }
 }
