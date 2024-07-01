@@ -184,10 +184,7 @@ const doDevice = (
       ),
     )
 
-    await Promise.all([
-      writeEnvsetupCommands(config, dirs),
-      writeReadme(config, dirs, propResults),
-    ])
+    await Promise.all([writeEnvsetupCommands(config, dirs), writeReadme(config, dirs, propResults)])
   })
 
 export default class GenerateFull extends Command {
@@ -426,7 +423,9 @@ async function compareToReferenceFileTreeSpec(vendorDirs: VendorDirectories, con
 
   if (cmp.numDiffs() != 0) {
     console.log('\n')
-    throw new Error(`Vendor module for ${config.device.name} doesn't match its FileTreeSpec in ${getVendorModuleTreeSpecFile(config)}.
+    throw new Error(`Vendor module for ${
+      config.device.name
+    } doesn't match its FileTreeSpec in ${getVendorModuleTreeSpecFile(config)}.
 To update it, use the --${GenerateFull.flags.updateSpec.name} flag.`)
   }
 }
