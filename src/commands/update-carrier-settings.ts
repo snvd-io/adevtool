@@ -40,7 +40,7 @@ export default class UpdateCarrierSettings extends Command {
           if (flags.debug) console.log(updateConfig)
           await downloadAllConfigs(updateConfig, outDir, flags.debug)
         } else {
-          this.log(`${config.device.name} is not supported due to lack of mobile connectivity`)
+          this.log(`${config.device.name} is not supported due to lack of cellular connectivity`)
         }
       },
       config => `${config.device.name} ${flags.buildId ?? config.device.build_id}`,

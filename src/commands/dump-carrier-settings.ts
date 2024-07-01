@@ -48,7 +48,7 @@ export default class DumpCarrierSettings extends Command {
           assert(await exists(stockCsPath))
           await decodeConfigs(stockCsPath, outDir)
         } else {
-          this.log(`${config.device.name} is not supported due to lack of mobile connectivity`)
+          this.log(`${config.device.name} is not supported due to lack of cellular connectivity`)
         }
       },
       config => `${config.device.name} ${flags.buildId ?? config.device.build_id}`,
