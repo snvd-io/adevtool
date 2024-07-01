@@ -158,8 +158,7 @@ export async function decodeConfigs(cfgPath: string, outDir: string) {
 }
 
 async function decodeConfig(args: ReadonlyArray<string>, inputFile: string, outputFile: string) {
-  const cmd = 'protoc'
-  const decoded = await spawnAsyncStdin(cmd, args, await fs.readFile(inputFile))
+  const decoded = await spawnAsyncStdin('protoc', args, await fs.readFile(inputFile))
   await fs.writeFile(outputFile, decoded)
 }
 
