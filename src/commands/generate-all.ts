@@ -318,7 +318,7 @@ export default class GenerateFull extends Command {
           const srcCsDir = getCarrierSettingsUpdatesDir(config)
           const dstCsDir = getCarrierSettingsVendorDir(vendorDirs)
           if (await exists(srcCsDir)) {
-            this.log(chalk.bold(`Updating carrier settings from ${srcCsDir}`))
+            this.log(chalk.bold(`Updating carrier settings from ${path.relative(OS_CHECKOUT_DIR, srcCsDir)}`))
             const srcVersions = await getVersionsMap(srcCsDir)
             const dstVersions = await getVersionsMap(dstCsDir)
             for await (let file of listFilesRecursive(srcCsDir)) {
