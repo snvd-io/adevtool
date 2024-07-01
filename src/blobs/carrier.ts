@@ -94,36 +94,37 @@ export async function fetchUpdateConfig(
 }
 
 export async function downloadAllConfigs(config: Map<string, string>, outDir: string, debug: boolean) {
-  if ((config.has('is_pixel') && config.get('is_pixel') === 'no_ota') || config.size <= 2) {
+  if (config.get('is_pixel') === 'no_ota' || config.size <= 2) {
     console.log(chalk.grey(`No updates are available for ${path.parse(outDir).base}`))
     return
   }
-  const clBaseUrl = config.has('carrier_list_url') ? (config.get('carrier_list_url') as string) : ''
-  const csBaseUrl = config.has('carrier_settings_url') ? (config.get('carrier_settings_url') as string) : ''
   await fs.rm(outDir, { force: true, recursive: true })
-  for (let [carrier, version] of config) {
-    if (carrier === 'carrier_list_url' || carrier === 'carrier_settings_url') {
+  for (let [entry, version] of config) {
+    if (entry === 'carrier_list_url' || entry === 'carrier_settings_url') {
       continue
     }
     let url: string
-    if (carrier === 'carrier_list') {
-      url = clBaseUrl.replace(/%d/g, version)
+    if (entry === 'carrier_list') {
+      let baseUrl = config.get('carrier_list_url')!
+      url = baseUrl.replace(/%d/g, version)
     } else {
-      url = csBaseUrl.replace(/%2\$s/i, carrier).replace(/%3\$d/i, version)
+      let baseUrl = config.get('carrier_settings_url')!
+      url = baseUrl.replace(/%2\$s/i, entry).replace(/%3\$d/i, version)
     }
     if (debug) console.log(url)
-    assert(url.includes('pixel'), 'carrier_settings_url is invalid')
-    let tmpOutFile = path.join(outDir, `${carrier}.pb.tmp`)
-    let outFile = path.join(outDir, `${carrier}.pb`)
+    assert(url.includes('pixel'), `invalid url: ${url}`)
+
+    let tmpOutFile = path.join(outDir, `${entry}.pb.tmp`)
+    let outFile = path.join(outDir, `${entry}.pb`)
     await fs.mkdir(outDir, { recursive: true })
     await fs.rm(tmpOutFile, { force: true })
     let resp = await fetch(url)
     if (resp.ok) {
       await stream.pipeline(resp.body!, createWriteStream(tmpOutFile))
       await fs.rename(tmpOutFile, outFile)
-      console.log(`Downloaded ${carrier}-${version} to ${outFile}`)
+      console.log(`Downloaded ${entry}-${version} to ${path.relative(OS_CHECKOUT_DIR, outFile)}`)
     } else {
-      console.log(chalk.red(`Failed to download ${carrier}-${version}\nurl: ${url}`))
+      console.log(chalk.red(`Failed to download ${entry}-${version}\nurl: ${url}`))
     }
   }
 }
