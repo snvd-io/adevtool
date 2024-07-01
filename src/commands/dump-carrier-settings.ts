@@ -6,9 +6,9 @@ import { decodeConfigs } from '../blobs/carrier'
 import { forEachDevice } from '../frontend/devices'
 import { BuildIndex, loadBuildIndex } from '../images/build-index'
 import { prepareFactoryImages } from '../frontend/source'
-import { assert } from 'console'
 import { exists } from '../util/fs'
 import { VENDOR_MODULE_SKELS_DIR, CARRIER_SETTINGS_VENDOR_DIR } from '../config/paths'
+import assert from 'assert'
 
 export default class DumpCarrierSettings extends Command {
   static description = 'generate protoc dumps of configs from factory image.'
