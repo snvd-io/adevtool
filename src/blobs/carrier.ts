@@ -7,8 +7,8 @@ import { Response } from '../proto-ts/vendor/adevtool/assets/response'
 import { Request } from '../proto-ts/vendor/adevtool/assets/request'
 import { CarrierList } from '../proto-ts/packages/apps/CarrierConfig2/src/com/google/carrier/carrier_list'
 import {
-  MultiCarrierSettings,
   CarrierSettings,
+  MultiCarrierSettings,
 } from '../proto-ts/packages/apps/CarrierConfig2/src/com/google/carrier/carrier_settings'
 import { exists, listFilesRecursive, TMP_PREFIX } from '../util/fs'
 import assert from 'assert'

@@ -1,10 +1,10 @@
 import { Command, flags } from '@oclif/command'
 import path from 'path'
 
-import { DEVICE_CONFIG_FLAGS, loadDeviceConfigs, getDeviceBuildId } from '../config/device'
+import { DEVICE_CONFIG_FLAGS, getDeviceBuildId, loadDeviceConfigs } from '../config/device'
 import { decodeConfigs } from '../blobs/carrier'
 import { forEachDevice } from '../frontend/devices'
-import { loadBuildIndex, BuildIndex } from '../images/build-index'
+import { BuildIndex, loadBuildIndex } from '../images/build-index'
 import { prepareFactoryImages } from '../frontend/source'
 import { assert } from 'console'
 import { exists } from '../util/fs'
