@@ -114,7 +114,7 @@ export async function downloadAllConfigs(config: Map<string, string>, outDir: st
     assert(url.includes('pixel'), 'carrier_settings_url is invalid')
     let tmpOutFile = path.join(outDir, `${carrier}.pb.tmp`)
     let outFile = path.join(outDir, `${carrier}.pb`)
-    if (!(await exists(outDir))) await fs.mkdir(outDir, { recursive: true })
+    await fs.mkdir(outDir, { recursive: true })
     await fs.rm(tmpOutFile, { force: true })
     let resp = await fetch(url)
     if (resp.ok) {
@@ -130,7 +130,7 @@ export async function downloadAllConfigs(config: Map<string, string>, outDir: st
 export async function decodeConfigs(cfgPath: string, outDir: string) {
   let promises: Promise<void>[] = []
   if (await exists(cfgPath)) {
-    if (!(await exists(outDir))) await fs.mkdir(outDir, { recursive: true })
+    await fs.mkdir(outDir, { recursive: true })
     for await (let file of listFilesRecursive(cfgPath)) {
       if (path.extname(file) !== '.pb') {
         continue
