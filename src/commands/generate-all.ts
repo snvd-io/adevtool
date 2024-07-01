@@ -50,6 +50,8 @@ import { exists, listFilesRecursive, withTempDir } from '../util/fs'
 import { spawnAsync } from '../util/process'
 import {
   decodeConfigs,
+  downloadAllConfigs,
+  fetchUpdateConfig,
   getCarrierSettingsUpdatesDir,
   getVersionsMap,
 } from '../blobs/carrier'
@@ -315,6 +317,12 @@ export default class GenerateFull extends Command {
         }
 
         if (!flags.doNotReplaceCarrierSettings) {
+          if (flags.updateSpec && config.device.has_cellular) {
+            this.log(chalk.bold(`Downloading carrier settings updates`))
+            const csUpdateConfig = await fetchUpdateConfig(config.device.name, config.device.build_id, false)
+            await downloadAllConfigs(csUpdateConfig, getCarrierSettingsUpdatesDir(config), false)
+          }
+
           const srcCsDir = getCarrierSettingsUpdatesDir(config)
           const dstCsDir = getCarrierSettingsVendorDir(vendorDirs)
           if (await exists(srcCsDir)) {
