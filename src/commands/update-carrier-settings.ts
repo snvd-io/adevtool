@@ -1,9 +1,7 @@
 import { Command, flags } from '@oclif/command'
-import path from 'path'
 
 import { DEVICE_CONFIG_FLAGS, loadDeviceConfigs } from '../config/device'
-import { CARRIER_SETTINGS_DIR } from '../config/paths'
-import { downloadAllConfigs, fetchUpdateConfig } from '../blobs/carrier'
+import { downloadAllConfigs, fetchUpdateConfig, getCarrierSettingsUpdatesDir } from '../blobs/carrier'
 import { forEachDevice } from '../frontend/devices'
 
 export default class UpdateCarrierSettings extends Command {
@@ -12,15 +10,14 @@ export default class UpdateCarrierSettings extends Command {
   static flags = {
     out: flags.string({
       char: 'o',
-      description: 'out dir.',
-      default: CARRIER_SETTINGS_DIR,
+      description: 'override output directory',
     }),
     debug: flags.boolean({
-      description: 'debug output.',
+      description: 'enable debug output',
       default: false,
     }),
     buildId: flags.string({
-      description: 'specify build ID',
+      description: 'override build ID',
       char: 'b',
     }),
     ...DEVICE_CONFIG_FLAGS,
@@ -34,8 +31,8 @@ export default class UpdateCarrierSettings extends Command {
       false,
       async config => {
         if (config.device.has_cellular) {
-          const outDir = path.join(flags.out, config.device.name)
           const buildId = flags.buildId ?? config.device.build_id
+          const outDir = flags.out ?? getCarrierSettingsUpdatesDir(config)
           const updateConfig = await fetchUpdateConfig(config.device.name, buildId, flags.debug)
           if (flags.debug) console.log(updateConfig)
           await downloadAllConfigs(updateConfig, outDir, flags.debug)

@@ -15,7 +15,8 @@ import assert from 'assert'
 import { createWriteStream, promises as fs } from 'fs'
 import { promises as stream } from 'stream'
 import { spawnAsyncStdin } from '../util/process'
-import { OS_CHECKOUT_DIR } from '../config/paths'
+import { CARRIER_SETTINGS_DIR, OS_CHECKOUT_DIR } from '../config/paths'
+import { DeviceConfig } from '../config/device'
 
 const PROTO_PATH = `${OS_CHECKOUT_DIR}/packages/apps/CarrierConfig2/src/com/google/carrier`
 
@@ -186,4 +187,8 @@ export async function getVersionsMap(dir: string): Promise<Map<string, number>> 
     versions.set(filename, version)
   }
   return versions
+}
+
+export function getCarrierSettingsUpdatesDir(config: DeviceConfig) {
+  return path.join(CARRIER_SETTINGS_DIR, config.device.vendor, config.device.name)
 }

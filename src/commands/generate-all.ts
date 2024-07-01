@@ -30,7 +30,8 @@ import {
   PropResults,
   resolveOverrides,
   resolveSepolicyDirs,
-  updatePresigned, writeEnvsetupCommands,
+  updatePresigned,
+  writeEnvsetupCommands,
 } from '../frontend/generate'
 import { writeReadme } from '../frontend/readme'
 import { DeviceImages, prepareDeviceImages, WRAPPED_SOURCE_FLAGS, wrapSystemSrc } from '../frontend/source'
@@ -47,7 +48,11 @@ import {
 } from '../util/file-tree-spec'
 import { exists, listFilesRecursive, withTempDir } from '../util/fs'
 import { spawnAsync } from '../util/process'
-import { decodeConfigs, getVersionsMap } from '../blobs/carrier'
+import {
+  decodeConfigs,
+  getCarrierSettingsUpdatesDir,
+  getVersionsMap,
+} from '../blobs/carrier'
 
 const doDevice = (
   dirs: VendorDirectories,
@@ -313,7 +318,7 @@ export default class GenerateFull extends Command {
         }
 
         if (!flags.doNotReplaceCarrierSettings) {
-          const srcCsDir = path.join(CARRIER_SETTINGS_DIR, config.device.name)
+          const srcCsDir = getCarrierSettingsUpdatesDir(config)
           const dstCsDir = getCarrierSettingsVendorDir(vendorDirs)
           if (await exists(srcCsDir)) {
             this.log(chalk.bold(`Updating carrier settings from ${srcCsDir}`))
