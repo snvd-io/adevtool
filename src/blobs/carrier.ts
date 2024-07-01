@@ -80,8 +80,8 @@ export async function fetchUpdateConfig(
     await fs.writeFile(tmpOutFile, pbResponse)
   }
   let result = new Map<string, string>()
-  const decodedResopnse = Response.decode(pbResponse).field1!.settings!.cfg!
-  decodedResopnse.forEach(cfg => {
+  const decodedResponse = Response.decode(pbResponse).field1!.settings!.cfg!
+  decodedResponse.forEach(cfg => {
     if (cfg.name === 'CarrierSettings__update_config') {
       const updateConfig = cfg!.unk1!.n!.entry!
       Object.keys(updateConfig).forEach(key => {
