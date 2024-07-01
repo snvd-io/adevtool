@@ -19,10 +19,6 @@ import { OS_CHECKOUT_DIR } from '../config/paths'
 
 const PROTO_PATH = `${OS_CHECKOUT_DIR}/packages/apps/CarrierConfig2/src/com/google/carrier`
 
-function getRandom(): string {
-  return `${Math.random()}`.slice(2, 10)
-}
-
 export async function fetchUpdateConfig(
   device: string,
   build_id: string,
