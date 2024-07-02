@@ -43,7 +43,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.product.manufacturer_for_attestation=Google \
     ro.build.expect.baseband=g5300o-240308-240517-B-11857457 \
     ro.build.expect.bootloader=akita-14.5-11693900 \
-    ro.vendor.build.svn=9 \
+    ro.vendor.build.svn=11 \
     ro.surface_flinger.game_default_frame_rate_override=60 \
     drm.service.enabled=true \
     media.mediadrmservice.enable=true \
@@ -61,7 +61,7 @@ PRODUCT_VENDOR_DLKM_PROPERTIES += \
     ro.product.device_for_attestation=akita \
     ro.product.manufacturer_for_attestation=Google
 
-PRODUCT_OVERRIDE_FINGERPRINT := google/akita/akita:14/AP2A.240605.024/11860263:user/release-keys
+PRODUCT_OVERRIDE_FINGERPRINT := google/akita/akita:14/AP2A.240705.005/11942872:user/release-keys
 
 PRODUCT_PACKAGES += \
     activity \

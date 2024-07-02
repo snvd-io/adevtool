@@ -1,2 +1,2 @@
-export BUILD_ID_cheetah="AP2A.240605.024"
+export BUILD_ID_cheetah="AP2A.240705.004"
 unset PLATFORM_SECURITY_PATCH_cheetah

@@ -30,7 +30,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.build.expect.baseband=g5300q-240308-240517-B-11857457 \
     ro.build.expect.bootloader=felix-14.5-11707788 \
-    ro.vendor.build.svn=51 \
+    ro.vendor.build.svn=52 \
     ro.surface_flinger.game_default_frame_rate_override=60 \
     drm.service.enabled=true \
     media.mediadrmservice.enable=true \
@@ -41,7 +41,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.ril.ecc.use.xml=1 \
     ro.vendor.uwb.calibration.calibrationpaths=/vendor/etc/uwb/calib_paths
 
-PRODUCT_OVERRIDE_FINGERPRINT := google/felix/felix:14/AP2A.240605.024/11860263:user/release-keys
+PRODUCT_OVERRIDE_FINGERPRINT := google/felix/felix:14/AP2A.240705.004/11875680:user/release-keys
 
 PRODUCT_PACKAGES += \
     activity \

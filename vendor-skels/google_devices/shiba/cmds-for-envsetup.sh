@@ -1,2 +1,2 @@
-export BUILD_ID_shiba="AP2A.240605.024"
+export BUILD_ID_shiba="AP2A.240705.005"
 unset PLATFORM_SECURITY_PATCH_shiba
