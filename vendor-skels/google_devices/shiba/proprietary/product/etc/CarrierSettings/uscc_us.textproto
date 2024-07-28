@@ -1,5 +1,5 @@
 canonical_name: "uscc_us"
-version: 56000000006
+version: 56000000007
 apns {
   apn {
     name: "U.S. Cellular"
@@ -488,6 +488,12 @@ configs {
     bool_value: false
   }
 }
+vendor_configs {
+  client {
+    name: "modem"
+    value: "\nv\n\027OEM_GCONFIG_PARIS_MODEL\022XZzUzMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\"\001\000\n.\n#PSS.SMS.IMS SMS CROSS OVER HANDLING\022\004AQ==\"\001\000\nx\n\031OEM_GCONFIG_PARIS_VERSION\022XZzUzMDBfdXNjY18xNTRfMjAyNDA2MTExODAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\"\001\001"
+  }
+}
 last_updated {
-  seconds: 1706100387
+  seconds: 1718696683
 }
