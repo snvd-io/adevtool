@@ -1,5 +1,5 @@
 canonical_name: "talkmobile_gb"
-version: 56000000009
+version: 56000000010
 apns {
   apn {
     name: "Talkmob WAP"
@@ -28,6 +28,7 @@ configs {
   config {
     key: "carrier_nr_availabilities_int_array"
     int_array {
+      item: 1
     }
   }
   config {
@@ -148,5 +149,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715212417
+  seconds: 1719450348
 }

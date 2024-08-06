@@ -21,7 +21,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.build.expect.baseband=g5123b-135085-240517-B-11857288 \
     ro.build.expect.bootloader=slider-14.5-11677881 \
-    ro.vendor.build.svn=83 \
+    ro.vendor.build.svn=84 \
     ro.surface_flinger.game_default_frame_rate_override=60 \
     persist.vendor.ril.use_radio_hal=1.6 \
     vendor.rild.libpath=libsitril.so \
@@ -31,7 +31,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     media.mediadrmservice.enable=true \
     ro.vendor.dolby.dax.version=DAX3_G_3.7.3.0_r1
 
-PRODUCT_OVERRIDE_FINGERPRINT := google/oriole/oriole:14/AP2A.240705.004/11875680:user/release-keys
+PRODUCT_OVERRIDE_FINGERPRINT := google/oriole/oriole:14/AP2A.240805.005.F1/12043167:user/release-keys
 
 PRODUCT_PACKAGES += \
     activity \
