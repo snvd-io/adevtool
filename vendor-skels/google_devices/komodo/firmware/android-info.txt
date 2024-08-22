@@ -1,0 +1,5 @@
+require board=komodo
+
+require version-bootloader=ripcurrentpro-14.6-12143045
+require version-baseband=g5400c-240718-240719-B-12112834
+require partition-exists=vendor_kernel_boot

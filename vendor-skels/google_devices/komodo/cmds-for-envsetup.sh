@@ -1,0 +1,2 @@
+export BUILD_ID_komodo="AD1A.240530.047"
+unset PLATFORM_SECURITY_PATCH_komodo
