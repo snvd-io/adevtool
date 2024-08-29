@@ -1,3 +1,18 @@
+comet AD1A.240530.030:
+  desc: Aug 2024
+  factory: 77dca5840fa82483f836934ca634ee332728009444e9d2dc125a251bb9ac869e comet-ad1a.240530.030-factory-77dca584.zip
+  ota: 98066022ebf9482a956b7135f831b7bf1c66f43667193fcb1ddd2adf681f1383 comet-ota-ad1a.240530.030-98066022.zip
+  vendor/google_devices: 05b3be1ceaa1d67b4a8c6c18da774a9444b5023868c4885577424922fe174755 google_devices-comet-ad1a.240530.030-52fc4d99.tgz
+comet AD1A.240530.030.A1:
+  desc: Aug 2024, India only
+  factory: b8941ae37298174ccb4a69ac98fc93c1fe4adbc71f7cabc76201680ef3bec0ec comet-ad1a.240530.030.a1-factory-b8941ae3.zip
+  ota: 1d0d3c2590130b636f3ab7a015b84eb1db7d4eb82b4b0266f5097ae1efa3bc3c comet-ota-ad1a.240530.030.a1-1d0d3c25.zip
+  vendor/google_devices: 62eb279f85f0c715de95f62edbca3f8548e226196761ed4280616387bb8a67a3 google_devices-comet-ad1a.240530.030.a1-dc9de65f.tgz
+comet AD1A.240530.047:
+  desc: Aug 2024
+  factory: 93386866fe622a6f7170a758b7ecde629dbff4f06146a47f569a6ec9e03aba81 comet-ad1a.240530.047-factory-93386866.zip
+  ota: a82cf266be89a19507b885b50965934ea01d03ec5465ad127b5ee1d4fc1cd61b comet-ota-ad1a.240530.047-a82cf266.zip
+  vendor/google_devices: 9dcaa82adead2fce57a8e013c49d3f73c71eb299b9bdaae0d7ab721e36c56108 google_devices-comet-ad1a.240530.047-9da2c962.tgz
 komodo AD1A.240530.030:
   desc: Aug 2024
   factory: fb963bd65cdf9f933692fda3937144f400bde59cfbd74dcaf76f003911480711 komodo-ad1a.240530.030-factory-fb963bd6.zip
