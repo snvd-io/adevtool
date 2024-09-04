@@ -1,2 +1,2 @@
 export BUILD_ID_barbet="AP2A.240805.005"
-unset PLATFORM_SECURITY_PATCH_barbet
+export PLATFORM_SECURITY_PATCH_barbet="2024-09-01"

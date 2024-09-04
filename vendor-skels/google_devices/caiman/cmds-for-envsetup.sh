@@ -1,2 +1,2 @@
-export BUILD_ID_caiman="AD1A.240530.047"
+export BUILD_ID_caiman="AD1A.240905.004"
 unset PLATFORM_SECURITY_PATCH_caiman

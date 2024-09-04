@@ -1,5 +1,5 @@
 require board=felix
 
-require version-bootloader=felix-14.5-11707788
+require version-bootloader=felix-14.5-12088398
 require version-baseband=g5300q-240308-240517-B-11857457
 require partition-exists=vendor_kernel_boot
