@@ -1,5 +1,5 @@
 canonical_name: "digi_my"
-version: 56000000010
+version: 60000000010
 apns {
   apn {
     name: "DiGi Internet"

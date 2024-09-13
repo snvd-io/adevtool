@@ -1,5 +1,5 @@
 canonical_name: "sprint_us"
-version: 56000000073
+version: 60000000074
 apns {
   apn {
     name: "Sprint"
@@ -119,7 +119,7 @@ configs {
   }
   config {
     key: "carrier_volte_provisioning_required_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "carrier_wfc_ims_available_bool"
@@ -192,7 +192,6 @@ configs {
       config {
         key: "ims.capability_type_voice_int_array"
         int_array {
-          item: 0
           item: 1
         }
       }
@@ -347,5 +346,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100344
+  seconds: 1721863422
 }

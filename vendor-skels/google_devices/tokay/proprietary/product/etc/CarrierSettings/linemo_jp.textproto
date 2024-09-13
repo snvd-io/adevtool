@@ -1,5 +1,5 @@
 canonical_name: "linemo_jp"
-version: 57000000006
+version: 60000000007
 apns {
   apn {
     name: "IMS"
@@ -12,10 +12,11 @@ apns {
   }
   apn {
     name: "LINEMO"
-    value: "plus.acs.jp"
+    value: "plus.acs.jp.v6"
     type: DEFAULT
     type: SUPL
     type: HIPRI
+    type: IA
     user: "lm"
     password: "lm"
     authtype: 2
@@ -492,5 +493,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1714608598
+  seconds: 1720164602
 }

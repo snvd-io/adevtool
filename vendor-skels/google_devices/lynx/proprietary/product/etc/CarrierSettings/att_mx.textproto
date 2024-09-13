@@ -1,5 +1,5 @@
 canonical_name: "att_mx"
-version: 56000000002
+version: 60000000004
 apns {
   apn {
     name: "Modem"
@@ -67,5 +67,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690417
+  seconds: 1722173380
 }

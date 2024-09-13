@@ -1,5 +1,5 @@
 canonical_name: "tele2_lt"
-version: 57000000007
+version: 60000000008
 apns {
   apn {
     name: "Internet"
@@ -126,5 +126,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1714608598
+  seconds: 1712735214
 }

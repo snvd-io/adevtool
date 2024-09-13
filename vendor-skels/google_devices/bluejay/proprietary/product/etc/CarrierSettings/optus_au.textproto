@@ -1,5 +1,5 @@
 canonical_name: "optus_au"
-version: 56000000013
+version: 60000000014
 apns {
   apn {
     name: "Optus Yes Internet"
@@ -199,6 +199,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.idle_eutran_rsrp_int_array"
     int_array {
       item: -104
@@ -263,5 +267,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709115995
+  seconds: 1710306111
 }

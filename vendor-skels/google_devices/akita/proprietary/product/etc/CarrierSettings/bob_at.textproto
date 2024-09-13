@@ -1,5 +1,5 @@
 canonical_name: "bob_at"
-version: 56000000003
+version: 60000000005
 apns {
   apn {
     name: "data.bob"
@@ -118,8 +118,8 @@ configs {
     int_value: 0
   }
   config {
-    key: "imsss.ut_requires_ims_registration_bool"
-    bool_value: true
+    key: "imsss.ut_supported_when_ps_data_off_bool"
+    bool_value: false
   }
   config {
     key: "imsss.ut_transport_type_int"
@@ -253,5 +253,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635204
+  seconds: 1713343958
 }

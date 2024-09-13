@@ -1,5 +1,5 @@
 canonical_name: "cityfone_ca"
-version: 56000000010
+version: 60000000012
 apns {
   apn {
     name: "Cityfone Tethering"
@@ -410,5 +410,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100369
+  seconds: 1722173369
 }

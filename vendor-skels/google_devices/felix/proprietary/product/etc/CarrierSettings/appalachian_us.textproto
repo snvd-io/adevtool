@@ -1,5 +1,5 @@
 canonical_name: "appalachian_us"
-version: 56000000001
+version: 60000000002
 apns {
   apn {
     name: "Appalachian"
@@ -53,6 +53,10 @@ apns {
 }
 configs {
   config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
     key: "httpParams"
     text_value: "X-MDN: ##LINE1##"
   }
@@ -82,5 +86,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708520764
+  seconds: 1720164579
 }

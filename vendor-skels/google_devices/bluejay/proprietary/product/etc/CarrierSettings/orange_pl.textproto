@@ -1,14 +1,16 @@
 canonical_name: "orange_pl"
-version: 56000000007
+version: 60000000010
 apns {
   apn {
     name: "Orange Internet"
-    value: "Internet"
+    value: "internetipv6"
     type: DEFAULT
     type: SUPL
     user: "internet"
     password: "internet"
     authtype: 1
+    protocol: IPV6
+    user_editable: false
   }
   apn {
     name: "Orange MMS"
@@ -20,14 +22,15 @@ apns {
     mmsc: "http://mms.orange.pl"
     mmsc_proxy: "192.168.6.104"
     mmsc_proxy_port: "8080"
+    user_editable: false
   }
   apn {
     name: "IMS"
     value: "ims"
     type: IMS
     bearer_bitmask: "14|18|20"
-    protocol: IPV4V6
-    roaming_protocol: IPV4V6
+    protocol: IPV6
+    roaming_protocol: IPV6
     user_visible: false
   }
   apn {
@@ -68,6 +71,10 @@ configs {
     text_value: "pl.orange.mojeorange"
   }
   config {
+    key: "default_vm_number_string"
+    text_value: "*501"
+  }
+  config {
     key: "hide_enhanced_4g_lte_bool"
     bool_value: true
   }
@@ -80,6 +87,10 @@ configs {
     int_array {
       item: 3
     }
+  }
+  config {
+    key: "imsemergency.emergency_registration_timer_millis_int"
+    int_value: 8000
   }
   config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
@@ -191,14 +202,10 @@ configs {
     }
   }
   config {
-    key: "show_4g_for_lte_data_icon_bool"
-    bool_value: true
-  }
-  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1708635164
+  seconds: 1718766380
 }

@@ -1,5 +1,5 @@
 canonical_name: "antel_uy"
-version: 56000000003
+version: 60000000005
 apns {
   apn {
     name: "Vera 1"
@@ -54,5 +54,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690417
+  seconds: 1722173380
 }

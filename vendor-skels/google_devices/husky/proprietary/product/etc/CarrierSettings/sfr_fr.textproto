@@ -1,5 +1,5 @@
 canonical_name: "sfr_fr"
-version: 56000000011
+version: 60000000015
 apns {
   apn {
     name: "SFR webphone"
@@ -244,5 +244,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100387
+  seconds: 1722173396
 }

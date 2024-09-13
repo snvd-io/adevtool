@@ -1,5 +1,5 @@
 canonical_name: "m1_sg"
-version: 57000000008
+version: 60000000008
 apns {
   apn {
     name: "Sunsurf Mobile"
@@ -188,5 +188,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1713418446
+  seconds: 1713343964
 }

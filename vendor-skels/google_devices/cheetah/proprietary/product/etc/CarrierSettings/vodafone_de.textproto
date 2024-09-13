@@ -1,5 +1,5 @@
 canonical_name: "vodafone_de"
-version: 56000000013
+version: 60000000015
 apns {
   apn {
     name: "Vodafone DE"
@@ -288,5 +288,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690405
+  seconds: 1716976996
 }

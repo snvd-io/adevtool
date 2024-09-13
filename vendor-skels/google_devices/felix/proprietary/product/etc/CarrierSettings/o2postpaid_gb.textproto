@@ -1,5 +1,5 @@
 canonical_name: "o2postpaid_gb"
-version: 56000000010
+version: 60000000011
 apns {
   apn {
     name: "O2 Pay Monthly"
@@ -271,6 +271,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "qns.xcap_transport_type_int"
+    int_value: 0
+  }
+  config {
     key: "radio_restart_failure_causes_int_array"
     int_array {
       item: 55
@@ -295,5 +299,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1707299261
+  seconds: 1714533657
 }

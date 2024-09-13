@@ -1,5 +1,5 @@
 canonical_name: "yesss_at"
-version: 56000000001
+version: 60000000006
 apns {
   apn {
     name: "yesss!"
@@ -13,7 +13,7 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -34,6 +34,10 @@ configs {
   config {
     key: "bsf.bsf_transport_type_int"
     int_value: 3
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
   }
   config {
     key: "carrier_nr_availabilities_int_array"
@@ -92,8 +96,8 @@ configs {
     int_value: 0
   }
   config {
-    key: "imsss.ut_requires_ims_registration_bool"
-    bool_value: true
+    key: "imsss.ut_supported_when_ps_data_off_bool"
+    bool_value: false
   }
   config {
     key: "imsss.ut_transport_type_int"
@@ -223,5 +227,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709115987
+  seconds: 1722173344
 }

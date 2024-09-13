@@ -1,5 +1,5 @@
 canonical_name: "orange_sk"
-version: 56000000009
+version: 60000000012
 apns {
   apn {
     name: "Orange SK"
@@ -72,6 +72,10 @@ configs {
   config {
     key: "config_plans_package_override_string"
     text_value: "sk.orange.android.orangego"
+  }
+  config {
+    key: "display_hd_plus_icon_bool"
+    bool_value: true
   }
   config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
@@ -206,5 +210,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635204
+  seconds: 1717578407
 }

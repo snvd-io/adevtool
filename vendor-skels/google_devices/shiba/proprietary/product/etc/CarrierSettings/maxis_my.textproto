@@ -1,5 +1,5 @@
 canonical_name: "maxis_my"
-version: 56000000009
+version: 60000000013
 apns {
   apn {
     name: "Maxis Internet"
@@ -20,7 +20,7 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -35,6 +35,10 @@ apns {
 }
 configs {
   config {
+    key: "allow_hold_call_during_emergency_bool"
+    bool_value: false
+  }
+  config {
     key: "bsf.bsf_server_fqdn_string"
     text_value: "bsf.ims.mnc012.mcc502.pub.3gppnetwork.org"
   }
@@ -48,6 +52,14 @@ configs {
   }
   config {
     key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
     bool_value: true
   }
   config {
@@ -106,10 +118,18 @@ configs {
     }
   }
   config {
+    key: "qns.xcap_rat_preference_int"
+    int_value: 3
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
 }
 last_updated {
-  seconds: 1708635195
+  seconds: 1716977029
 }

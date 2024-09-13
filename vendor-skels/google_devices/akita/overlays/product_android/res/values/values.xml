@@ -11,6 +11,7 @@
   <string name="config_ambientContextEventArrayExtraKey">EVENT_ARRAY</string>
   <string name="config_ambientContextPackageNameExtraKey">PACKAGE_NAME</string>
   <string name="config_defaultAccessibilityNotificationSound">Effect_Tick.ogg</string>
+  <string name="config_defaultCredentialManagerAutofillService">com.android.credentialmanager/com.android.credentialmanager.autofill.CredentialAutofillService</string>
   <string name="config_icon_mask">M50 0C77.6 0 100 22.4 100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z</string>
   <string name="config_qualified_networks_service_package">com.android.qns</string>
   <string name="face_recalibrate_notification_content">Face unlock may not work until you re-enroll</string>
@@ -19,6 +20,7 @@
   <string name="fingerprint_error_bad_calibration">Can’t use fingerprint sensor. Visit a repair provider or g.co/pixel/fingerprintunlock</string>
   <string name="fingerprint_recalibrate_notification_content">Visit a repair provider or g.co/pixel/fingerprintunlock</string>
   <string name="safety_protection_display_text">"&lt;font face=\"google-sans"&gt;Protected by &lt;/font&gt;&lt;font face="google-sans-medium"&gt;Android&lt;/font&gt;"</string>
+  <string name="scCellularNetworkSecurityLearnMore">"https://support.google.com/android?p=cellular_security"</string>
   <string name="vendor_required_attestation_revocation_list_url">https://android.googleapis.com/attestation/status</string>
   <bool name="config_allowDisablingAssistDisclosure">true</bool>
   <bool name="config_biometricFrrNotificationEnabled">true</bool>
@@ -28,7 +30,6 @@
   <bool name="config_honor_data_retry_timer_for_emergency_network">true</bool>
   <bool name="config_hotspotNetworksEnabledForService">false</bool>
   <bool name="config_knownNetworksEnabledForService">false</bool>
-  <bool name="config_lockscreenWeatherEnabledByDefault">true</bool>
   <bool name="config_refreshRateSynchronizationEnabled">true</bool>
   <bool name="config_safetyProtectionEnabled">true</bool>
   <bool name="config_settingsHelpLinksEnabled">true</bool>
@@ -50,6 +51,7 @@
   <integer name="config_externalDisplayPeakRefreshRate">61</integer>
   <integer name="config_externalDisplayPeakWidth">1920</integer>
   <integer name="config_fingerprintMaxTemplatesPerUser">4</integer>
+  <integer name="config_screenTimeoutOverride">10000</integer>
   <integer name="device_idle_idle_after_inactive_to_ms">15000</integer>
   <integer name="device_idle_inactive_to_ms">15000</integer>
   <integer name="device_idle_locating_to_ms">15000</integer>

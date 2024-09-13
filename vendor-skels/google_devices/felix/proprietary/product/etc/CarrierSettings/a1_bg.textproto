@@ -1,5 +1,5 @@
 canonical_name: "a1_bg"
-version: 56000000001
+version: 60000000003
 apns {
   apn {
     name: "Mtel Internet"
@@ -27,5 +27,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690411
+  seconds: 1722173369
 }

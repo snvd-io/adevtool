@@ -1,5 +1,5 @@
 canonical_name: "globe_ph"
-version: 57000000005
+version: 60000000008
 apns {
   apn {
     name: "myGlobe Internet"
@@ -111,10 +111,14 @@ configs {
     }
   }
   config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
     key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
     bool_value: true
   }
 }
 last_updated {
-  seconds: 1709690435
+  seconds: 1722173420
 }

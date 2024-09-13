@@ -1,5 +1,5 @@
 canonical_name: "telenor_dk"
-version: 57000000005
+version: 60000000008
 apns {
   apn {
     name: "Telenor Internet"
@@ -169,6 +169,14 @@ configs {
     bool_value: true
   }
   config {
+    key: "iwlan.child_sa_rekey_hard_timer_sec_int"
+    int_value: 3600
+  }
+  config {
+    key: "iwlan.child_sa_rekey_soft_timer_sec_int"
+    int_value: 3500
+  }
+  config {
     key: "iwlan.epdg_address_priority_int_array"
     int_array {
       item: 0
@@ -177,6 +185,18 @@ configs {
   config {
     key: "iwlan.epdg_static_address_string"
     text_value: "epdg.epc.mnc002.mcc238.pub.3gppnetwork.org"
+  }
+  config {
+    key: "iwlan.ike_rekey_hard_timer_in_sec"
+    int_value: 86400
+  }
+  config {
+    key: "iwlan.ike_rekey_soft_timer_sec_int"
+    int_value: 86300
+  }
+  config {
+    key: "iwlan.ike_remote_id_type_int"
+    int_value: 11
   }
   config {
     key: "maxImageHeight"
@@ -208,5 +228,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715914019
+  seconds: 1722173420
 }

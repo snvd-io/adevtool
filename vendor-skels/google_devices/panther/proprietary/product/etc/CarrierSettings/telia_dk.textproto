@@ -1,5 +1,5 @@
 canonical_name: "telia_dk"
-version: 56000000012
+version: 60000000016
 apns {
   apn {
     name: "Internet"
@@ -96,6 +96,13 @@ configs {
     int_value: 1
   }
   config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "338|busy everywhere|1017"
+      item: "510|Call completed elsewhere|1014"
+    }
+  }
+  config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
     bool_value: false
   }
@@ -178,7 +185,7 @@ configs {
   }
   config {
     key: "maxMessageSize"
-    int_value: 1048576
+    int_value: 2097152
   }
   config {
     key: "qns.xcap_rat_preference_int"
@@ -194,5 +201,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1707459778
+  seconds: 1722173359
 }

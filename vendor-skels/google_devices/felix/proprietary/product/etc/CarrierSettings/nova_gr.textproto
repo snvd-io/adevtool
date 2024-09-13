@@ -1,5 +1,5 @@
 canonical_name: "nova_gr"
-version: 56000000003
+version: 60000000003
 apns {
   apn {
     name: "Wind Internet"

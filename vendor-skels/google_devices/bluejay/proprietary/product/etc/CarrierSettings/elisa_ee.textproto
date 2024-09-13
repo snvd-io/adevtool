@@ -1,5 +1,5 @@
 canonical_name: "elisa_ee"
-version: 56000000009
+version: 60000000011
 apns {
   apn {
     name: "Elisa Internet"
@@ -43,6 +43,10 @@ configs {
     int_value: 9001
   }
   config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
     key: "carrier_nr_availabilities_int_array"
     int_array {
     }
@@ -50,6 +54,20 @@ configs {
   config {
     key: "carrier_volte_available_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "editable_wfc_roaming_mode_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
   }
   config {
     key: "imsss.ut_as_server_fqdn_string"
@@ -122,5 +140,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635164
+  seconds: 1715771924
 }

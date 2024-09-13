@@ -1,5 +1,5 @@
 canonical_name: "swisscom_ch"
-version: 56000000014
+version: 60000000017
 apns {
   apn {
     name: "Swisscom Services"
@@ -106,6 +106,13 @@ configs {
   config {
     key: "ims.request_uri_type_int"
     int_value: 1
+  }
+  config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "338|busy everywhere|1017"
+      item: "510|Call completed elsewhere|1014"
+    }
   }
   config {
     key: "imsi_key_availability_int"
@@ -448,5 +455,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1703668362
+  seconds: 1722173351
 }

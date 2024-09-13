@@ -1,5 +1,5 @@
 canonical_name: "bell_ca"
-version: 56000000018
+version: 60000000019
 apns {
   apn {
     name: "Bell Mobility"
@@ -343,6 +343,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "iwlan.add_ke_to_child_session_rekey_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 86500
   }
@@ -441,5 +445,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100353
+  seconds: 1713343926
 }

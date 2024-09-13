@@ -1,5 +1,5 @@
 canonical_name: "o2_de"
-version: 56000000008
+version: 60000000011
 apns {
   apn {
     name: "o2 Internet"
@@ -108,6 +108,10 @@ configs {
   config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
     int_array {
+      item: 6
+      item: 3
+      item: 1
+      item: 2
     }
   }
   config {
@@ -305,5 +309,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1711427706
+  seconds: 1722173409
 }

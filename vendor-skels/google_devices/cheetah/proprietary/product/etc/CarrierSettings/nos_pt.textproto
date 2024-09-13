@@ -1,5 +1,5 @@
 canonical_name: "nos_pt"
-version: 56000000008
+version: 60000000010
 apns {
   apn {
     name: "Internet"
@@ -157,5 +157,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1695826667
+  seconds: 1722173359
 }

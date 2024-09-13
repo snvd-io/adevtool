@@ -1,5 +1,5 @@
 canonical_name: "shaw_ca"
-version: 56000000025
+version: 60000000027
 apns {
   apn {
     name: "Internet"
@@ -334,5 +334,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690405
+  seconds: 1722173359
 }

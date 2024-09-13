@@ -1,5 +1,5 @@
 canonical_name: "telus_ca"
-version: 56000000090
+version: 60000000091
 apns {
   apn {
     name: "TELUS ISP"
@@ -350,6 +350,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "iwlan.update_n1_mode_on_ui_change_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan_handover_policy_string_array"
     text_array {
       item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
@@ -475,5 +479,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519122
+  seconds: 1716976973
 }

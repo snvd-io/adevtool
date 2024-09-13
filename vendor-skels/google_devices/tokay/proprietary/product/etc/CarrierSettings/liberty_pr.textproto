@@ -1,5 +1,5 @@
 canonical_name: "liberty_pr"
-version: 57000000007
+version: 60000000007
 apns {
   apn {
     name: "Liberty Internet"
@@ -743,5 +743,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1713418446
+  seconds: 1713343964
 }

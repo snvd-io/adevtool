@@ -1,5 +1,5 @@
 canonical_name: "liberty_pr"
-version: 56000000028
+version: 60000000029
 apns {
   apn {
     name: "Liberty Internet"
@@ -404,6 +404,7 @@ configs {
     key: "iwlan_handover_policy_string_array"
     text_array {
       item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
       item: "source=IWLAN|UNKNOWN, target=GERAN, type=disallowed, capabilities=IMS"
       item: "source=GERAN, target=IWLAN, type=disallowed, capabilities=IMS"
       item: "source=UTRAN|EUTRAN|NGRAN|IWLAN, target=UTRAN|EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
@@ -726,5 +727,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635157
+  seconds: 1713343920
 }

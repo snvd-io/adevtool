@@ -1,5 +1,5 @@
 canonical_name: "lebara_gb"
-version: 56000000004
+version: 60000000006
 apns {
   apn {
     name: "Lebara Internet"
@@ -76,5 +76,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1719450362
+  seconds: 1722173351
 }

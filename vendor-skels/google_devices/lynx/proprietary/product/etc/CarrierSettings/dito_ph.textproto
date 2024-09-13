@@ -1,5 +1,5 @@
 canonical_name: "dito_ph"
-version: 56000000004
+version: 60000000005
 apns {
   apn {
     name: "DITO"
@@ -72,7 +72,11 @@ configs {
       }
     }
   }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
 }
 last_updated {
-  seconds: 1706100379
+  seconds: 1715895724
 }

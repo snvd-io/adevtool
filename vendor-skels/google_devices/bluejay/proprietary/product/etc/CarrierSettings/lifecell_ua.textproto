@@ -1,5 +1,5 @@
 canonical_name: "lifecell_ua"
-version: 56000000001
+version: 60000000001
 apns {
   apn {
     name: "Lifecell Internet"

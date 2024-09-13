@@ -134,11 +134,11 @@ dex_import {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.google.edgetpu_app_service-V3-ndk__system_ext",
+    name: "com.google.edgetpu_app_service-V4-ndk__system_ext",
     owner: "google_devices",
-    stem: "com.google.edgetpu_app_service-V3-ndk",
+    stem: "com.google.edgetpu_app_service-V4-ndk",
     target: {
-        android_arm64: { srcs: [ "system_ext/lib64/com.google.edgetpu_app_service-V3-ndk.so" ] }
+        android_arm64: { srcs: [ "system_ext/lib64/com.google.edgetpu_app_service-V4-ndk.so" ] }
     },
     compile_multilib: "64",
     check_elf_files: false,
@@ -190,18 +190,6 @@ cc_prebuilt_library_shared {
     owner: "google_devices",
     stem: "libedgetpu_dba.google",
     target: { android_arm64: { srcs: [ "system_ext/lib64/libedgetpu_dba.google.so" ] } },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libedgetpu_tachyon.google__system_ext",
-    owner: "google_devices",
-    stem: "libedgetpu_tachyon.google",
-    target: { android_arm64: { srcs: [ "system_ext/lib64/libedgetpu_tachyon.google.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -272,11 +260,11 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.google.whitechapel.audio.extension-V1-ndk__system_ext",
+    name: "vendor.google.whitechapel.audio.extension-V2-ndk__system_ext",
     owner: "google_devices",
-    stem: "vendor.google.whitechapel.audio.extension-V1-ndk",
+    stem: "vendor.google.whitechapel.audio.extension-V2-ndk",
     target: {
-        android_arm64: { srcs: [ "system_ext/lib64/vendor.google.whitechapel.audio.extension-V1-ndk.so" ] }
+        android_arm64: { srcs: [ "system_ext/lib64/vendor.google.whitechapel.audio.extension-V2-ndk.so" ] }
     },
     compile_multilib: "64",
     check_elf_files: false,
@@ -432,6 +420,12 @@ android_app_import {
     system_ext_specific: true,
 }
 
+sh_binary {
+    name: "oem-iptables-init.sh",
+    owner: "google_devices",
+    src: "system/system/bin/oem-iptables-init.sh",
+}
+
 prebuilt_apex {
     name: "com.google.android.hardware.biometrics.face.pixel23",
     owner: "google_devices",
@@ -449,9 +443,9 @@ prebuilt_apex {
 }
 
 prebuilt_apex {
-    name: "com.google.android.widevine-wv_341113000",
+    name: "com.google.android.widevine-11775005",
     owner: "google_devices",
-    src: "vendor/apex/com.google.android.widevine-wv_341113000.apex",
+    src: "vendor/apex/com.google.android.widevine-11775005.apex",
     prefer: true,
     soc_specific: true,
 }
@@ -600,17 +594,6 @@ cc_prebuilt_binary {
     name: "android.hardware.gxp.logging@service-gxp-logging",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/android.hardware.gxp.logging@service-gxp-logging" ],
-    relative_install_path: "hw",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.identity@1.0-service.citadel",
-    owner: "google_devices",
-    srcs: [ "vendor/bin/hw/android.hardware.identity@1.0-service.citadel" ],
     relative_install_path: "hw",
     check_elf_files: false,
     prefer: true,
@@ -883,6 +866,17 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "vendor.google.wireless_charger.service-default",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/hw/vendor.google.wireless_charger.service-default" ],
+    relative_install_path: "hw",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "init.camera.set-interrupts-ownership",
     owner: "google_devices",
     srcs: [ "vendor/bin/init.camera.set-interrupts-ownership" ],
@@ -896,6 +890,16 @@ sh_binary {
     name: "init.radio.sh",
     owner: "google_devices",
     src: "vendor/bin/init.radio.sh",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "liboemservice_proxy_default",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/liboemservice_proxy_default" ],
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
     soc_specific: true,
 }
 
@@ -1003,6 +1007,15 @@ prebuilt_etc {
     name: "activity",
     owner: "google_devices",
     src: "vendor/etc/chre/activity.so",
+    filename_from_src: true,
+    sub_dir: "chre",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "aidb_recorder",
+    owner: "google_devices",
+    src: "vendor/etc/chre/aidb_recorder.so",
     filename_from_src: true,
     sub_dir: "chre",
     soc_specific: true,
@@ -1207,6 +1220,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "vice",
+    owner: "google_devices",
+    src: "vendor/etc/chre/vice.so",
+    filename_from_src: true,
+    sub_dir: "chre",
+    soc_specific: true,
+}
+
+prebuilt_etc {
     name: "wallaby",
     owner: "google_devices",
     src: "vendor/etc/chre/wallaby.so",
@@ -1251,30 +1273,6 @@ cc_prebuilt_library_shared {
     owner: "google_devices",
     target: {
         android_arm64: { srcs: [ "vendor/lib64/android.hardware.confirmationui.secure_input_citadel.so" ] }
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "android.hardware.identity@1.0-impl.nos",
-    owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/android.hardware.identity@1.0-impl.nos.so" ] } },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "android.hardware.keymaster@4.1-impl.nos",
-    owner: "google_devices",
-    target: {
-        android_arm64: { srcs: [ "vendor/lib64/android.hardware.keymaster@4.1-impl.nos.so" ] }
     },
     compile_multilib: "64",
     check_elf_files: false,
@@ -1355,6 +1353,17 @@ cc_prebuilt_library_shared {
     name: "aoc_audio_stereo_spatializer",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/aoc_audio_stereo_spatializer.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "aocx-ndk",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/aocx-ndk.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -1517,9 +1526,9 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.google.edgetpu_app_service-V3-ndk",
+    name: "com.google.edgetpu_app_service-V4-ndk",
     owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/com.google.edgetpu_app_service-V3-ndk.so" ] } },
+    target: { android_arm64: { srcs: [ "vendor/lib64/com.google.edgetpu_app_service-V4-ndk.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -1613,6 +1622,17 @@ cc_prebuilt_library_shared {
     name: "fake_gxp_telemetry_reader",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/fake_gxp_telemetry_reader.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "fake_libtachyon_core",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/fake_libtachyon_core.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -1977,6 +1997,17 @@ cc_prebuilt_library_shared {
     name: "libedgetpu_client.google",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libedgetpu_client.google.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libedgetpu_tachyon.google",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libedgetpu_tachyon.google.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -2590,6 +2621,17 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libtachyon_dsp_core",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libtachyon_dsp_core.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libtouchflow",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libtouchflow.so" ] } },
@@ -2612,6 +2654,17 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libutils-default",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libutils-default.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libwlcproto_aidl-default",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libwlcproto_aidl-default.so" ] } },
@@ -2626,6 +2679,17 @@ cc_prebuilt_library_shared {
     name: "modem_ml_pw_rpc_gen",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/modem_ml_pw_rpc_gen.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "modemml-tflite-service-aidl-V1-ndk",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/modemml-tflite-service-aidl-V1-ndk.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -2774,10 +2838,10 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.google.whitechapel.audio.extension-V1-ndk",
+    name: "vendor.google.whitechapel.audio.extension-V2-ndk",
     owner: "google_devices",
     target: {
-        android_arm64: { srcs: [ "vendor/lib64/vendor.google.whitechapel.audio.extension-V1-ndk.so" ] }
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.whitechapel.audio.extension-V2-ndk.so" ] }
     },
     compile_multilib: "64",
     check_elf_files: false,
@@ -2790,6 +2854,19 @@ cc_prebuilt_library_shared {
     name: "vendor.google.wireless_charger-V2-ndk",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/vendor.google.wireless_charger-V2-ndk.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.google.wireless_charger.service-V1-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.wireless_charger.service-V1-ndk.so" ] }
+    },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -2957,15 +3034,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "android.hardware.identity.strongbox",
-    owner: "google_devices",
-    src: "vendor/etc/vintf/manifest/android.hardware.identity.strongbox.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "android.hardware.neuralnetworks@service-darwinn-aidl__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/android.hardware.neuralnetworks@service-darwinn-aidl.xml",
@@ -3023,6 +3091,15 @@ prebuilt_etc_xml {
     name: "dmd__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/dmd.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "liboemservice_proxy",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/liboemservice_proxy.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -3095,6 +3172,15 @@ prebuilt_etc_xml {
     name: "vendor.google.wireless_charger-default__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/vendor.google.wireless_charger-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "vendor.google.wireless_charger.service-default__2",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/vendor.google.wireless_charger.service-default.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,

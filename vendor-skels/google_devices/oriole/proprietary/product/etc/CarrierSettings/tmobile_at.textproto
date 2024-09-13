@@ -1,5 +1,5 @@
 canonical_name: "tmobile_at"
-version: 56000000644
+version: 60000000646
 apns {
   apn {
     name: "T-Mobile IMS"
@@ -246,5 +246,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100344
+  seconds: 1722173344
 }

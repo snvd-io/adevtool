@@ -1,5 +1,5 @@
 canonical_name: "attbootstrap_us"
-version: 56000000005
+version: 60000000007
 apns {
   apn {
     name: "ATT OEMSETUPB"
@@ -504,6 +504,7 @@ configs {
     key: "iwlan_handover_policy_string_array"
     text_array {
       item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
       item: "source=IWLAN|UNKNOWN, target=GERAN, type=disallowed, capabilities=IMS"
       item: "source=GERAN, target=IWLAN, type=disallowed, capabilities=IMS"
       item: "source=UTRAN|EUTRAN|NGRAN|IWLAN, target=UTRAN|EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
@@ -583,7 +584,7 @@ configs {
   }
   config {
     key: "operator_name_filter_pattern_string"
-    text_value: "(.*)\\.{3}[12]$"
+    text_value: "()"
   }
   config {
     key: "prefer_2g_bool"
@@ -831,5 +832,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635180
+  seconds: 1713951449
 }

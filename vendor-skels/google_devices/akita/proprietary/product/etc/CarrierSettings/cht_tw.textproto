@@ -1,5 +1,5 @@
 canonical_name: "cht_tw"
-version: 56000000005
+version: 60000000008
 apns {
   apn {
     name: "\344\270\255\350\217\257\351\233\273\344\277\241(Chunghwa) (Internet)"
@@ -84,6 +84,10 @@ configs {
   }
   config {
     key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "display_hd_plus_icon_bool"
     bool_value: true
   }
   config {
@@ -260,5 +264,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1692898854
+  seconds: 1722173409
 }

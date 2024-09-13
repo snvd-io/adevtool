@@ -1,5 +1,5 @@
 canonical_name: "gamma_gb"
-version: 56000000590
+version: 60000000592
 apns {
   apn {
     name: "GAMMA"
@@ -333,5 +333,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1705496617
+  seconds: 1722173344
 }

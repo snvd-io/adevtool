@@ -1,5 +1,5 @@
 canonical_name: "freedommobile_ca"
-version: 56000000017
+version: 60000000019
 apns {
   apn {
     name: "Internet"
@@ -336,5 +336,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690417
+  seconds: 1722173380
 }

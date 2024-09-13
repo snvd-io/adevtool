@@ -17,6 +17,7 @@
   <string name="config_ambientContextEventArrayExtraKey">EVENT_ARRAY</string>
   <string name="config_ambientContextPackageNameExtraKey">PACKAGE_NAME</string>
   <string name="config_defaultAccessibilityNotificationSound">Effect_Tick.ogg</string>
+  <string name="config_defaultCredentialManagerAutofillService">com.android.credentialmanager/com.android.credentialmanager.autofill.CredentialAutofillService</string>
   <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
   <string name="config_icon_mask">M50 0C77.6 0 100 22.4 100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z</string>
   <string name="config_qualified_networks_service_package">com.android.qns</string>
@@ -68,6 +69,7 @@
   <string name="policydesc_wipeData_secondaryUser">"Erase this user's data on this tablet without warning."</string>
   <string name="power_dialog">Tablet options</string>
   <string name="safety_protection_display_text">"&lt;font face=\"google-sans"&gt;Protected by &lt;/font&gt;&lt;font face="google-sans-medium"&gt;Android&lt;/font&gt;"</string>
+  <string name="scCellularNetworkSecurityLearnMore">"https://support.google.com/android?p=cellular_security"</string>
   <string name="shutdown_confirm">Your tablet will shut down.</string>
   <string name="supervised_user_creation_label">Add child</string>
   <string name="vdm_camera_access_denied">Can’t access the tablet’s camera from your %1$s</string>
@@ -88,9 +90,11 @@
   <bool name="config_enableProximityService">true</bool>
   <bool name="config_enableTimeoutToDockUserWhenDocked">true</bool>
   <bool name="config_fingerprintSupportsGestures">true</bool>
+  <bool name="config_honor_data_retry_timer_for_emergency_network">true</bool>
   <bool name="config_hotspotNetworksEnabledForService">false</bool>
   <bool name="config_isCameraCompatControlForStretchedIssuesEnabled">true</bool>
   <bool name="config_isCompatFakeFocusEnabled">true</bool>
+  <bool name="config_isDesktopModeSupported">true</bool>
   <bool name="config_isWindowManagerCameraCompatTreatmentEnabled">true</bool>
   <bool name="config_keepDreamingWhenUnplugging">true</bool>
   <bool name="config_knownNetworksEnabledForService">false</bool>
@@ -101,7 +105,6 @@
   <bool name="config_letterboxIsPolicyForIgnoringRequestedOrientationEnabled">true</bool>
   <bool name="config_letterboxIsSplitScreenAspectRatioForUnresizableAppsEnabled">true</bool>
   <bool name="config_letterboxIsVerticalReachabilityEnabled">true</bool>
-  <bool name="config_lockscreenWeatherEnabledByDefault">true</bool>
   <bool name="config_orderUnlockAndWake">true</bool>
   <bool name="config_performantAuthDefault">true</bool>
   <bool name="config_resetScreenTimeoutOnUnexpectedDreamExit">true</bool>

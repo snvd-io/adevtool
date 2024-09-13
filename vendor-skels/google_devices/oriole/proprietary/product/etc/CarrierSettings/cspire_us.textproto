@@ -1,5 +1,5 @@
 canonical_name: "cspire_us"
-version: 56000000444
+version: 60000000446
 apns {
   apn {
     name: "C Spire OTA"
@@ -416,5 +416,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1697177636
+  seconds: 1722173344
 }

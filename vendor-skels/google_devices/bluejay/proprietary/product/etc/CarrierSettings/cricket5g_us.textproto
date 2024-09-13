@@ -1,5 +1,5 @@
 canonical_name: "cricket5g_us"
-version: 56000000016
+version: 60000000019
 apns {
   apn {
     name: "internet"
@@ -418,6 +418,16 @@ configs {
     text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"9000\", \"9001\", \"11011\", \"9003\", \"11001\", \"9006\", \"8192\"],\"RetryArray\": [],\"UnthrottlingEvents\": []}, {\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"*\"],\"RetryArray\": [\"10\", \"60\", \"120\", \"240\", \"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
   }
   config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
+    }
+  }
+  config {
     key: "maxImageHeight"
     int_value: 1944
   }
@@ -671,5 +681,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1707299248
+  seconds: 1722173351
 }

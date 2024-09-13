@@ -1,5 +1,5 @@
 canonical_name: "salt_li"
-version: 56000000001
+version: 60000000002
 apns {
   apn {
     name: "Internet"
@@ -13,10 +13,15 @@ apns {
 }
 configs {
   config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+    }
+  }
+  config {
     key: "enabledMMS"
     bool_value: false
   }
 }
 last_updated {
-  seconds: 1708520740
+  seconds: 1718180264
 }

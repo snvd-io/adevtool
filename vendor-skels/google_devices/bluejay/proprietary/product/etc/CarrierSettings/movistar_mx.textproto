@@ -1,5 +1,5 @@
 canonical_name: "movistar_mx"
-version: 56000000002
+version: 60000000003
 apns {
   apn {
     name: "Movistar INTERNET"
@@ -72,7 +72,11 @@ configs {
     key: "imsvoice.conference_factory_uri_string"
     text_value: "conference@factory.ims.movistar.mx"
   }
+  config {
+    key: "qns.xcap_transport_type_int"
+    int_value: 0
+  }
 }
 last_updated {
-  seconds: 1709690400
+  seconds: 1714533636
 }

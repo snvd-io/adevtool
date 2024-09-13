@@ -1,12 +1,15 @@
 canonical_name: "u264a_ca"
-version: 57000000008
+version: 60000000009
 apns {
+  apn {
+    name: "U+264A CA"
+    value: "h3g3"
+    type: DEFAULT
+    type: SUPL
+    user_editable: false
+  }
 }
 configs {
-  config {
-    key: "carrier_app_required_during_setup_bool"
-    bool_value: true
-  }
   config {
     key: "carrier_default_wfc_ims_enabled_bool"
     bool_value: true
@@ -24,12 +27,16 @@ configs {
     int_value: 2
   }
   config {
+    key: "carrier_ims_gba_required_bool"
+    bool_value: true
+  }
+  config {
     key: "carrier_name_override_bool"
     bool_value: true
   }
   config {
     key: "carrier_name_string"
-    text_value: "Google Fi"
+    text_value: "Google"
   }
   config {
     key: "carrier_ussd_method_int"
@@ -52,8 +59,36 @@ configs {
     bool_value: true
   }
   config {
+    key: "display_hd_audio_property_bool"
+    bool_value: false
+  }
+  config {
+    key: "enableSMSDeliveryReports"
+    bool_value: false
+  }
+  config {
+    key: "force_home_network_bool"
+    bool_value: true
+  }
+  config {
     key: "gps.es_extension_sec"
     text_value: "300"
+  }
+  config {
+    key: "hide_carrier_network_settings_bool"
+    bool_value: false
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_sim_lock_settings_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_sim_network_locked_events_bool"
+    bool_value: true
   }
   config {
     key: "ims_reasoninfo_mapping_string_array"
@@ -129,10 +164,6 @@ configs {
         }
       }
     }
-  }
-  config {
-    key: "imsvoice.audio_rtcp_inactivity_timer_millis_int"
-    int_value: 30000
   }
   config {
     key: "imsvoice.evs_payload_description_bundle"
@@ -259,10 +290,22 @@ configs {
     }
   }
   config {
+    key: "require_entitlement_checks_bool"
+    bool_value: false
+  }
+  config {
     key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
     bool_value: true
   }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 3
+  }
+  config {
+    key: "vvm_type_string"
+    text_value: "vvm_type_disabled"
+  }
 }
 last_updated {
-  seconds: 1715914019
+  seconds: 1716977053
 }

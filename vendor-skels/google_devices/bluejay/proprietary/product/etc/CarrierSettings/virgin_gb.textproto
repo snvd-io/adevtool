@@ -1,5 +1,5 @@
 canonical_name: "virgin_gb"
-version: 56000000017
+version: 60000000019
 apns {
   apn {
     name: "Virgin Media Mobile Internet"
@@ -249,5 +249,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1697177646
+  seconds: 1722173351
 }

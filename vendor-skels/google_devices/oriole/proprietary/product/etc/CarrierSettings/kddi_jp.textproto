@@ -1,5 +1,5 @@
 canonical_name: "kddi_jp"
-version: 56000000076
+version: 60000000077
 apns {
   apn {
     name: "5G NET"
@@ -473,6 +473,10 @@ configs {
     int_value: 40
   }
   config {
+    key: "qns.xcap_transport_type_int"
+    int_value: 0
+  }
+  config {
     key: "read_only_apn_types_string_array"
     text_array {
       item: "dun"
@@ -507,5 +511,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100344
+  seconds: 1714533626
 }

@@ -1,5 +1,5 @@
 canonical_name: "dish5gsa_us"
-version: 57000000006
+version: 60000000001
 apns {
   apn {
     name: "internet"
@@ -112,6 +112,14 @@ configs {
       item: 0
       item: 1
     }
+  }
+  config {
+    key: "ims.ipv4_sip_mtu_size_cellular_int"
+    int_value: 1430
+  }
+  config {
+    key: "ims.ipv6_sip_mtu_size_cellular_int"
+    int_value: 1430
   }
   config {
     key: "imsemergency.emergency_over_ims_roaming_supported_3gpp_network_types_int_array"
@@ -359,5 +367,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718957350
+  seconds: 1716977053
 }

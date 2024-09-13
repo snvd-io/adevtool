@@ -1,5 +1,5 @@
 canonical_name: "o2_sk"
-version: 56000000009
+version: 60000000010
 apns {
   apn {
     name: "O2 internet"
@@ -42,6 +42,10 @@ configs {
   config {
     key: "bsf.bsf_server_fqdn_string"
     text_value: "bsf.ims.mnc006.mcc231.pub.3gppnetwork.org"
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
   }
   config {
     key: "carrier_volte_available_bool"
@@ -154,5 +158,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635164
+  seconds: 1716355877
 }

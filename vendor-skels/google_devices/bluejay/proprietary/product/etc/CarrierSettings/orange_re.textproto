@@ -1,5 +1,5 @@
 canonical_name: "orange_re"
-version: 56000000008
+version: 60000000009
 apns {
   apn {
     name: "Orange World re"
@@ -43,6 +43,10 @@ configs {
   config {
     key: "hide_enhanced_4g_lte_bool"
     bool_value: true
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "PRD-IR92/15 #MANUFACTURE#/#MODEL#-#BUILD# device-type/#TYPE# mno-custom/#MCCMNC#"
   }
   config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
@@ -158,5 +162,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635164
+  seconds: 1712735153
 }

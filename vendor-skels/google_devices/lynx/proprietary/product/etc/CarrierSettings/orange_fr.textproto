@@ -1,5 +1,5 @@
 canonical_name: "orange_fr"
-version: 56000000012
+version: 60000000015
 apns {
   apn {
     name: "Orange Fr IMS"
@@ -52,7 +52,6 @@ apns {
     type: MMS
     bearer_bitmask: "18"
     mmsc: "http://mms.orange.fr"
-    protocol: IPV4V6
     user_visible: false
   }
 }
@@ -478,5 +477,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100379
+  seconds: 1722173380
 }

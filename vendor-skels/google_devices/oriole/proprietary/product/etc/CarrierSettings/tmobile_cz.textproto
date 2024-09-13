@@ -1,5 +1,5 @@
 canonical_name: "tmobile_cz"
-version: 56000000593
+version: 60000000593
 apns {
   apn {
     name: "IMS"

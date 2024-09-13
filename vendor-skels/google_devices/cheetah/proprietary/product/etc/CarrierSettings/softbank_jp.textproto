@@ -1,5 +1,5 @@
 canonical_name: "softbank_jp"
-version: 56000000017
+version: 60000000018
 apns {
   apn {
     name: "IMS"
@@ -436,6 +436,11 @@ configs {
     int_value: 0
   }
   config {
+    key: "imsvoice.srvcc_type_int_array"
+    int_array {
+    }
+  }
+  config {
     key: "is_ims_conference_size_enforced_bool"
     bool_value: true
   }
@@ -495,5 +500,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100361
+  seconds: 1714533646
 }

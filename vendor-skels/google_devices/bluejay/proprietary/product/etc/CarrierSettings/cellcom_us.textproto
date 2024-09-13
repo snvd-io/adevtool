@@ -1,5 +1,5 @@
 canonical_name: "cellcom_us"
-version: 56000000016
+version: 60000000019
 apns {
   apn {
     name: "Cellcom"
@@ -229,7 +229,7 @@ configs {
   }
   config {
     key: "carrier_volte_provisioning_required_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "carrier_vt_available_bool"
@@ -755,7 +755,6 @@ configs {
       config {
         key: "ims.capability_type_voice_int_array"
         int_array {
-          item: 0
           item: 1
         }
       }
@@ -1323,5 +1322,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100353
+  seconds: 1722173351
 }

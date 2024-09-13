@@ -1,5 +1,5 @@
 canonical_name: "h3_ie"
-version: 56000000014
+version: 60000000017
 apns {
   apn {
     name: "3"
@@ -77,6 +77,10 @@ configs {
     text_value: "171"
   }
   config {
+    key: "display_hd_plus_icon_bool"
+    bool_value: true
+  }
+  config {
     key: "ims.registration_expiry_timer_sec_int"
     int_value: 36000
   }
@@ -111,6 +115,7 @@ configs {
     int_array {
       item: 6
       item: 3
+      item: 5
     }
   }
   config {
@@ -184,5 +189,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635187
+  seconds: 1722173380
 }

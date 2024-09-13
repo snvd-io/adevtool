@@ -1,5 +1,5 @@
 canonical_name: "koodo_ca"
-version: 56000000086
+version: 60000000089
 apns {
   apn {
     name: "Koodo SP"
@@ -343,6 +343,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "iwlan.update_n1_mode_on_ui_change_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan_handover_policy_string_array"
     text_array {
       item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
@@ -468,5 +472,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519122
+  seconds: 1722173344
 }

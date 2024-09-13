@@ -1,5 +1,5 @@
 canonical_name: "fido_ca"
-version: 56000000017
+version: 60000000019
 apns {
   apn {
     name: "Fido Internet"
@@ -432,5 +432,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100361
+  seconds: 1722173359
 }

@@ -1,5 +1,5 @@
 canonical_name: "tmomvno_nl"
-version: 56000000018
+version: 60000000021
 apns {
   apn {
     name: "Internet"
@@ -108,6 +108,7 @@ configs {
     key: "ims_reasoninfo_mapping_string_array"
     text_array {
       item: "361| call declined|1017"
+      item: "510|Call completed elsewhere|1014"
     }
   }
   config {
@@ -326,5 +327,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690400
+  seconds: 1722173351
 }

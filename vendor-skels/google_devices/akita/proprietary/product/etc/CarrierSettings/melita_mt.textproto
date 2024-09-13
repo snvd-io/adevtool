@@ -1,0 +1,16 @@
+canonical_name: "melita_mt"
+version: 60000000001
+apns {
+  apn {
+    name: "melitaweb"
+    value: "web.melita"
+    type: DEFAULT
+    type: SUPL
+    authtype: 0
+  }
+}
+configs {
+}
+last_updated {
+  seconds: 1720164596
+}

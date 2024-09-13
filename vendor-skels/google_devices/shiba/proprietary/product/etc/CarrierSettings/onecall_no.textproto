@@ -1,5 +1,5 @@
 canonical_name: "onecall_no"
-version: 56000000005
+version: 60000000010
 apns {
   apn {
     name: "OneCall Internet"
@@ -41,6 +41,10 @@ apns {
 }
 configs {
   config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
     key: "carrier_default_wfc_ims_mode_int"
     int_value: 1
   }
@@ -55,6 +59,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
@@ -65,6 +73,20 @@ configs {
   config {
     key: "hide_enhanced_4g_lte_bool"
     bool_value: true
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_invite_support_int_array"
+    int_array {
+      item: 4
+      item: 2
+    }
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_register_support_int_array"
+    int_array {
+      item: 4
+      item: 2
+    }
   }
   config {
     key: "ims.ipv4_sip_mtu_size_cellular_int"
@@ -151,9 +173,13 @@ configs {
           config {
             key: "imsvoice.evs_codec_attribute_bitrate_int_array"
             int_array {
-              item: 3
+              item: 0
               item: 6
             }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 2
           }
         }
       }
@@ -166,6 +192,21 @@ configs {
   config {
     key: "imsvoice.ringing_timer_millis_int"
     int_value: 180000
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 14
+      item: 15
+    }
+  }
+  config {
+    key: "iwlan.dpd_timer_sec_int"
+    int_value: 330
+  }
+  config {
+    key: "iwlan.ike_remote_id_type_int"
+    int_value: 11
   }
   config {
     key: "maxMessageSize"
@@ -181,5 +222,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1707459796
+  seconds: 1722173396
 }

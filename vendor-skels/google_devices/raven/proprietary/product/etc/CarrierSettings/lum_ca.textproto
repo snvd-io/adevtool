@@ -1,5 +1,5 @@
 canonical_name: "lum_ca"
-version: 56000000005
+version: 60000000006
 apns {
   apn {
     name: "Lum"
@@ -95,6 +95,7 @@ configs {
     key: "imsemergency.emergency_over_ims_supported_rats_int_array"
     int_array {
       item: 3
+      item: 5
     }
   }
   config {
@@ -190,6 +191,10 @@ configs {
     }
   }
   config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 28800
   }
@@ -248,6 +253,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "qns.sos_transport_type_int"
+    int_value: 2
+  }
+  config {
     key: "sim_country_iso_override_string"
     text_value: "ca"
   }
@@ -271,5 +280,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1717463378
+  seconds: 1716976973
 }

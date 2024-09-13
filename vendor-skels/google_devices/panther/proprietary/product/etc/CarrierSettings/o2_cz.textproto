@@ -1,5 +1,5 @@
 canonical_name: "o2_cz"
-version: 56000000012
+version: 60000000013
 apns {
   apn {
     name: "O2 internet"
@@ -134,6 +134,10 @@ configs {
               item: 6
             }
           }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 255
+          }
         }
       }
     }
@@ -152,5 +156,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635171
+  seconds: 1715771932
 }

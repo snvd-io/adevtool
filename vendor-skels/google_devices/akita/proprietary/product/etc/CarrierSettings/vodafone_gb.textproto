@@ -1,5 +1,5 @@
 canonical_name: "vodafone_gb"
-version: 56000000010
+version: 60000000011
 apns {
   apn {
     name: "Vodafone UK Data"
@@ -199,10 +199,6 @@ configs {
     int_value: 30
   }
   config {
-    key: "iwlan.update_n1_mode_on_ui_change_bool"
-    bool_value: false
-  }
-  config {
     key: "min_udp_port_4500_nat_timeout_sec_int"
     int_value: 120
   }
@@ -316,5 +312,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519158
+  seconds: 1716977039
 }

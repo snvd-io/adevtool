@@ -1,5 +1,5 @@
 canonical_name: "firstnet_us"
-version: 56000000010
+version: 60000000014
 apns {
   apn {
     name: "ATT FirstNet-Phone"
@@ -110,7 +110,7 @@ configs {
   }
   config {
     key: "editable_wfc_mode_bool"
-    bool_value: false
+    bool_value: true
   }
   config {
     key: "emergency_number_prefix_string_array"
@@ -417,6 +417,7 @@ configs {
     key: "iwlan_handover_policy_string_array"
     text_array {
       item: "source=GERAN|IWLAN, target=GERAN|IWLAN, type=disallowed"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
       item: "source=UTRAN|EUTRAN|NGRAN|IWLAN, target=UTRAN|EUTRAN|NGRAN|IWLAN, type=allowed"
     }
   }
@@ -682,5 +683,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1707299261
+  seconds: 1722173369
 }

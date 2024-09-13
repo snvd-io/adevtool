@@ -1,5 +1,5 @@
 canonical_name: "h3g27202_ie"
-version: 56000000012
+version: 60000000015
 apns {
   apn {
     name: "3"
@@ -115,6 +115,7 @@ configs {
     int_array {
       item: 6
       item: 3
+      item: 5
     }
   }
   config {
@@ -188,5 +189,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635157
+  seconds: 1722173344
 }

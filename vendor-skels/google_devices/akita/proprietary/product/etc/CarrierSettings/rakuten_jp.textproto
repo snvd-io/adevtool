@@ -1,11 +1,12 @@
 canonical_name: "rakuten_jp"
-version: 56000000007
+version: 60000000011
 apns {
   apn {
     name: "Internet"
     value: "rakuten.jp"
     type: DEFAULT
     type: SUPL
+    type: IA
     type: DUN
     protocol: IPV4V6
     roaming_protocol: IPV4V6
@@ -216,7 +217,7 @@ configs {
   }
   config {
     key: "imsvoice.ringback_timer_millis_int"
-    int_value: 180000
+    int_value: 200000
   }
   config {
     key: "imsvoice.ringing_timer_millis_int"
@@ -273,5 +274,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100394
+  seconds: 1722173409
 }

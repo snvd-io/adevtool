@@ -5,11 +5,8 @@ cc_prebuilt_library_shared {
     name: "libdmengine__product",
     owner: "google_devices",
     stem: "libdmengine",
-    target: {
-        android_arm: { srcs: [ "product/lib/libdmengine.so" ] },
-        android_arm64: { srcs: [ "product/lib64/libdmengine.so" ] }
-    },
-    compile_multilib: "both",
+    target: { android_arm64: { srcs: [ "product/lib64/libdmengine.so" ] } },
+    compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
     strip: { none: true },
@@ -20,11 +17,8 @@ cc_prebuilt_library_shared {
     name: "libdmjavaplugin__product",
     owner: "google_devices",
     stem: "libdmjavaplugin",
-    target: {
-        android_arm: { srcs: [ "product/lib/libdmjavaplugin.so" ] },
-        android_arm64: { srcs: [ "product/lib64/libdmjavaplugin.so" ] }
-    },
-    compile_multilib: "both",
+    target: { android_arm64: { srcs: [ "product/lib64/libdmjavaplugin.so" ] } },
+    compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
     strip: { none: true },
@@ -147,87 +141,6 @@ dex_import {
 }
 
 cc_prebuilt_library_shared {
-    name: "libedgetpu_dba.google__system_ext",
-    owner: "google_devices",
-    stem: "libedgetpu_dba.google",
-    target: {
-        android_arm: { srcs: [ "system_ext/lib/libedgetpu_dba.google.so" ] },
-        android_arm64: { srcs: [ "system_ext/lib64/libedgetpu_dba.google.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libedgetpu_tachyon.google__system_ext",
-    owner: "google_devices",
-    stem: "libedgetpu_tachyon.google",
-    target: {
-        android_arm: { srcs: [ "system_ext/lib/libedgetpu_tachyon.google.so" ] },
-        android_arm64: { srcs: [ "system_ext/lib64/libedgetpu_tachyon.google.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmediaadaptor__system_ext",
-    owner: "google_devices",
-    stem: "libmediaadaptor",
-    target: {
-        android_arm: { srcs: [ "system_ext/lib/libmediaadaptor.so" ] },
-        android_arm64: { srcs: [ "system_ext/lib64/libmediaadaptor.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.samsung_slsi.telephony.hardware.oemservice@1.0__system_ext",
-    owner: "google_devices",
-    stem: "vendor.samsung_slsi.telephony.hardware.oemservice@1.0",
-    target: {
-        android_arm: { srcs: [ "system_ext/lib/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so" ] },
-        android_arm64: {
-            srcs: [ "system_ext/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so" ]
-        }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.samsung_slsi.telephony.hardware.radioExternal@1.0__system_ext",
-    owner: "google_devices",
-    stem: "vendor.samsung_slsi.telephony.hardware.radioExternal@1.0",
-    target: {
-        android_arm: {
-            srcs: [ "system_ext/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so" ]
-        },
-        android_arm64: {
-            srcs: [ "system_ext/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so" ]
-        }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "com.google.edgetpu_app_service-V3-ndk__system_ext",
     owner: "google_devices",
     stem: "com.google.edgetpu_app_service-V3-ndk",
@@ -256,6 +169,18 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libedgetpu_dba.google__system_ext",
+    owner: "google_devices",
+    stem: "libedgetpu_dba.google",
+    target: { android_arm64: { srcs: [ "system_ext/lib64/libedgetpu_dba.google.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libhbmsvmanager_jni__system_ext",
     owner: "google_devices",
     stem: "libhbmsvmanager_jni",
@@ -268,10 +193,54 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libmediaadaptor__system_ext",
+    owner: "google_devices",
+    stem: "libmediaadaptor",
+    target: { android_arm64: { srcs: [ "system_ext/lib64/libmediaadaptor.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libpowerstatshaldataprovider__system_ext",
     owner: "google_devices",
     stem: "libpowerstatshaldataprovider",
     target: { android_arm64: { srcs: [ "system_ext/lib64/libpowerstatshaldataprovider.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung_slsi.telephony.hardware.oemservice@1.0__system_ext",
+    owner: "google_devices",
+    stem: "vendor.samsung_slsi.telephony.hardware.oemservice@1.0",
+    target: {
+        android_arm64: {
+            srcs: [ "system_ext/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so" ]
+        }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung_slsi.telephony.hardware.radioExternal@1.0__system_ext",
+    owner: "google_devices",
+    stem: "vendor.samsung_slsi.telephony.hardware.radioExternal@1.0",
+    target: {
+        android_arm64: {
+            srcs: [ "system_ext/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so" ]
+        }
+    },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -374,6 +343,12 @@ android_app_import {
     system_ext_specific: true,
 }
 
+sh_binary {
+    name: "oem-iptables-init.sh",
+    owner: "google_devices",
+    src: "system/system/bin/oem-iptables-init.sh",
+}
+
 prebuilt_apex {
     name: "com.google.android.hardware.biometrics.face.pixel22",
     owner: "google_devices",
@@ -383,9 +358,9 @@ prebuilt_apex {
 }
 
 prebuilt_apex {
-    name: "com.google.android.widevine-wv_341113000",
+    name: "com.google.android.widevine-11775005",
     owner: "google_devices",
-    src: "vendor/apex/com.google.android.widevine-wv_341113000.apex",
+    src: "vendor/apex/com.google.android.widevine-11775005.apex",
     prefer: true,
     soc_specific: true,
 }
@@ -438,6 +413,16 @@ cc_prebuilt_binary {
     name: "bipchmgr",
     owner: "google_devices",
     srcs: [ "vendor/bin/bipchmgr" ],
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "boringssl_self_test32",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/boringssl_self_test32" ],
     check_elf_files: false,
     prefer: true,
     strip: { none: true },
@@ -545,17 +530,6 @@ cc_prebuilt_binary {
     name: "android.hardware.gxp.logging@service-gxp-logging",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/android.hardware.gxp.logging@service-gxp-logging" ],
-    relative_install_path: "hw",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.identity@1.0-service.citadel",
-    owner: "google_devices",
-    srcs: [ "vendor/bin/hw/android.hardware.identity@1.0-service.citadel" ],
     relative_install_path: "hw",
     check_elf_files: false,
     prefer: true,
@@ -831,6 +805,17 @@ cc_prebuilt_binary {
     name: "vendor.google.wireless_charger-default",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/vendor.google.wireless_charger-default" ],
+    relative_install_path: "hw",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.google.wireless_charger.service-default",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/hw/vendor.google.wireless_charger.service-default" ],
     relative_install_path: "hw",
     check_elf_files: false,
     prefer: true,
@@ -1152,1310 +1137,19 @@ prebuilt_etc {
     soc_specific: true,
 }
 
+prebuilt_etc {
+    name: "vice",
+    owner: "google_devices",
+    src: "vendor/etc/chre/vice.so",
+    filename_from_src: true,
+    sub_dir: "chre",
+    soc_specific: true,
+}
+
 dex_import {
     name: "com.google.android.camera.experimental2022",
     owner: "google_devices",
     jars: [ "vendor/framework/com.google.android.camera.experimental2022.jar" ],
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "aoc_aud_ext",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/aoc_aud_ext.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/aoc_aud_ext.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "aoc_audio_stereo_spatializer",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/aoc_audio_stereo_spatializer.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/aoc_audio_stereo_spatializer.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "audio_adapted_info_features",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/audio_adapted_info_features.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/audio_adapted_info_features.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "audio_amcs_ext",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/audio_amcs_ext.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/audio_amcs_ext.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "audio_bluenote_aoc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/audio_bluenote_aoc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/audio_bluenote_aoc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "audio_bt_aoc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/audio_bt_aoc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/audio_bt_aoc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "audio_cca_aoc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/audio_cca_aoc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/audio_cca_aoc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "audio_fortemedia_aoc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/audio_fortemedia_aoc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/audio_fortemedia_aoc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "audio_spk_35l41",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/audio_spk_35l41.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/audio_spk_35l41.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "audio_tunnel_aoc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/audio_tunnel_aoc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/audio_tunnel_aoc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "audio_usb_aoc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/audio_usb_aoc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/audio_usb_aoc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "audio_waves_aoc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/audio_waves_aoc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/audio_waves_aoc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "com.google.edgetpu_app_service-V3-ndk",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/com.google.edgetpu_app_service-V3-ndk.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/com.google.edgetpu_app_service-V3-ndk.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "com.google.pixel.modem.logmasklibrary-V1-ndk",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/com.google.pixel.modem.logmasklibrary-V1-ndk.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/com.google.pixel.modem.logmasklibrary-V1-ndk.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libGLES_mali",
-    owner: "google_devices",
-    relative_install_path: "egl",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/egl/libGLES_mali.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/egl/libGLES_mali.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "gxp_metrics_logger",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/gxp_metrics_logger.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/gxp_metrics_logger.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "audio.platform.aoc",
-    owner: "google_devices",
-    relative_install_path: "hw",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/hw/audio.platform.aoc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/hw/audio.platform.aoc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "audio.primary.gs201",
-    owner: "google_devices",
-    relative_install_path: "hw",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/hw/audio.primary.gs201.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/hw/audio.primary.gs201.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "sound_trigger.primary.gs201",
-    owner: "google_devices",
-    relative_install_path: "hw",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/hw/sound_trigger.primary.gs201.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/hw/sound_trigger.primary.gs201.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.google.whitechapel.audio.audioext@4.0-impl",
-    owner: "google_devices",
-    relative_install_path: "hw",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/hw/vendor.google.whitechapel.audio.audioext@4.0-impl.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/hw/vendor.google.whitechapel.audio.audioext@4.0-impl.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vulkan.mali",
-    owner: "google_devices",
-    relative_install_path: "hw",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/hw/vulkan.mali.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/hw/vulkan.mali.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lassen_dmd_constants",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/lassen_dmd_constants.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/lassen_dmd_constants.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib_aion_buffer",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/lib_aion_buffer.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/lib_aion_buffer.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libadaptedinfo",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libadaptedinfo.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libadaptedinfo.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libAlgFx_HiFi3z",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libAlgFx_HiFi3z.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libAlgFx_HiFi3z.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libamcsextfile",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libamcsextfile.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libamcsextfile.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libaoc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libaoc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libaoc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libaoctuningdecoder",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libaoctuningdecoder.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libaoctuningdecoder.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libaocx",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libaocx.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libaocx.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libbo_av1",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libbo_av1.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libbo_av1.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libc2filterplugin",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libc2filterplugin.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libc2filterplugin.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdisplaycolor",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libdisplaycolor.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libdisplaycolor.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libedgetpu_client.google",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libedgetpu_client.google.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libedgetpu_client.google.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libedgetpu_util",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libedgetpu_util.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libedgetpu_util.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libExynosC2ComponentStore",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libExynosC2ComponentStore.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libExynosC2ComponentStore.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libExynosC2H263Dec",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libExynosC2H263Dec.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libExynosC2H263Dec.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libExynosC2H263Enc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libExynosC2H263Enc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libExynosC2H263Enc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libExynosC2H264Dec",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libExynosC2H264Dec.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libExynosC2H264Dec.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libExynosC2H264Enc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libExynosC2H264Enc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libExynosC2H264Enc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libExynosC2HevcDec",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libExynosC2HevcDec.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libExynosC2HevcDec.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libExynosC2HevcEnc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libExynosC2HevcEnc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libExynosC2HevcEnc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libExynosC2Mpeg4Dec",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libExynosC2Mpeg4Dec.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libExynosC2Mpeg4Dec.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libExynosC2Mpeg4Enc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libExynosC2Mpeg4Enc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libExynosC2Mpeg4Enc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libExynosC2Vp8Dec",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libExynosC2Vp8Dec.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libExynosC2Vp8Dec.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libExynosC2Vp8Enc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libExynosC2Vp8Enc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libExynosC2Vp8Enc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libExynosC2Vp9Dec",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libExynosC2Vp9Dec.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libExynosC2Vp9Dec.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libExynosC2Vp9Enc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libExynosC2Vp9Enc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libExynosC2Vp9Enc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libfvsam_prm_parser",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libfvsam_prm_parser.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libfvsam_prm_parser.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgc2_av1_dec",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libgc2_av1_dec.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libgc2_av1_dec.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgc2_base",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libgc2_base.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libgc2_base.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgc2_cwl",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libgc2_cwl.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libgc2_cwl.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgc2_log",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libgc2_log.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libgc2_log.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgc2_store",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libgc2_store.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libgc2_store.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgc2_utils",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libgc2_utils.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libgc2_utils.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgooglerilaudio",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libgooglerilaudio.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libgooglerilaudio.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgooglerilmemmonitor",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libgooglerilmemmonitor.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libgooglerilmemmonitor.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgpudataproducer",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libgpudataproducer.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libgpudataproducer.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libion_exynos",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libion_exynos.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libion_exynos.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmahalcontroller",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libmahalcontroller.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libmahalcontroller.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmetrics_logger",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libmetrics_logger.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libmetrics_logger.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "liboemservice",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/liboemservice.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/liboemservice.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libOpenCL-pixel",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libOpenCL-pixel.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libOpenCL-pixel.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libOpenCL",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libOpenCL.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libOpenCL.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqorvo_uwb_params_nfcc",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libqorvo_uwb_params_nfcc.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libqorvo_uwb_params_nfcc.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libril_gfeature",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libril_gfeature.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libril_gfeature.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libril_sitril",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libril_sitril.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libril_sitril.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libril-aidl",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libril-aidl.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libril-aidl.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libsensorsuez",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libsensorsuez.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libsensorsuez.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libsitril-audio",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libsitril-audio.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libsitril-audio.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libsitril-client",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libsitril-client.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libsitril-client.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libsitril-gps",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libsitril-gps.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libsitril-gps.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libsitril-ims",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libsitril-ims.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libsitril-ims.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libsitril",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libsitril.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libsitril.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libstpreprocess21",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libstpreprocess21.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libstpreprocess21.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libstreset21",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libstreset21.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libstreset21.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libsueznanoappclients",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libsueznanoappclients.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libsueznanoappclients.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libusf",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libusf.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libusf.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "sensors.usf",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/sensors.usf.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/sensors.usf.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "liboffloadeffect",
-    owner: "google_devices",
-    relative_install_path: "soundfx",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/soundfx/liboffloadeffect.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/soundfx/liboffloadeffect.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libspatialaudio",
-    owner: "google_devices",
-    relative_install_path: "soundfx",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/soundfx/libspatialaudio.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/soundfx/libspatialaudio.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor-pixelatoms-cpp",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/vendor-pixelatoms-cpp.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/vendor-pixelatoms-cpp.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.google.battery_mitigation-V1-ndk",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/vendor.google.battery_mitigation-V1-ndk.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/vendor.google.battery_mitigation-V1-ndk.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.google.battery_mitigation.service_static",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/vendor.google.battery_mitigation.service_static.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/vendor.google.battery_mitigation.service_static.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.google.whitechapel.audio.audioext@4.0",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/vendor.google.whitechapel.audio.audioext@4.0.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/vendor.google.whitechapel.audio.audioext@4.0.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.google.whitechapel.audio.extension-V1-ndk",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/vendor.google.whitechapel.audio.extension-V1-ndk.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/vendor.google.whitechapel.audio.extension-V1-ndk.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.radio.base",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/vendor.radio.base.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/vendor.radio.base.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.radio.protocol.sit.base",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/vendor.radio.protocol.sit.base.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/vendor.radio.protocol.sit.base.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.radio.protocol.sit.json",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/vendor.radio.protocol.sit.json.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/vendor.radio.protocol.sit.json.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.radio.protocol.sit.stream",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/vendor.radio.protocol.sit.stream.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/vendor.radio.protocol.sit.stream.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.samsung_slsi.telephony.hardware.oemservice@1.0",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.samsung_slsi.telephony.hardware.radioExternal@1.0",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so" ] },
-        android_arm64: {
-            srcs: [ "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so" ]
-        }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.samsung_slsi.telephony.hardware.radioExternal@1.1",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so" ] },
-        android_arm64: {
-            srcs: [ "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so" ]
-        }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
     soc_specific: true,
 }
 
@@ -2475,30 +1169,6 @@ cc_prebuilt_library_shared {
     owner: "google_devices",
     target: {
         android_arm64: { srcs: [ "vendor/lib64/android.hardware.confirmationui.secure_input_citadel.so" ] }
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "android.hardware.identity@1.0-impl.nos",
-    owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/android.hardware.identity@1.0-impl.nos.so" ] } },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "android.hardware.keymaster@4.1-impl.nos",
-    owner: "google_devices",
-    target: {
-        android_arm64: { srcs: [ "vendor/lib64/android.hardware.keymaster@4.1-impl.nos.so" ] }
     },
     compile_multilib: "64",
     check_elf_files: false,
@@ -2565,9 +1235,174 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "aoc_aud_ext",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/aoc_aud_ext.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "aoc_audio_stereo_spatializer",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/aoc_audio_stereo_spatializer.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "aocx-ndk",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/aocx-ndk.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio_adapted_info_features",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/audio_adapted_info_features.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio_amcs_ext",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/audio_amcs_ext.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio_bluenote_aoc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/audio_bluenote_aoc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio_bt_aoc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/audio_bt_aoc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio_cca_aoc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/audio_cca_aoc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio_fortemedia_aoc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/audio_fortemedia_aoc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio_spk_35l41",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/audio_spk_35l41.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio_tunnel_aoc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/audio_tunnel_aoc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio_usb_aoc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/audio_usb_aoc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio_waves_aoc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/audio_waves_aoc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "biometricsuez",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/biometricsuez.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.google.edgetpu_app_service-V3-ndk",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/com.google.edgetpu_app_service-V3-ndk.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.google.edgetpu_app_service-V4-ndk",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/com.google.edgetpu_app_service-V4-ndk.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -2650,6 +1485,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "com.google.pixel.modem.logmasklibrary-V1-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "vendor/lib64/com.google.pixel.modem.logmasklibrary-V1-ndk.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libGLES_mali",
+    owner: "google_devices",
+    relative_install_path: "egl",
+    target: { android_arm64: { srcs: [ "vendor/lib64/egl/libGLES_mali.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "fake_gxp_telemetry_reader",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/fake_gxp_telemetry_reader.so" ] } },
@@ -2664,6 +1524,17 @@ cc_prebuilt_library_shared {
     name: "fp_utils",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/fp_utils.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "gxp_metrics_logger",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/gxp_metrics_logger.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -2697,6 +1568,30 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "audio.platform.aoc",
+    owner: "google_devices",
+    relative_install_path: "hw",
+    target: { android_arm64: { srcs: [ "vendor/lib64/hw/audio.platform.aoc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio.primary.gs201",
+    owner: "google_devices",
+    relative_install_path: "hw",
+    target: { android_arm64: { srcs: [ "vendor/lib64/hw/audio.primary.gs201.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "flp.default",
     owner: "google_devices",
     relative_install_path: "hw",
@@ -2721,9 +1616,157 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "sound_trigger.primary.gs201",
+    owner: "google_devices",
+    relative_install_path: "hw",
+    target: { android_arm64: { srcs: [ "vendor/lib64/hw/sound_trigger.primary.gs201.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.google.whitechapel.audio.audioext@4.0-impl",
+    owner: "google_devices",
+    relative_install_path: "hw",
+    target: {
+        android_arm64: { srcs: [ "vendor/lib64/hw/vendor.google.whitechapel.audio.audioext@4.0-impl.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vulkan.mali",
+    owner: "google_devices",
+    relative_install_path: "hw",
+    target: { android_arm64: { srcs: [ "vendor/lib64/hw/vulkan.mali.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lassen_dmd_constants",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/lassen_dmd_constants.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_aion_buffer",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/lib_aion_buffer.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "lib_reader",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/lib_reader.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libadaptedinfo",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libadaptedinfo.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libAlgFx_HiFi3z",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libAlgFx_HiFi3z.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libamcsextfile",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libamcsextfile.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaoc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libaoc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaoctuningdecoder",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libaoctuningdecoder.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaocx",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libaocx.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbo_av1",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libbo_av1.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libc2filterplugin",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libc2filterplugin.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -2809,6 +1852,39 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libdisplaycolor",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libdisplaycolor.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libedgetpu_client.google",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libedgetpu_client.google.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libedgetpu_tachyon.google",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libedgetpu_tachyon.google.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libedgetpu_tflite_compiler",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libedgetpu_tflite_compiler.so" ] } },
@@ -2820,9 +1896,273 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libedgetpu_util",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libedgetpu_util.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosC2ComponentStore",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libExynosC2ComponentStore.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosC2H263Dec",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libExynosC2H263Dec.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosC2H263Enc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libExynosC2H263Enc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosC2H264Dec",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libExynosC2H264Dec.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosC2H264Enc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libExynosC2H264Enc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosC2HevcDec",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libExynosC2HevcDec.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosC2HevcEnc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libExynosC2HevcEnc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosC2Mpeg4Dec",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libExynosC2Mpeg4Dec.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosC2Mpeg4Enc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libExynosC2Mpeg4Enc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosC2Vp8Dec",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libExynosC2Vp8Dec.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosC2Vp8Enc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libExynosC2Vp8Enc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosC2Vp9Dec",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libExynosC2Vp9Dec.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosC2Vp9Enc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libExynosC2Vp9Enc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfvsam_prm_parser",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libfvsam_prm_parser.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgc2_av1_dec",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libgc2_av1_dec.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgc2_base",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libgc2_base.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgc2_cwl",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libgc2_cwl.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgc2_log",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libgc2_log.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgc2_store",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libgc2_store.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgc2_utils",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libgc2_utils.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libgf_hal",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libgf_hal.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgooglerilaudio",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libgooglerilaudio.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgooglerilmemmonitor",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libgooglerilmemmonitor.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgpudataproducer",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libgpudataproducer.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -2853,9 +2193,42 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libion_exynos",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libion_exynos.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libjson",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libjson.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmahalcontroller",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libmahalcontroller.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmetrics_logger",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libmetrics_logger.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -2897,9 +2270,97 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "liboemservice",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/liboemservice.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOpenCL-pixel",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libOpenCL-pixel.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOpenCL",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libOpenCL.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqorvo_uwb_params_nfcc",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libqorvo_uwb_params_nfcc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libril_gfeature",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libril_gfeature.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libril_sitril",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libril_sitril.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libril-aidl",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libril-aidl.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "librtxproto_aidl-default",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/librtxproto_aidl-default.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsensorsuez",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libsensorsuez.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -2930,6 +2391,94 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libsitril-audio",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libsitril-audio.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsitril-client",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libsitril-client.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsitril-gps",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libsitril-gps.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsitril-ims",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libsitril-ims.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsitril",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libsitril.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstpreprocess21",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libstpreprocess21.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstreset21",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libstreset21.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsueznanoappclients",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libsueznanoappclients.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libtachyon_core",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libtachyon_core.so" ] } },
@@ -2944,6 +2493,28 @@ cc_prebuilt_library_shared {
     name: "libtouchflow",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libtouchflow.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libusf",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libusf.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libutils-default",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libutils-default.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -2976,6 +2547,41 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "sensors.usf",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/sensors.usf.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liboffloadeffect",
+    owner: "google_devices",
+    relative_install_path: "soundfx",
+    target: { android_arm64: { srcs: [ "vendor/lib64/soundfx/liboffloadeffect.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libspatialaudio",
+    owner: "google_devices",
+    relative_install_path: "soundfx",
+    target: { android_arm64: { srcs: [ "vendor/lib64/soundfx/libspatialaudio.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor_chre_atoms_log",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/vendor_chre_atoms_log.so" ] } },
@@ -2998,9 +2604,46 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor-pixelatoms-cpp",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/vendor-pixelatoms-cpp.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.google.audiometricext@1.0",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/vendor.google.audiometricext@1.0.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.google.battery_mitigation-V1-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.battery_mitigation-V1-ndk.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.google.battery_mitigation.service_static",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.battery_mitigation.service_static.so" ] }
+    },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -3031,9 +2674,135 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.google.whitechapel.audio.audioext@4.0",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.whitechapel.audio.audioext@4.0.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.google.whitechapel.audio.extension-V2-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.whitechapel.audio.extension-V2-ndk.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.google.wireless_charger-V2-ndk",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/vendor.google.wireless_charger-V2-ndk.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.google.wireless_charger.service-V1-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.wireless_charger.service-V1-ndk.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.radio.base",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/vendor.radio.base.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.radio.protocol.sit.base",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/vendor.radio.protocol.sit.base.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.radio.protocol.sit.json",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/vendor.radio.protocol.sit.json.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.radio.protocol.sit.stream",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/vendor.radio.protocol.sit.stream.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung_slsi.telephony.hardware.oemservice@1.0",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung_slsi.telephony.hardware.radioExternal@1.0",
+    owner: "google_devices",
+    target: {
+        android_arm64: {
+            srcs: [ "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so" ]
+        }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung_slsi.telephony.hardware.radioExternal@1.1",
+    owner: "google_devices",
+    target: {
+        android_arm64: {
+            srcs: [ "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so" ]
+        }
+    },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -3099,15 +2868,6 @@ prebuilt_etc_xml {
     name: "android.hardware.gnss@2.1-service-brcm__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-brcm.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "android.hardware.identity.strongbox",
-    owner: "google_devices",
-    src: "vendor/etc/vintf/manifest/android.hardware.identity.strongbox.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -3261,6 +3021,15 @@ prebuilt_etc_xml {
     name: "vendor.google.wireless_charger-default__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/vendor.google.wireless_charger-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "vendor.google.wireless_charger.service-default__2",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/vendor.google.wireless_charger.service-default.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,

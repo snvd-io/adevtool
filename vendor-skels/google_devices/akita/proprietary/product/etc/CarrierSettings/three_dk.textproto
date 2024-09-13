@@ -1,5 +1,5 @@
 canonical_name: "three_dk"
-version: 56000000005
+version: 60000000008
 apns {
   apn {
     name: "3"
@@ -12,6 +12,7 @@ apns {
     mmsc_proxy: "mmsproxy.3.dk"
     mmsc_proxy_port: "8799"
     protocol: IPV4V6
+    roaming_protocol: IPV4V6
   }
   apn {
     name: "3"
@@ -292,5 +293,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1698312810
+  seconds: 1722173409
 }

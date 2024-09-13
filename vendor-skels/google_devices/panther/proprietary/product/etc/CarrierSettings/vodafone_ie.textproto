@@ -1,5 +1,5 @@
 canonical_name: "vodafone_ie"
-version: 56000000016
+version: 60000000019
 apns {
   apn {
     name: "Internet"
@@ -238,7 +238,11 @@ configs {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 5
+  }
 }
 last_updated {
-  seconds: 1706100361
+  seconds: 1722173359
 }

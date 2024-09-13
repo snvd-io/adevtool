@@ -1,5 +1,5 @@
 canonical_name: "vodafone_cz"
-version: 56000000013
+version: 60000000014
 apns {
   apn {
     name: "IMS"
@@ -72,6 +72,10 @@ configs {
   config {
     key: "default_vm_number_string"
     text_value: "+420608989898"
+  }
+  config {
+    key: "display_hd_plus_icon_bool"
+    bool_value: true
   }
   config {
     key: "hide_enhanced_4g_lte_bool"
@@ -160,5 +164,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635195
+  seconds: 1715154557
 }

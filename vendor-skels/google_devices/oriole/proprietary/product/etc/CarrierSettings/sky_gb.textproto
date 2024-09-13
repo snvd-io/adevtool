@@ -1,5 +1,5 @@
 canonical_name: "sky_gb"
-version: 56000000012
+version: 60000000018
 apns {
   apn {
     name: "SKY MMS"
@@ -18,7 +18,7 @@ apns {
     mmsc: "http://185.110.178.96:38090/was"
     mmsc_proxy: "185.110.178.97"
     mmsc_proxy_port: "9028"
-    user_editable: false
+    user_visible: false
   }
   apn {
     name: "SKY Internet"
@@ -38,6 +38,7 @@ apns {
     name: "Sky Ut"
     value: "ut.mobile.sky"
     type: XCAP
+    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -47,6 +48,10 @@ configs {
   config {
     key: "bsf.bsf_server_fqdn_string"
     text_value: "bsf.ims.mnc057.mcc234.pub.3gppnetwork.org"
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
   }
   config {
     key: "carrier_nr_availabilities_int_array"
@@ -96,8 +101,6 @@ configs {
       item: 5
       item: 6
       item: 3
-      item: 1
-      item: 2
     }
   }
   config {
@@ -127,12 +130,6 @@ configs {
           item: 96
         }
       }
-      config {
-        key: "imsvoice.evs_payload_type_int_array"
-        int_array {
-          item: 126
-        }
-      }
     }
   }
   config {
@@ -142,27 +139,6 @@ configs {
   config {
     key: "imsvoice.dedicated_bearer_wait_timer_millis_int"
     int_value: 10000
-  }
-  config {
-    key: "imsvoice.evs_payload_description_bundle"
-    bundle {
-      config {
-        key: "126"
-        bundle {
-          config {
-            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
-            int_array {
-              item: 0
-              item: 6
-            }
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
-            int_value: 3
-          }
-        }
-      }
-    }
   }
   config {
     key: "imsvoice.minimum_session_expires_timer_sec_int"
@@ -207,5 +183,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519122
+  seconds: 1722173344
 }

@@ -1,5 +1,5 @@
 canonical_name: "tmobile_us"
-version: 57000000017
+version: 60000000015
 apns {
   apn {
     name: "T-Mobile Tethering"
@@ -511,10 +511,6 @@ configs {
     text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"10500\"],\"RetryArray\": [\"3600\",\"7200\",\"10800\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\",\"WIFI_DISABLE_EVENT\",\"WIFI_CALLING_DISABLE_EVENT\"]},{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"15500\"],\"NumAttemptsPerFqdn\": \"6\",\"RetryArray\": [\"0\",\"0\",\"300\",\"600\",\"1200\",\"0\",\"0\",\"0\",\"300\",\"600\",\"1200\",\"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\",\"WIFI_DISABLE_EVENT\",\"WIFI_CALLING_DISABLE_EVENT\"]},{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"11001\",\"11011\"],\"RetryArray\": [],\"UnthrottlingEvents\": []},{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"8192\"],\"RetryArray\": [\"5\",\"10\",\"10\",\"20\",\"40\",\"80\",\"160\",\"320\",\"640\",\"1280\",\"1800\",\"3600\",\"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\",\"WIFI_DISABLE_EVENT\",\"WIFI_CALLING_DISABLE_EVENT\"],\"HandoverAttemptCount\": \"3\"}]}]"
   }
   config {
-    key: "iwlan.update_n1_mode_on_ui_change_bool"
-    bool_value: false
-  }
-  config {
     key: "iwlan_handover_policy_string_array"
     text_array {
       item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
@@ -781,5 +777,5 @@ vendor_configs {
   }
 }
 last_updated {
-  seconds: 1716513306
+  seconds: 1716977053
 }

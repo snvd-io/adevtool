@@ -1,5 +1,5 @@
 canonical_name: "simyo_es"
-version: 56000000003
+version: 60000000006
 apns {
   apn {
     name: "internet simyo"
@@ -68,10 +68,6 @@ configs {
   config {
     key: "default_vm_number_string"
     text_value: "242"
-  }
-  config {
-    key: "hide_enhanced_4g_lte_bool"
-    bool_value: true
   }
   config {
     key: "hide_redundant_options_menu_on_stk_input_screen_bool"
@@ -386,5 +382,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519128
+  seconds: 1722173351
 }

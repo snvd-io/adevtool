@@ -1,5 +1,5 @@
 canonical_name: "default"
-version: 56000000064
+version: 60000000067
 configs {
   config {
     key: "carrier_cross_sim_ims_available_bool"
@@ -54,10 +54,6 @@ configs {
   config {
     key: "emergency_sms_mode_timer_ms_int"
     int_value: 300000
-  }
-  config {
-    key: "force_home_network_bool"
-    bool_value: false
   }
   config {
     key: "force_imei_bool"
@@ -279,6 +275,10 @@ configs {
     int_value: 5
   }
   config {
+    key: "iwlan.update_n1_mode_on_ui_change_bool"
+    bool_value: false
+  }
+  config {
     key: "iwlan_handover_policy_string_array"
     text_array {
       item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
@@ -459,5 +459,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709115987
+  seconds: 1722173344
 }

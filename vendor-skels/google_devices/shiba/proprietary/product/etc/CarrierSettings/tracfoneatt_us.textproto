@@ -1,5 +1,5 @@
 canonical_name: "tracfoneatt_us"
-version: 56000000013
+version: 60000000016
 apns {
   apn {
     name: "Tracfone AT&T"
@@ -498,6 +498,7 @@ configs {
     key: "iwlan_handover_policy_string_array"
     text_array {
       item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
       item: "source=IWLAN|UNKNOWN, target=GERAN, type=disallowed, capabilities=IMS"
       item: "source=GERAN, target=IWLAN, type=disallowed, capabilities=IMS"
       item: "source=UTRAN|EUTRAN|NGRAN|IWLAN, target=UTRAN|EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
@@ -825,5 +826,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1707299272
+  seconds: 1722173396
 }

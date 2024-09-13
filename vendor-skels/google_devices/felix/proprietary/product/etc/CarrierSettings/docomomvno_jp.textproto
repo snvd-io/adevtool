@@ -1,5 +1,5 @@
 canonical_name: "docomomvno_jp"
-version: 56000000011
+version: 60000000011
 apns {
   apn {
     name: "sp\343\203\242\343\203\274\343\203\211"

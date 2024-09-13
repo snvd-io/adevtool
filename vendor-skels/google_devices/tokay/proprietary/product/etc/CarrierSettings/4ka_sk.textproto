@@ -1,8 +1,8 @@
 canonical_name: "4ka_sk"
-version: 57000000002
+version: 60000000003
 apns {
   apn {
-    name: "4ka SK Internet"
+    name: "4ka Internet"
     value: "internet"
     type: DEFAULT
     protocol: IPV4V6
@@ -39,5 +39,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1713418446
+  seconds: 1717578413
 }

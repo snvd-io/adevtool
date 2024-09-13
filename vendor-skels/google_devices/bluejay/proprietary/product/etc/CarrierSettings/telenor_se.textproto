@@ -1,5 +1,5 @@
 canonical_name: "telenor_se"
-version: 56000000016
+version: 60000000020
 apns {
   apn {
     name: "Telenor MMS"
@@ -228,5 +228,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690400
+  seconds: 1722173351
 }

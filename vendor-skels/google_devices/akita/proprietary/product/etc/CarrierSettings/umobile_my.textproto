@@ -1,5 +1,5 @@
 canonical_name: "umobile_my"
-version: 56000000008
+version: 60000000010
 apns {
   apn {
     name: "U Mobile Internet"
@@ -113,5 +113,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690429
+  seconds: 1722173409
 }

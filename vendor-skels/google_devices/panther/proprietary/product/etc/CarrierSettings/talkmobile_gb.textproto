@@ -1,5 +1,5 @@
 canonical_name: "talkmobile_gb"
-version: 56000000010
+version: 60000000015
 apns {
   apn {
     name: "Talkmob WAP"
@@ -33,6 +33,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "carrier_default_wfc_ims_available_bool"
+    bool_value: true
+  }
   config {
     key: "carrier_nr_availabilities_int_array"
     int_array {
@@ -76,12 +80,6 @@ configs {
     bool_value: false
   }
   config {
-    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
-    int_array {
-      item: 3
-    }
-  }
-  config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
     bool_value: false
   }
@@ -96,6 +94,11 @@ configs {
   config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
     int_array {
+      item: 6
+      item: 3
+      item: 5
+      item: 1
+      item: 2
     }
   }
   config {
@@ -165,5 +168,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715212432
+  seconds: 1722173359
 }

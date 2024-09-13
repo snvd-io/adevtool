@@ -1,5 +1,5 @@
 canonical_name: "telenor_no"
-version: 56000000003
+version: 60000000006
 apns {
   apn {
     name: "Telenor Smart"
@@ -164,6 +164,22 @@ configs {
     bool_value: true
   }
   config {
+    key: "iwlan.child_sa_rekey_hard_timer_sec_int"
+    int_value: 3600
+  }
+  config {
+    key: "iwlan.child_sa_rekey_soft_timer_sec_int"
+    int_value: 3500
+  }
+  config {
+    key: "iwlan.ike_rekey_hard_timer_in_sec"
+    int_value: 86400
+  }
+  config {
+    key: "iwlan.ike_rekey_soft_timer_sec_int"
+    int_value: 86300
+  }
+  config {
     key: "maxImageHeight"
     int_value: 1944
   }
@@ -189,5 +205,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1695826689
+  seconds: 1722173409
 }

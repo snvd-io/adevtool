@@ -1,5 +1,5 @@
 canonical_name: "meo_pt"
-version: 56000000016
+version: 60000000019
 apns {
   apn {
     name: "tmn internet"
@@ -87,6 +87,14 @@ configs {
   }
   config {
     key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enable_2g_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
     bool_value: true
   }
   config {
@@ -226,5 +234,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635180
+  seconds: 1722173369
 }

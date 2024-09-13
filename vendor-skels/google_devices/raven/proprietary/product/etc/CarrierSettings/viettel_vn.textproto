@@ -1,0 +1,44 @@
+canonical_name: "viettel_vn"
+version: 60000000001
+apns {
+  apn {
+    name: "Viettel-wap-gprs 1"
+    value: "v-internet"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "Viettel-wap-gprs 2"
+    value: "v-wap"
+    type: DEFAULT
+    type: SUPL
+    proxy: "192.168.233.10"
+    port: "8080"
+  }
+  apn {
+    name: "Viettel-gprs-mms"
+    value: "v-mms"
+    type: MMS
+    mmsc: "http://mms.viettelmobile.com.vn/mms/wapenc"
+    mmsc_proxy: "192.168.233.10"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1719391050
+}

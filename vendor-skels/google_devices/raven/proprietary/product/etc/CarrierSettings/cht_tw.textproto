@@ -1,5 +1,5 @@
 canonical_name: "cht_tw"
-version: 56000000394
+version: 60000000396
 apns {
   apn {
     name: "\344\270\255\350\217\257\351\233\273\344\277\241(Chunghwa) (Internet)"
@@ -256,5 +256,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1692898797
+  seconds: 1722173344
 }

@@ -1,5 +1,5 @@
 canonical_name: "celcom_my"
-version: 56000000009
+version: 60000000011
 apns {
   apn {
     name: "Celcom Internet"
@@ -91,5 +91,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690429
+  seconds: 1722173409
 }

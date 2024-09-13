@@ -1,5 +1,5 @@
 canonical_name: "coriolis_fr"
-version: 57000000005
+version: 60000000007
 apns {
   apn {
     name: "Coriolis"
@@ -232,5 +232,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1710391116
+  seconds: 1722173420
 }

@@ -1,5 +1,5 @@
 canonical_name: "carolinawest_us"
-version: 56000000006
+version: 60000000006
 apns {
   apn {
     name: "Carolina West Wireless"
@@ -128,5 +128,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690394
+  seconds: 1709714785
 }

@@ -1,15 +1,17 @@
 canonical_name: "partner_il"
-version: 56000000006
+version: 60000000007
 apns {
   apn {
-    name: "3G Portal"
-    value: "uwap.orange.co.il"
+    name: "Partner"
+    value: "uinternet"
     type: DEFAULT
     type: MMS
     type: SUPL
+    type: DUN
+    authtype: 3
     mmsc: "http://192.168.220.15/servlets/mms"
-    mmsc_proxy: "192.118.11.55"
-    mmsc_proxy_port: "8080"
+    protocol: IPV4V6
+    user_editable: false
   }
   apn {
     name: "IMS"
@@ -84,5 +86,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706698783
+  seconds: 1718316544
 }

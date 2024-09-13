@@ -1,5 +1,5 @@
 canonical_name: "telia_no"
-version: 56000000011
+version: 60000000014
 apns {
   apn {
     name: "Telia Internet"
@@ -86,6 +86,20 @@ configs {
     bool_value: true
   }
   config {
+    key: "ims.geolocation_pidf_in_sip_invite_support_int_array"
+    int_array {
+      item: 4
+      item: 2
+    }
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_register_support_int_array"
+    int_array {
+      item: 4
+      item: 2
+    }
+  }
+  config {
     key: "ims.ipv4_sip_mtu_size_cellular_int"
     int_value: 1300
   }
@@ -170,9 +184,13 @@ configs {
           config {
             key: "imsvoice.evs_codec_attribute_bitrate_int_array"
             int_array {
-              item: 3
+              item: 0
               item: 6
             }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 2
           }
         }
       }
@@ -243,5 +261,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1707459772
+  seconds: 1722173351
 }

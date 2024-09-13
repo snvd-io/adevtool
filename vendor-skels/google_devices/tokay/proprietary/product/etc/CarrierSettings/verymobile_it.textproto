@@ -1,5 +1,5 @@
 canonical_name: "verymobile_it"
-version: 57000000005
+version: 60000000010
 apns {
   apn {
     name: "IMS"
@@ -199,7 +199,21 @@ configs {
   config {
     key: "qns.idle_eutran_rsrp_int_array"
     int_array {
-      item: -104
+      item: -96
+      item: -116
+    }
+  }
+  config {
+    key: "qns.idle_geran_rssi_int_array"
+    int_array {
+      item: -90
+      item: -100
+    }
+  }
+  config {
+    key: "qns.idle_utran_rscp_int_array"
+    int_array {
+      item: -100
       item: -110
     }
   }
@@ -208,6 +222,22 @@ configs {
     int_array {
       item: -70
       item: -80
+    }
+  }
+  config {
+    key: "qns.ims_wlan_hysteresis_timer_ms_int_array"
+    int_array {
+      item: 60000
+      item: 30000
+      item: 0
+    }
+  }
+  config {
+    key: "qns.ims_wwan_hysteresis_timer_ms_int_array"
+    int_array {
+      item: 60000
+      item: 30000
+      item: 0
     }
   }
   config {
@@ -230,8 +260,8 @@ configs {
   config {
     key: "qns.voice_eutran_rsrp_int_array"
     int_array {
-      item: -104
-      item: -110
+      item: -96
+      item: -116
     }
   }
   config {
@@ -259,5 +289,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715228879
+  seconds: 1722173420
 }

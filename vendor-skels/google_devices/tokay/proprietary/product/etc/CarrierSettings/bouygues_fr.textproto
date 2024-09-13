@@ -1,5 +1,5 @@
 canonical_name: "bouygues_fr"
-version: 57000000006
+version: 60000000009
 apns {
   apn {
     name: "Bouygues Telecom"
@@ -319,5 +319,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715228879
+  seconds: 1722173420
 }

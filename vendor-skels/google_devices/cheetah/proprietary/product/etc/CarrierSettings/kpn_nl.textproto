@@ -1,13 +1,13 @@
 canonical_name: "kpn_nl"
-version: 56000000016
+version: 60000000022
 apns {
   apn {
     name: "IMS"
     value: "ims"
     type: IMS
     bearer_bitmask: "14|18|20"
-    protocol: IPV4V6
-    roaming_protocol: IPV4V6
+    protocol: IPV6
+    roaming_protocol: IPV6
     user_visible: false
   }
   apn {
@@ -81,7 +81,18 @@ configs {
     bool_value: true
   }
   config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "338|another device sent all devices busy response|1017"
+      item: "510|Call completed elsewhere|1014"
+    }
+  }
+  config {
     key: "imsemergency.emergency_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsrtt.text_qos_precondition_supported_bool"
     bool_value: false
   }
   config {
@@ -151,6 +162,14 @@ configs {
     }
   }
   config {
+    key: "imsvoice.voice_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsvt.video_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 86500
   }
@@ -200,5 +219,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1701263093
+  seconds: 1722173359
 }

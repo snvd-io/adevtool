@@ -1,5 +1,5 @@
 canonical_name: "orange_sk"
-version: 56000000009
+version: 60000000011
 apns {
   apn {
     name: "Orange SK"
@@ -202,5 +202,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635187
+  seconds: 1715771948
 }

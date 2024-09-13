@@ -1,5 +1,5 @@
 canonical_name: "verizon_us"
-version: 57000000013
+version: 60000000011
 apns {
   apn {
     name: "Verizon"
@@ -964,8 +964,7 @@ configs {
       item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS|EIMS|MMS|XCAP|CBS"
       item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS|EIMS|MMS|XCAP|CBS"
       item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS|EIMS|MMS|XCAP|CBS"
-      item: "source=EUTRAN|NGRAN|IWLAN|UNKNOWN, target=EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS"
-      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS|MMS|XCAP|CBS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS|EIMS|MMS|XCAP|CBS"
     }
   }
   config {
@@ -1409,5 +1408,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721782969
+  seconds: 1721863480
 }

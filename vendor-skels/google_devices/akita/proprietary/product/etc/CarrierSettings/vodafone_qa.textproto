@@ -1,5 +1,5 @@
 canonical_name: "vodafone_qa"
-version: 56000000005
+version: 60000000006
 apns {
   apn {
     name: "Voda internet"
@@ -60,6 +60,16 @@ configs {
     text_value: "xcap.ims.mnc002.mcc427.pub.3gppnetwork.org"
   }
   config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+      item: 1
+      item: 2
+    }
+  }
+  config {
     key: "imsvoice.audio_codec_capability_payload_types_bundle"
     bundle {
       config {
@@ -96,5 +106,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709116031
+  seconds: 1712735200
 }

@@ -1,5 +1,5 @@
 canonical_name: "telco_re"
-version: 56000000001
+version: 60000000002
 apns {
   apn {
     name: "Telco OI Re"
@@ -13,11 +13,15 @@ apns {
 }
 configs {
   config {
+    key: "maxMessageSize"
+    int_value: 614400
+  }
+  config {
     key: "read_only_apn_types_string_array"
     text_array {
     }
   }
 }
 last_updated {
-  seconds: 1706698770
+  seconds: 1710929979
 }

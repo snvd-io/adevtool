@@ -1,5 +1,5 @@
 canonical_name: "uscc_us"
-version: 56000000008
+version: 60000000010
 apns {
   apn {
     name: "U.S. Cellular"
@@ -185,12 +185,16 @@ configs {
     int_value: 32000
   }
   config {
+    key: "imsemergency.emergency_registration_timer_millis_int"
+    int_value: 10000
+  }
+  config {
     key: "imsrtt.text_rr_bandwidth_bps_int"
-    int_value: 2000
+    int_value: 300
   }
   config {
     key: "imsrtt.text_rs_bandwidth_bps_int"
-    int_value: 600
+    int_value: 100
   }
   config {
     key: "imsserviceentitlement.entitlement_server_url_string"
@@ -488,12 +492,6 @@ configs {
     bool_value: false
   }
 }
-vendor_configs {
-  client {
-    name: "modem"
-    value: "\nv\n\027OEM_GCONFIG_PARIS_MODEL\022XZzUzMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\"\001\000\n.\n#PSS.SMS.IMS SMS CROSS OVER HANDLING\022\004AQ==\"\001\000\nx\n\031OEM_GCONFIG_PARIS_VERSION\022XZzUzMDBfdXNjY18xNTRfMjAyNDA2MTExODAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\"\001\001"
-  }
-}
 last_updated {
-  seconds: 1718696669
+  seconds: 1722173369
 }

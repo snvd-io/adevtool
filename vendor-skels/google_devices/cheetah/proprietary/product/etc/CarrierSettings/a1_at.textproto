@@ -1,5 +1,5 @@
 canonical_name: "a1_at"
-version: 56000000013
+version: 60000000017
 apns {
   apn {
     name: "A1 Internet"
@@ -109,8 +109,8 @@ configs {
     int_value: 0
   }
   config {
-    key: "imsss.ut_requires_ims_registration_bool"
-    bool_value: true
+    key: "imsss.ut_supported_when_ps_data_off_bool"
+    bool_value: false
   }
   config {
     key: "imsss.ut_transport_type_int"
@@ -234,5 +234,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635171
+  seconds: 1722173359
 }

@@ -1,5 +1,5 @@
 canonical_name: "idmobile_gb"
-version: 56000000012
+version: 60000000014
 apns {
   apn {
     name: "iD"
@@ -324,5 +324,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1705496660
+  seconds: 1722173396
 }

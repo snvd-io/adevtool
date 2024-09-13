@@ -1,5 +1,5 @@
 canonical_name: "fizz_ca"
-version: 56000000009
+version: 60000000011
 apns {
   apn {
     name: "mobile.bm"
@@ -368,5 +368,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635204
+  seconds: 1722173409
 }

@@ -1,13 +1,12 @@
 canonical_name: "enreach_nl"
-version: 56000000004
+version: 60000000005
 apns {
   apn {
-    name: "MVNO NL"
+    name: "Enreach NL"
     value: "internet.mvno.mobi"
     type: DEFAULT
     type: SUPL
-    user: "mvno"
-    password: "mvno"
+    type: DUN
     authtype: 1
     protocol: IPV4V6
     roaming_protocol: IPV4V6
@@ -74,10 +73,15 @@ configs {
     }
   }
   config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+  config {
     key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
     bool_value: true
   }
 }
 last_updated {
-  seconds: 1706100394
+  seconds: 1713343958
 }

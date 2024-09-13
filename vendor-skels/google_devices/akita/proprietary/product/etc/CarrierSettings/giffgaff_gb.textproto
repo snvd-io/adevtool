@@ -1,18 +1,16 @@
 canonical_name: "giffgaff_gb"
-version: 56000000004
+version: 60000000006
 apns {
   apn {
     name: "giffgaff"
     value: "giffgaff.com"
     type: DEFAULT
-    type: DUN
     type: MMS
-    type: SUPL
-    type: HIPRI
-    type: XCAP
-    user: "giffgaff"
-    password: "password"
+    user: "gg"
+    password: "p"
+    authtype: 1
     mmsc: "http://mmsc.mediamessaging.co.uk:8002"
+    protocol: IPV4V6
   }
   apn {
     name: "IMS"
@@ -101,9 +99,9 @@ configs {
   }
   config {
     key: "wfc_spn_format_idx_int"
-    int_value: 1
+    int_value: 9
   }
 }
 last_updated {
-  seconds: 1709690429
+  seconds: 1718316570
 }

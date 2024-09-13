@@ -1,5 +1,5 @@
 canonical_name: "h3_gb"
-version: 56000000006
+version: 60000000008
 apns {
   apn {
     name: "3hotspot"
@@ -343,5 +343,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1705496666
+  seconds: 1722173409
 }

@@ -1,5 +1,5 @@
 canonical_name: "tstar_tw"
-version: 56000000006
+version: 60000000008
 apns {
   apn {
     name: "\345\217\260\347\201\243\345\244\247\345\223\245\345\244\247TS (Internet)"
@@ -200,5 +200,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100369
+  seconds: 1722173369
 }

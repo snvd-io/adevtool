@@ -12,6 +12,7 @@
   <string name="config_ambientContextEventArrayExtraKey">EVENT_ARRAY</string>
   <string name="config_ambientContextPackageNameExtraKey">PACKAGE_NAME</string>
   <string name="config_defaultAccessibilityNotificationSound">Effect_Tick.ogg</string>
+  <string name="config_defaultCredentialManagerAutofillService">com.android.credentialmanager/com.android.credentialmanager.autofill.CredentialAutofillService</string>
   <string name="config_deviceSpecificDeviceStatePolicyProvider">com.google.android.server.policy.FelixDeviceStatePolicyProvider</string>
   <string name="config_display_features">fold-[1104,0,1104,1848]</string>
   <string name="config_icon_mask">M50 0C77.6 0 100 22.4 100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z</string>
@@ -27,6 +28,7 @@
   <string name="fingerprint_acquired_too_fast">Keep your finger on the sensor a little longer</string>
   <string name="fingerprint_error_power_pressed">Verification ended. Try touching lightly next time.</string>
   <string name="safety_protection_display_text">"&lt;font face=\"google-sans"&gt;Protected by &lt;/font&gt;&lt;font face="google-sans-medium"&gt;Android&lt;/font&gt;"</string>
+  <string name="scCellularNetworkSecurityLearnMore">"https://support.google.com/android?p=cellular_security"</string>
   <string name="vendor_required_attestation_revocation_list_url">https://android.googleapis.com/attestation/status</string>
   <bool name="config_allowDisablingAssistDisclosure">true</bool>
   <bool name="config_allowRotationResolver">false</bool>
@@ -37,6 +39,7 @@
   <bool name="config_enableMultiUserUI">true</bool>
   <bool name="config_fingerprintSupportsGestures">true</bool>
   <bool name="config_fold_lock_behavior">true</bool>
+  <bool name="config_honor_data_retry_timer_for_emergency_network">true</bool>
   <bool name="config_hotspotNetworksEnabledForService">false</bool>
   <bool name="config_is_powerbutton_fps">true</bool>
   <bool name="config_isCameraCompatControlForStretchedIssuesEnabled">true</bool>
@@ -54,7 +57,6 @@
   <bool name="config_letterboxIsSplitScreenAspectRatioForUnresizableAppsEnabled">true</bool>
   <bool name="config_letterboxIsVerticalReachabilityEnabled">true</bool>
   <bool name="config_localDisplaysMirrorContent">false</bool>
-  <bool name="config_lockscreenWeatherEnabledByDefault">true</bool>
   <bool name="config_matchSecondaryInternalDisplaysOrientationToReverseDefaultDisplay">true</bool>
   <bool name="config_offsetWallpaperToCenterOfLargestDisplay">true</bool>
   <bool name="config_safetyProtectionEnabled">true</bool>

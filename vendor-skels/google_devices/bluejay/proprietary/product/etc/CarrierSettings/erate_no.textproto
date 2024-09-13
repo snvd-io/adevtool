@@ -1,5 +1,5 @@
 canonical_name: "erate_no"
-version: 56000000001
+version: 60000000004
 apns {
   apn {
     name: "eRate Internet"
@@ -30,7 +30,11 @@ configs {
       item: 1
     }
   }
+  config {
+    key: "default_vm_number_string"
+    text_value: "+4796630000"
+  }
 }
 last_updated {
-  seconds: 1703668362
+  seconds: 1722173351
 }

@@ -1,5 +1,5 @@
 canonical_name: "telecable2_es"
-version: 56000000002
+version: 60000000004
 apns {
   apn {
     name: "Internet"
@@ -121,5 +121,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519152
+  seconds: 1722173396
 }

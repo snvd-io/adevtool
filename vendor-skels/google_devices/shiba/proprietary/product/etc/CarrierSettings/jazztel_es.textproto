@@ -1,5 +1,5 @@
 canonical_name: "jazztel_es"
-version: 56000000005
+version: 60000000006
 apns {
   apn {
     name: "jazzinternet"
@@ -159,46 +159,6 @@ configs {
           item: 105
         }
       }
-      config {
-        key: "imsvoice.evs_payload_type_int_array"
-        int_array {
-          item: 96
-          item: 97
-        }
-      }
-    }
-  }
-  config {
-    key: "imsvoice.evs_payload_description_bundle"
-    bundle {
-      config {
-        key: "96"
-        bundle {
-          config {
-            key: "imsvoice.evs_codec_attribute_bandwidth_int"
-            int_value: 2
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
-            int_array {
-              item: 3
-              item: 6
-            }
-          }
-        }
-      }
-      config {
-        key: "97"
-        bundle {
-          config {
-            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
-            int_array {
-              item: 0
-              item: 6
-            }
-          }
-        }
-      }
     }
   }
   config {
@@ -281,5 +241,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519152
+  seconds: 1715771956
 }

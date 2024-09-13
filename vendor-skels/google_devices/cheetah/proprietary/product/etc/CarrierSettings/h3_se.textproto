@@ -1,5 +1,5 @@
 canonical_name: "h3_se"
-version: 56000000015
+version: 60000000018
 apns {
   apn {
     name: "3"
@@ -228,6 +228,18 @@ configs {
     }
   }
   config {
+    key: "imsvoice.minimum_session_expires_timer_sec_int"
+    int_value: 600
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 125000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 125000
+  }
+  config {
     key: "imsvoice.session_refresh_method_int"
     int_value: 0
   }
@@ -253,5 +265,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519134
+  seconds: 1722173359
 }

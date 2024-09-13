@@ -1,5 +1,5 @@
 canonical_name: "tdc_dk"
-version: 56000000497
+version: 60000000498
 apns {
   apn {
     name: "TDC MMS"
@@ -183,6 +183,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "iwlan.add_ke_to_child_session_rekey_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan.diffie_hellman_groups_int_array"
     int_array {
       item: 14
@@ -210,5 +214,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690394
+  seconds: 1715771916
 }

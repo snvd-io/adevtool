@@ -1,5 +1,5 @@
 canonical_name: "turkcell_tr"
-version: 57000000002
+version: 60000000002
 apns {
   apn {
     name: "TURKCELL INTERNET"
@@ -67,5 +67,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1713598529
+  seconds: 1715771975
 }

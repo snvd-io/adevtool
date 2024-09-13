@@ -1,2 +1,2 @@
-export BUILD_ID_bluejay="AP2A.240905.003.F1"
+export BUILD_ID_bluejay="AP31.240617.015"
 unset PLATFORM_SECURITY_PATCH_bluejay

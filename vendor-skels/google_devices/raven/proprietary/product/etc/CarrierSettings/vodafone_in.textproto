@@ -1,5 +1,5 @@
 canonical_name: "vodafone_in"
-version: 56000000370
+version: 60000000373
 apns {
   apn {
     name: "Vodafone Mobile Connect"
@@ -48,6 +48,10 @@ configs {
   }
   config {
     key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "editable_wfc_roaming_mode_bool"
     bool_value: true
   }
   config {
@@ -241,5 +245,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690394
+  seconds: 1722173344
 }

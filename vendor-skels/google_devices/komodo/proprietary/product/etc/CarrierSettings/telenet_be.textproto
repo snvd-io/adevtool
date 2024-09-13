@@ -1,5 +1,5 @@
 canonical_name: "telenet_be"
-version: 57000000005
+version: 60000000005
 apns {
   apn {
     name: "Telenet Internet"
@@ -114,10 +114,6 @@ configs {
             int_value: 255
           }
           config {
-            key: "imsvoice.evs_codec_attribute_dtx_bool"
-            bool_value: true
-          }
-          config {
             key: "imsvoice.evs_codec_attribute_hf_only_int"
             int_value: 0
           }
@@ -155,5 +151,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1714608598
+  seconds: 1712735214
 }

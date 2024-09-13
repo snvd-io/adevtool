@@ -1,5 +1,5 @@
 canonical_name: "ee_gb"
-version: 56000000049
+version: 60000000051
 apns {
   apn {
     name: "IMS"
@@ -317,5 +317,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1701854003
+  seconds: 1722173344
 }

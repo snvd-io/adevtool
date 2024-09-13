@@ -1,5 +1,5 @@
 canonical_name: "vodafone_it"
-version: 57000000004
+version: 60000000006
 apns {
   apn {
     name: "Tethering Internet"
@@ -261,5 +261,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709116039
+  seconds: 1722173420
 }

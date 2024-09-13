@@ -1,5 +1,5 @@
 canonical_name: "orange_be"
-version: 56000000007
+version: 60000000009
 apns {
   apn {
     name: "Orange MMS"
@@ -313,5 +313,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100394
+  seconds: 1722173409
 }

@@ -1,0 +1,35 @@
+canonical_name: "telavox_se"
+version: 60000000001
+apns {
+  apn {
+    name: "Telavox internet"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+  apn {
+    name: "Telavox MMS"
+    value: "mms"
+    mmsc: "http://mms.media"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+    user_editable: false
+  }
+}
+configs {
+  config {
+    key: "ims.sip_over_ipsec_enabled_bool"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1720164562
+}

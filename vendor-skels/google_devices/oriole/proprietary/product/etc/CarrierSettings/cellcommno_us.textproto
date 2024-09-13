@@ -1,5 +1,5 @@
 canonical_name: "cellcommno_us"
-version: 56000000048
+version: 60000000050
 apns {
   apn {
     name: "Cellcom"
@@ -1344,5 +1344,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100344
+  seconds: 1722173344
 }

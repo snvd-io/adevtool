@@ -1,5 +1,5 @@
 canonical_name: "zain_bh"
-version: 56000000005
+version: 60000000005
 apns {
   apn {
     name: "Zain BH Internet"
@@ -99,5 +99,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690417
+  seconds: 1709714821
 }

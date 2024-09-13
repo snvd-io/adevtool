@@ -1,5 +1,5 @@
 canonical_name: "skt_kr"
-version: 56000000007
+version: 60000000009
 apns {
   apn {
     name: "SKT IMS"
@@ -237,5 +237,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708520803
+  seconds: 1722173409
 }

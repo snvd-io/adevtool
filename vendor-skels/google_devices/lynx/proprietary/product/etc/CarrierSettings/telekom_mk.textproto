@@ -1,5 +1,5 @@
 canonical_name: "telekom_mk"
-version: 56000000003
+version: 60000000005
 apns {
   apn {
     name: "T-Mobile MK Internet"
@@ -79,5 +79,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690417
+  seconds: 1722173380
 }

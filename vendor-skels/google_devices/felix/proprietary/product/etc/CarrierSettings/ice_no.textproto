@@ -1,5 +1,5 @@
 canonical_name: "ice_no"
-version: 56000000010
+version: 60000000012
 apns {
   apn {
     name: "ice.net Internet"
@@ -120,5 +120,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1701263101
+  seconds: 1722173369
 }

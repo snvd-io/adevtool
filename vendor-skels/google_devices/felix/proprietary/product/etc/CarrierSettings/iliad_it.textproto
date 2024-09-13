@@ -1,5 +1,5 @@
 canonical_name: "iliad_it"
-version: 56000000007
+version: 60000000011
 apns {
   apn {
     name: "iliad"
@@ -7,6 +7,7 @@ apns {
     type: DEFAULT
     type: MMS
     mmsc: "http://mms.iliad.it"
+    protocol: IPV4V6
   }
   apn {
     name: "IMS"
@@ -82,10 +83,18 @@ configs {
     }
   }
   config {
+    key: "maxMessageSize"
+    int_value: 204800
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
     key: "sim_country_iso_override_string"
     text_value: "it"
   }
 }
 last_updated {
-  seconds: 1707299261
+  seconds: 1722173369
 }

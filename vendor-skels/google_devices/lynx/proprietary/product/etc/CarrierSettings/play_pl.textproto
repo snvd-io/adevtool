@@ -1,5 +1,5 @@
 canonical_name: "play_pl"
-version: 56000000010
+version: 60000000013
 apns {
   apn {
     name: "Play Internet"
@@ -39,8 +39,21 @@ apns {
 }
 configs {
   config {
+    key: "call_barring_visibility_bool"
+    bool_value: true
+  }
+  config {
     key: "carrier_default_wfc_ims_roaming_enabled_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_metered_apn_types_strings"
+    text_array {
+      item: "default"
+      item: "dun"
+      item: "supl"
+      item: "enterprise"
+    }
   }
   config {
     key: "carrier_name_override_bool"
@@ -232,6 +245,14 @@ configs {
     }
   }
   config {
+    key: "qns.mms_rat_preference_int"
+    int_value: 2
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 6
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 11
   }
@@ -241,5 +262,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690417
+  seconds: 1718316552
 }

@@ -1,5 +1,5 @@
 canonical_name: "telekom_ro"
-version: 57000000008
+version: 60000000008
 apns {
   apn {
     name: "Cosmote Connect Mobile"
@@ -172,5 +172,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1712551354
+  seconds: 1712735214
 }

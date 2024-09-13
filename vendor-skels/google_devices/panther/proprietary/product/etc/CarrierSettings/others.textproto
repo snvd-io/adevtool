@@ -1,4 +1,4 @@
-version: 56000000101
+version: 60000000113
 setting {
   canonical_name: "019mobile_il"
   apns {
@@ -2394,39 +2394,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "23426SPN=LYCAMOBILE"
-  apns {
-    apn {
-      name: "Lycamobile"
-      value: "data.lycamobile.co.uk"
-      type: DEFAULT
-      type: SUPL
-      user: "lmuk"
-      password: "plus"
-      authtype: 1
-    }
-  }
-  configs {
-    config {
-      key: "non_roaming_operator_string_array"
-      text_array {
-        item: "23410"
-        item: "23420"
-        item: "23430"
-        item: "23431"
-        item: "23432"
-        item: "23433"
-        item: "23434"
-        item: "23486"
-      }
-    }
-    config {
-      key: "show_4g_for_lte_data_icon_bool"
-      bool_value: true
-    }
-  }
-}
-setting {
   canonical_name: "23430GID1=B2"
   apns {
     apn {
@@ -2493,6 +2460,39 @@ setting {
     config {
       key: "wfc_spn_format_idx_int"
       int_value: 1
+    }
+  }
+}
+setting {
+  canonical_name: "23430SPN=LycaMobile"
+  apns {
+    apn {
+      name: "Lycamobile"
+      value: "data.lycamobile.co.uk"
+      type: DEFAULT
+      type: SUPL
+      user: "lmuk"
+      password: "plus"
+      authtype: 1
+    }
+  }
+  configs {
+    config {
+      key: "non_roaming_operator_string_array"
+      text_array {
+        item: "23410"
+        item: "23420"
+        item: "23430"
+        item: "23431"
+        item: "23432"
+        item: "23433"
+        item: "23434"
+        item: "23486"
+      }
+    }
+    config {
+      key: "show_4g_for_lte_data_icon_bool"
+      bool_value: true
     }
   }
 }
@@ -3838,62 +3838,6 @@ setting {
     config {
       key: "maxMessageSize"
       int_value: 131072
-    }
-  }
-}
-setting {
-  canonical_name: "29701"
-  apns {
-    apn {
-      name: "Telenor MNE mms"
-      value: "mms"
-      type: MMS
-      authtype: 0
-      mmsc: "http://mm.vor.telenor.me"
-      mmsc_proxy: "192.168.246.5"
-      mmsc_proxy_port: "8080"
-    }
-    apn {
-      name: "Telenor MNE internet"
-      value: "internet"
-      type: DEFAULT
-      type: SUPL
-      proxy: "192.168.246.5"
-      port: "8080"
-      authtype: 0
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "29702"
-  apns {
-    apn {
-      name: "T-Mobile MMS"
-      value: "mms"
-      type: MMS
-      user: "38267"
-      password: "38267"
-      mmsc: "http://192.168.180.100/servlets/mms"
-      mmsc_proxy: "10.0.5.19"
-      mmsc_proxy_port: "8080"
-    }
-    apn {
-      name: "T-Mobile Internet"
-      value: "tmcg-wnw"
-      type: DEFAULT
-      type: SUPL
-      proxy: "10.0.5.19"
-      port: "8080"
-      user: "38267"
-      password: "38267"
-    }
-  }
-  configs {
-    config {
-      key: "display_hd_audio_property_bool"
-      bool_value: false
     }
   }
 }
@@ -13186,73 +13130,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "45201"
-  apns {
-    apn {
-      name: "Mobi-wap-gprs 2"
-      value: "m-wap"
-      type: DEFAULT
-      type: SUPL
-      user: "mms"
-      password: "mms"
-      authtype: 1
-    }
-    apn {
-      name: "Mobi-wap-gprs 1"
-      value: "m-wap"
-      type: DEFAULT
-      type: SUPL
-      proxy: "203.162.21.107"
-      port: "8080"
-      user: "mms"
-      password: "mms"
-      authtype: 1
-    }
-    apn {
-      name: "Mobi-gprs-mms"
-      value: "m-i090"
-      type: MMS
-      user: "mms"
-      password: "mms"
-      authtype: 1
-      mmsc: "http://203.162.21.114/mmsc"
-      mmsc_proxy: "203.162.21.114"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "45204"
-  apns {
-    apn {
-      name: "Viettel-wap-gprs 1"
-      value: "v-internet"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "Viettel-wap-gprs 2"
-      value: "v-wap"
-      type: DEFAULT
-      type: SUPL
-      proxy: "192.168.233.10"
-      port: "8080"
-    }
-    apn {
-      name: "Viettel-gprs-mms"
-      value: "v-mms"
-      type: MMS
-      mmsc: "http://mms.viettelmobile.com.vn/mms/wapenc"
-      mmsc_proxy: "192.168.233.10"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "45205"
   apns {
     apn {
@@ -14017,66 +13894,6 @@ setting {
       authtype: 1
       mmsc: "http://mmsc.axis"
       mmsc_proxy: "10.8.3.8"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "51010"
-  apns {
-    apn {
-      name: "internet"
-      value: "internet"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "TSEL-WAP"
-      value: "telkomsel"
-      type: DEFAULT
-      type: SUPL
-      proxy: "10.1.89.130"
-      port: "8000"
-      user: "wap"
-      password: "wap123"
-      authtype: 1
-    }
-    apn {
-      name: "TSEL-MMS"
-      value: "mms"
-      type: MMS
-      user: "wap"
-      password: "wap123"
-      authtype: 1
-      mmsc: "http://mms.telkomsel.com"
-      mmsc_proxy: "10.1.89.150"
-      mmsc_proxy_port: "8000"
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "51011"
-  apns {
-    apn {
-      name: "Internet"
-      value: "internet"
-      type: DEFAULT
-      type: SUPL
-      authtype: 1
-    }
-    apn {
-      name: "XL-MMS"
-      value: "www.xlmms.net"
-      type: MMS
-      user: "xlgprs"
-      password: "proxl"
-      authtype: 1
-      mmsc: "http://mmc.xl.net.id/servlets/mms"
-      mmsc_proxy: "202.152.240.50"
       mmsc_proxy_port: "8080"
     }
   }
@@ -18374,36 +18191,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "72405"
-  apns {
-    apn {
-      name: "Java Session"
-      value: "java.claro.com.br"
-      type: DEFAULT
-      type: SUPL
-      user: "claro"
-      password: "claro"
-    }
-    apn {
-      name: "Claro Foto"
-      value: "mms.claro.com.br"
-      type: MMS
-      user: "claro"
-      password: "claro"
-      authtype: 1
-      mmsc: "http://mms.claro.com.br"
-      mmsc_proxy: "200.169.126.10"
-      mmsc_proxy_port: "8799"
-    }
-  }
-  configs {
-    config {
-      key: "show_4g_for_lte_data_icon_bool"
-      bool_value: true
-    }
-  }
-}
-setting {
   canonical_name: "72407"
   apns {
     apn {
@@ -20725,6 +20512,30 @@ setting {
   }
 }
 setting {
+  canonical_name: "enreach_de"
+  apns {
+    apn {
+      name: "Enreach DE"
+      value: "internet.mvno.mobi"
+      type: DEFAULT
+      type: SUPL
+      type: DUN
+      authtype: 1
+    }
+  }
+  configs {
+    config {
+      key: "prefer_2g_bool"
+      bool_value: true
+    }
+    config {
+      key: "read_only_apn_types_string_array"
+      text_array {
+      }
+    }
+  }
+}
+setting {
   canonical_name: "etb_co"
   apns {
     apn {
@@ -20770,671 +20581,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "firstnetlab_us"
-  apns {
-    apn {
-      name: "ATT FirstNet-Phone"
-      value: "firstnet-phone"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      type: FOTA
-      mmsc: "http://mmsc.mobile.att.net"
-      mmsc_proxy: "proxy.mobile.att.net"
-      mmsc_proxy_port: "80"
-      protocol: IPV4V6
-      user_editable: false
-    }
-    apn {
-      name: "firstnet-hotspot"
-      value: "firstnet-hotspot"
-      type: DUN
-      protocol: IPV4V6
-      user_visible: false
-    }
-    apn {
-      name: "ims"
-      value: "ims"
-      type: IMS
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-      user_visible: false
-    }
-  }
-  configs {
-    config {
-      key: "5g_icon_configuration_string"
-      text_value: "connected_mmwave:5G_Plus,connected:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
-    }
-    config {
-      key: "5g_icon_display_grace_period_string"
-      text_value: "connected_mmwave,any,30"
-    }
-    config {
-      key: "additional_nr_advanced_bands_int_array"
-      int_array {
-        item: 77
-      }
-    }
-    config {
-      key: "allow_hold_call_during_emergency_bool"
-      bool_value: false
-    }
-    config {
-      key: "allow_merging_rtt_calls_bool"
-      bool_value: true
-    }
-    config {
-      key: "apn_settings_default_apn_types_string_array"
-      text_array {
-        item: "default"
-      }
-    }
-    config {
-      key: "carrier_default_wfc_ims_mode_int"
-      int_value: 1
-    }
-    config {
-      key: "carrier_default_wfc_ims_roaming_enabled_bool"
-      bool_value: true
-    }
-    config {
-      key: "carrier_supports_ss_over_ut_bool"
-      bool_value: true
-    }
-    config {
-      key: "carrier_ussd_method_int"
-      int_value: 1
-    }
-    config {
-      key: "carrier_volte_available_bool"
-      bool_value: true
-    }
-    config {
-      key: "carrier_wfc_ims_available_bool"
-      bool_value: true
-    }
-    config {
-      key: "csp_enabled_bool"
-      bool_value: true
-    }
-    config {
-      key: "editable_wfc_mode_bool"
-      bool_value: false
-    }
-    config {
-      key: "emergency_number_prefix_string_array"
-      text_array {
-        item: "*67"
-        item: "*82"
-        item: "*272"
-      }
-    }
-    config {
-      key: "enableSMSDeliveryReports"
-      bool_value: false
-    }
-    config {
-      key: "hide_enhanced_4g_lte_bool"
-      bool_value: true
-    }
-    config {
-      key: "hide_preferred_network_type_bool"
-      bool_value: true
-    }
-    config {
-      key: "ignore_rtt_mode_setting_bool"
-      bool_value: true
-    }
-    config {
-      key: "ims.geolocation_pidf_in_sip_invite_support_int_array"
-      int_array {
-        item: 4
-        item: 2
-      }
-    }
-    config {
-      key: "ims.geolocation_pidf_in_sip_register_support_int_array"
-      int_array {
-        item: 4
-        item: 2
-      }
-    }
-    config {
-      key: "ims.ims_pdn_enabled_in_no_vops_support_int_array"
-      int_array {
-        item: 0
-        item: 1
-      }
-    }
-    config {
-      key: "ims.ipv4_sip_mtu_size_cellular_int"
-      int_value: 1342
-    }
-    config {
-      key: "ims.ipv6_sip_mtu_size_cellular_int"
-      int_value: 1342
-    }
-    config {
-      key: "ims.registration_retry_base_timer_millis_int"
-      int_value: 120000
-    }
-    config {
-      key: "ims.registration_retry_max_timer_millis_int"
-      int_value: 7200000
-    }
-    config {
-      key: "ims.request_uri_type_int"
-      int_value: 1
-    }
-    config {
-      key: "ims.sip_timer_b_millis_int"
-      int_value: 32000
-    }
-    config {
-      key: "ims.sip_timer_d_millis_int"
-      int_value: 32000
-    }
-    config {
-      key: "ims.sip_timer_f_millis_int"
-      int_value: 32000
-    }
-    config {
-      key: "ims.sip_timer_h_millis_int"
-      int_value: 32000
-    }
-    config {
-      key: "ims.sip_timer_j_millis_int"
-      int_value: 32000
-    }
-    config {
-      key: "ims.supported_rats_int_array"
-      int_array {
-        item: 3
-        item: 2
-        item: 5
-        item: 6
-      }
-    }
-    config {
-      key: "ims_reasoninfo_mapping_string_array"
-      text_array {
-        item: "510|Call completed elsewhere|1014"
-        item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
-      }
-    }
-    config {
-      key: "imsemergency.emergency_qos_precondition_supported_bool"
-      bool_value: false
-    }
-    config {
-      key: "imsemergency.emergency_registration_timer_millis_int"
-      int_value: 10000
-    }
-    config {
-      key: "imsrtt.text_on_default_bearer_supported_bool"
-      bool_value: true
-    }
-    config {
-      key: "imsrtt.text_qos_precondition_supported_bool"
-      bool_value: false
-    }
-    config {
-      key: "imsrtt.text_rr_bandwidth_bps_int"
-      int_value: 300
-    }
-    config {
-      key: "imsrtt.text_rs_bandwidth_bps_int"
-      int_value: 100
-    }
-    config {
-      key: "imssms.sms_csfb_retry_on_failure_bool"
-      bool_value: false
-    }
-    config {
-      key: "imsss.ut_server_based_services_int_array"
-      int_array {
-        item: 20
-        item: 12
-        item: 18
-        item: 14
-        item: 19
-        item: 21
-        item: 15
-        item: 16
-        item: 17
-        item: 13
-        item: 1
-        item: 3
-        item: 4
-        item: 7
-        item: 6
-        item: 5
-        item: 2
-        item: 0
-        item: 8
-        item: 9
-        item: 11
-      }
-    }
-    config {
-      key: "imsss.ut_terminal_based_services_int_array"
-      int_array {
-        item: 10
-      }
-    }
-    config {
-      key: "imsss.xcap_over_ut_supported_rats_int_array"
-      int_array {
-        item: 6
-        item: 3
-        item: 5
-        item: 1
-        item: 2
-      }
-    }
-    config {
-      key: "imsvoice.audio_as_bandwidth_kbps_int"
-      int_value: 49
-    }
-    config {
-      key: "imsvoice.audio_codec_capability_payload_types_bundle"
-      bundle {
-        config {
-          key: "imsvoice.amrnb_payload_type_int_array"
-          int_array {
-            item: 110
-          }
-        }
-        config {
-          key: "imsvoice.amrwb_payload_type_int_array"
-          int_array {
-            item: 104
-          }
-        }
-        config {
-          key: "imsvoice.dtmfnb_payload_type_int_array"
-          int_array {
-            item: 97
-          }
-        }
-        config {
-          key: "imsvoice.dtmfwb_payload_type_int_array"
-          int_array {
-            item: 96
-          }
-        }
-        config {
-          key: "imsvoice.evs_payload_type_int_array"
-          int_array {
-            item: 127
-          }
-        }
-      }
-    }
-    config {
-      key: "imsvoice.evs_payload_description_bundle"
-      bundle {
-        config {
-          key: "127"
-          bundle {
-            config {
-              key: "imsvoice.evs_codec_attribute_bitrate_int_array"
-              int_array {
-                item: 0
-                item: 4
-              }
-            }
-            config {
-              key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
-              int_value: 2
-            }
-          }
-        }
-      }
-    }
-    config {
-      key: "imsvoice.include_caller_id_service_codes_in_sip_invite_bool"
-      bool_value: true
-    }
-    config {
-      key: "imsvoice.mo_call_request_timeout_millis_int"
-      int_value: 0
-    }
-    config {
-      key: "imsvoice.ringback_timer_millis_int"
-      int_value: 180000
-    }
-    config {
-      key: "imsvoice.ringing_timer_millis_int"
-      int_value: 45000
-    }
-    config {
-      key: "imsvoice.session_timer_supported_bool"
-      bool_value: false
-    }
-    config {
-      key: "imsvoice.srvcc_type_int_array"
-      int_array {
-        item: 0
-        item: 1
-        item: 2
-      }
-    }
-    config {
-      key: "imsvoice.voice_on_default_bearer_supported_bool"
-      bool_value: true
-    }
-    config {
-      key: "imsvoice.voice_qos_precondition_supported_bool"
-      bool_value: false
-    }
-    config {
-      key: "imsvt.video_on_default_bearer_supported_bool"
-      bool_value: true
-    }
-    config {
-      key: "imsvt.video_qos_precondition_supported_bool"
-      bool_value: false
-    }
-    config {
-      key: "imswfc.emergency_call_over_emergency_pdn_bool"
-      bool_value: true
-    }
-    config {
-      key: "include_lte_for_nr_advanced_threshold_bandwidth_bool"
-      bool_value: true
-    }
-    config {
-      key: "iwlan.diffie_hellman_groups_int_array"
-      int_array {
-        item: 14
-      }
-    }
-    config {
-      key: "iwlan.epdg_address_priority_int_array"
-      int_array {
-        item: 0
-      }
-    }
-    config {
-      key: "iwlan.epdg_static_address_string"
-      text_value: "epdg.epc.firstnet.com"
-    }
-    config {
-      key: "iwlan.key_error_policy_config_string"
-      text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"9000\", \"9001\", \"11011\", \"9003\", \"11001\", \"9006\", \"8192\"],\"RetryArray\": [],\"UnthrottlingEvents\": []}, {\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"*\"],\"RetryArray\": [\"10\", \"60\", \"120\", \"240\", \"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
-    }
-    config {
-      key: "iwlan_handover_policy_string_array"
-      text_array {
-        item: "source=GERAN|IWLAN, target=GERAN|IWLAN, type=disallowed"
-        item: "source=UTRAN|EUTRAN|NGRAN|IWLAN, target=UTRAN|EUTRAN|NGRAN|IWLAN, type=allowed"
-      }
-    }
-    config {
-      key: "limited_sim_function_notification_for_dsds_bool"
-      bool_value: true
-    }
-    config {
-      key: "maxImageHeight"
-      int_value: 1944
-    }
-    config {
-      key: "maxImageWidth"
-      int_value: 2592
-    }
-    config {
-      key: "maxMessageSize"
-      int_value: 1048576
-    }
-    config {
-      key: "mmi_two_digit_number_pattern_string_array"
-      text_array {
-        item: "0"
-        item: "00"
-        item: "*0"
-        item: "*1"
-        item: "*2"
-        item: "*3"
-        item: "*4"
-        item: "*5"
-        item: "*6"
-        item: "*7"
-        item: "*8"
-        item: "*9"
-        item: "#0"
-        item: "#1"
-        item: "#2"
-        item: "#3"
-        item: "#4"
-        item: "#5"
-        item: "#6"
-        item: "#7"
-        item: "#8"
-        item: "#9"
-      }
-    }
-    config {
-      key: "non_roaming_operator_string_array"
-      text_array {
-        item: "310"
-        item: "311"
-        item: "312"
-        item: "313"
-        item: "314"
-        item: "315"
-        item: "316"
-      }
-    }
-    config {
-      key: "nr_advanced_threshold_bandwidth_khz_int"
-      int_value: 50000
-    }
-    config {
-      key: "operator_name_filter_pattern_string"
-      text_value: "(.*)\\.{3}[12]$"
-    }
-    config {
-      key: "qns.choose_wfc_preferred_transport_in_both_bad_condition_int_array"
-      int_array {
-        item: 1
-      }
-    }
-    config {
-      key: "qns.fallback_network_quality_evaluation_bool"
-      bool_value: false
-    }
-    config {
-      key: "qns.idle_eutran_rsrp_int_array"
-      int_array {
-        item: -90
-        item: -108
-      }
-    }
-    config {
-      key: "qns.idle_eutran_rssnr_int_array"
-      int_array {
-        item: 2
-        item: -3
-      }
-    }
-    config {
-      key: "qns.idle_ngran_ssrsrp_int_array"
-      int_array {
-        item: -90
-        item: -108
-      }
-    }
-    config {
-      key: "qns.idle_ngran_sssinr_int_array"
-      int_array {
-        item: 2
-        item: -3
-      }
-    }
-    config {
-      key: "qns.idle_utran_ecno_int_array"
-      int_array {
-        item: -11
-        item: -15
-      }
-    }
-    config {
-      key: "qns.idle_utran_rscp_int_array"
-      int_array {
-        item: -73
-        item: -93
-      }
-    }
-    config {
-      key: "qns.ims_cellular_allowed_rat_string_array"
-      text_array {
-        item: "LTE"
-        item: "NR"
-        item: "3G"
-      }
-    }
-    config {
-      key: "qns.ims_wlan_hysteresis_timer_ms_int_array"
-      int_array {
-        item: 5000
-        item: 0
-        item: 0
-      }
-    }
-    config {
-      key: "qns.ims_wwan_hysteresis_timer_ms_int_array"
-      int_array {
-        item: 5000
-        item: 0
-        item: 0
-      }
-    }
-    config {
-      key: "qns.in_call_rovein_allowed_and_fallback_reason_int_array"
-      int_array {
-        item: 1
-        item: 2
-      }
-    }
-    config {
-      key: "qns.prefer_current_transport_type_in_voice_call_bool"
-      bool_value: true
-    }
-    config {
-      key: "qns.rtp_metrics_int_array"
-      int_array {
-        item: 100
-        item: 30
-        item: 5000
-        item: 2000
-      }
-    }
-    config {
-      key: "qns.sos_transport_type_int"
-      int_value: 2
-    }
-    config {
-      key: "qns.support_vops_notavailable_priority_iwlan_bool"
-      bool_value: false
-    }
-    config {
-      key: "qns.voice_eutran_rsrp_int_array"
-      int_array {
-        item: 65535
-        item: -108
-      }
-    }
-    config {
-      key: "qns.voice_eutran_rssnr_int_array"
-      int_array {
-        item: 65535
-        item: -3
-      }
-    }
-    config {
-      key: "qns.voice_ngran_ssrsrp_int_array"
-      int_array {
-        item: 65535
-        item: -108
-      }
-    }
-    config {
-      key: "qns.voice_ngran_sssinr_int_array"
-      int_array {
-        item: 65535
-        item: -3
-      }
-    }
-    config {
-      key: "qns.wifi_rssi_thresholdbackhaul_timer_int"
-      int_value: 0
-    }
-    config {
-      key: "qns.xcap_rat_preference_int"
-      int_value: 3
-    }
-    config {
-      key: "read_only_apn_types_string_array"
-      text_array {
-        item: "dun"
-        item: "ims"
-      }
-    }
-    config {
-      key: "roaming_operator_string_array"
-      text_array {
-        item: "310110"
-        item: "310140"
-        item: "310400"
-        item: "310470"
-        item: "311170"
-      }
-    }
-    config {
-      key: "rtt_downgrade_supported_bool"
-      bool_value: true
-    }
-    config {
-      key: "rtt_supported_bool"
-      bool_value: true
-    }
-    config {
-      key: "rtt_supported_while_roaming_bool"
-      bool_value: true
-    }
-    config {
-      key: "show_4g_for_3g_data_icon_bool"
-      bool_value: true
-    }
-    config {
-      key: "show_carrier_data_icon_pattern_string"
-      text_value: ".*\\.{3}[12]$"
-    }
-    config {
-      key: "skip_cf_fail_to_disable_dialog_bool"
-      bool_value: true
-    }
-    config {
-      key: "tty_supported_bool"
-      bool_value: false
-    }
-    config {
-      key: "volte_replacement_rat_int"
-      int_value: 3
-    }
-    config {
-      key: "wfc_emergency_address_carrier_app_string"
-      text_value: "com.google.android.wfcactivation/.WfcActivationActivity"
-    }
-    config {
-      key: "wfc_spn_format_idx_int"
-      int_value: 1
-    }
-  }
-}
-setting {
   canonical_name: "freedompop_mx"
   apns {
     apn {
@@ -21463,7 +20609,7 @@ setting {
   configs {
     config {
       key: "force_home_network_bool"
-      bool_value: false
+      bool_value: true
     }
     config {
       key: "inflate_signal_strength_bool"
@@ -21483,7 +20629,7 @@ setting {
   configs {
     config {
       key: "force_home_network_bool"
-      bool_value: false
+      bool_value: true
     }
   }
 }
@@ -21565,6 +20711,14 @@ setting {
     config {
       key: "carrier_wfc_ims_available_bool"
       bool_value: true
+    }
+    config {
+      key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+      int_array {
+        item: 6
+        item: 3
+        item: 5
+      }
     }
     config {
       key: "wfc_spn_format_idx_int"
@@ -22782,26 +21936,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "mvno_de"
-  apns {
-    apn {
-      name: "MVNO DE"
-      value: "internet.mvno.mobi"
-      type: DEFAULT
-      type: SUPL
-      user: "mvno"
-      password: "mvno"
-      authtype: 1
-    }
-  }
-  configs {
-    config {
-      key: "prefer_2g_bool"
-      bool_value: true
-    }
-  }
-}
-setting {
   canonical_name: "natcom_ht"
   apns {
     apn {
@@ -23735,11 +22869,6 @@ setting {
       type: SUPL
     }
   }
-  configs {
-  }
-}
-setting {
-  canonical_name: "smartfren_id"
   configs {
   }
 }
@@ -25259,33 +24388,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "zipsim_us"
-  apns {
-    apn {
-      name: "ZIP SIM"
-      value: "wholesale"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      mmsc: "http://wholesale.mmsmvno.com/mms/wapenc"
-    }
-  }
-  configs {
-    config {
-      key: "maxImageHeight"
-      int_value: 1944
-    }
-    config {
-      key: "maxImageWidth"
-      int_value: 2592
-    }
-    config {
-      key: "maxMessageSize"
-      int_value: 1048576
-    }
-  }
-}
-setting {
   canonical_name: "ztar_ca"
   apns {
     apn {
@@ -25317,5 +24419,5 @@ setting {
   }
 }
 last_updated {
-  seconds: 1709690405
+  seconds: 1722173359
 }

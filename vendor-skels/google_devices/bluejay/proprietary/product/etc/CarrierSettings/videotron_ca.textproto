@@ -1,5 +1,5 @@
 canonical_name: "videotron_ca"
-version: 56000000015
+version: 60000000017
 apns {
   apn {
     name: "Media"
@@ -360,5 +360,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100353
+  seconds: 1722173351
 }

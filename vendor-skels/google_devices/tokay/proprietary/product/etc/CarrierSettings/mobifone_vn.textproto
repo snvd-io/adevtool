@@ -1,22 +1,11 @@
 canonical_name: "mobifone_vn"
-version: 57000000001
+version: 60000000001
 apns {
   apn {
     name: "Mobi-wap-gprs 2"
     value: "m-wap"
     type: DEFAULT
     type: SUPL
-    user: "mms"
-    password: "mms"
-    authtype: 1
-  }
-  apn {
-    name: "Mobi-wap-gprs 1"
-    value: "m-wap"
-    type: DEFAULT
-    type: SUPL
-    proxy: "203.162.21.107"
-    port: "8080"
     user: "mms"
     password: "mms"
     authtype: 1
@@ -32,15 +21,22 @@ apns {
     mmsc_proxy: "203.162.21.114"
     mmsc_proxy_port: "8080"
   }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
 }
 configs {
   config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
+    key: "carrier_volte_available_bool"
+    bool_value: true
   }
 }
 last_updated {
-  seconds: 1713418446
+  seconds: 1720164602
 }

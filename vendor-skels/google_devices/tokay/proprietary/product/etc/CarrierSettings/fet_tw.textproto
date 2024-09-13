@@ -1,5 +1,5 @@
 canonical_name: "fet_tw"
-version: 57000000007
+version: 60000000010
 apns {
   apn {
     name: "\351\201\240\345\202\263\351\233\273\344\277\241(Far EasTone) (Internet)"
@@ -270,6 +270,10 @@ configs {
     int_value: 120
   }
   config {
+    key: "no_reply_timer_for_cfnry_sec_int"
+    int_value: 40
+  }
+  config {
     key: "nr_timers_reset_if_non_endc_and_rrc_idle_bool"
     bool_value: true
   }
@@ -300,5 +304,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715228879
+  seconds: 1722173420
 }

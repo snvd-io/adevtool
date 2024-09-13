@@ -1,5 +1,5 @@
 canonical_name: "koodo_ca"
-version: 56000000018
+version: 60000000022
 apns {
   apn {
     name: "Koodo SP"
@@ -58,11 +58,11 @@ apns {
 configs {
   config {
     key: "5g_icon_configuration_string"
-    text_value: "connected_mmwave:5G_Plus,connected:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
+    text_value: "connected_mmwave:5G_Plus,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
   }
   config {
     key: "5g_icon_display_grace_period_string"
-    text_value: "connected_mmwave,connected,30;connected_mmwave,not_restricted_rrc_idle,30;connected_mmwave,not_restricted_rrc_con,30"
+    text_value: "connected_mmwave,connected,30;connected_mmwave,connected_rrc_idle,30;connected_mmwave,not_restricted_rrc_idle,30;connected_mmwave,not_restricted_rrc_con,30"
   }
   config {
     key: "additional_nr_advanced_bands_int_array"
@@ -361,6 +361,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "iwlan.update_n1_mode_on_ui_change_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan_handover_policy_string_array"
     text_array {
       item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
@@ -490,5 +494,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519146
+  seconds: 1722173380
 }

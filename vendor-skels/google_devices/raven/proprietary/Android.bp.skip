@@ -163,12 +163,12 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libedgetpu_tachyon.google__system_ext",
+    name: "libhbmsvmanager_jni__system_ext",
     owner: "google_devices",
-    stem: "libedgetpu_tachyon.google",
+    stem: "libhbmsvmanager_jni",
     target: {
-        android_arm: { srcs: [ "system_ext/lib/libedgetpu_tachyon.google.so" ] },
-        android_arm64: { srcs: [ "system_ext/lib64/libedgetpu_tachyon.google.so" ] }
+        android_arm: { srcs: [ "system_ext/lib/libhbmsvmanager_jni.so" ] },
+        android_arm64: { srcs: [ "system_ext/lib64/libhbmsvmanager_jni.so" ] }
     },
     compile_multilib: "both",
     check_elf_files: false,
@@ -184,6 +184,21 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: { srcs: [ "system_ext/lib/libmediaadaptor.so" ] },
         android_arm64: { srcs: [ "system_ext/lib64/libmediaadaptor.so" ] }
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libpowerstatshaldataprovider__system_ext",
+    owner: "google_devices",
+    stem: "libpowerstatshaldataprovider",
+    target: {
+        android_arm: { srcs: [ "system_ext/lib/libpowerstatshaldataprovider.so" ] },
+        android_arm64: { srcs: [ "system_ext/lib64/libpowerstatshaldataprovider.so" ] }
     },
     compile_multilib: "both",
     check_elf_files: false,
@@ -249,30 +264,6 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: { srcs: [ "system_ext/lib64/com.google.edgetpu_vendor_service-V2-ndk.so" ] }
     },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libhbmsvmanager_jni__system_ext",
-    owner: "google_devices",
-    stem: "libhbmsvmanager_jni",
-    target: { android_arm64: { srcs: [ "system_ext/lib64/libhbmsvmanager_jni.so" ] } },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libpowerstatshaldataprovider__system_ext",
-    owner: "google_devices",
-    stem: "libpowerstatshaldataprovider",
-    target: { android_arm64: { srcs: [ "system_ext/lib64/libpowerstatshaldataprovider.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -376,10 +367,16 @@ android_app_import {
     system_ext_specific: true,
 }
 
-prebuilt_apex {
-    name: "com.google.android.widevine-wv_341113000",
+sh_binary {
+    name: "oem-iptables-init.sh",
     owner: "google_devices",
-    src: "vendor/apex/com.google.android.widevine-wv_341113000.apex",
+    src: "system/system/bin/oem-iptables-init.sh",
+}
+
+prebuilt_apex {
+    name: "com.google.android.widevine-11775005",
+    owner: "google_devices",
+    src: "vendor/apex/com.google.android.widevine-11775005.apex",
     prefer: true,
     soc_specific: true,
 }
@@ -528,17 +525,6 @@ cc_prebuilt_binary {
     name: "android.hardware.gnss@2.1-service-brcm",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/android.hardware.gnss@2.1-service-brcm" ],
-    relative_install_path: "hw",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.identity@1.0-service.citadel",
-    owner: "google_devices",
-    srcs: [ "vendor/bin/hw/android.hardware.identity@1.0-service.citadel" ],
     relative_install_path: "hw",
     check_elf_files: false,
     prefer: true,
@@ -803,6 +789,17 @@ cc_prebuilt_binary {
     name: "vendor.google.wireless_charger-default",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/vendor.google.wireless_charger-default" ],
+    relative_install_path: "hw",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.google.wireless_charger.service-default",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/hw/vendor.google.wireless_charger.service-default" ],
     relative_install_path: "hw",
     check_elf_files: false,
     prefer: true,
@@ -1116,6 +1113,20 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: { srcs: [ "vendor/lib/aoc_audio_stereo_spatializer.so" ] },
         android_arm64: { srcs: [ "vendor/lib64/aoc_audio_stereo_spatializer.so" ] }
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "aocx-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm: { srcs: [ "vendor/lib/aocx-ndk.so" ] },
+        android_arm64: { srcs: [ "vendor/lib64/aocx-ndk.so" ] }
     },
     compile_multilib: "both",
     check_elf_files: false,
@@ -1542,6 +1553,20 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: { srcs: [ "vendor/lib/libedgetpu_client.google.so" ] },
         android_arm64: { srcs: [ "vendor/lib64/libedgetpu_client.google.so" ] }
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libedgetpu_tachyon.google",
+    owner: "google_devices",
+    target: {
+        android_arm: { srcs: [ "vendor/lib/libedgetpu_tachyon.google.so" ] },
+        android_arm64: { srcs: [ "vendor/lib64/libedgetpu_tachyon.google.so" ] }
     },
     compile_multilib: "both",
     check_elf_files: false,
@@ -2225,11 +2250,11 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.google.whitechapel.audio.extension-V1-ndk",
+    name: "vendor.google.whitechapel.audio.extension-V2-ndk",
     owner: "google_devices",
     target: {
-        android_arm: { srcs: [ "vendor/lib/vendor.google.whitechapel.audio.extension-V1-ndk.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/vendor.google.whitechapel.audio.extension-V1-ndk.so" ] }
+        android_arm: { srcs: [ "vendor/lib/vendor.google.whitechapel.audio.extension-V2-ndk.so" ] },
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.whitechapel.audio.extension-V2-ndk.so" ] }
     },
     compile_multilib: "both",
     check_elf_files: false,
@@ -2365,30 +2390,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.identity@1.0-impl.nos",
-    owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/android.hardware.identity@1.0-impl.nos.so" ] } },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "android.hardware.keymaster@4.1-impl.nos",
-    owner: "google_devices",
-    target: {
-        android_arm64: { srcs: [ "vendor/lib64/android.hardware.keymaster@4.1-impl.nos.so" ] }
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "android.hardware.oemlock-impl.nos",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/android.hardware.oemlock-impl.nos.so" ] } },
@@ -2449,6 +2450,17 @@ cc_prebuilt_library_shared {
     name: "biometricsuez",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/biometricsuez.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.google.edgetpu_app_service-V4-ndk",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/com.google.edgetpu_app_service-V4-ndk.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -2800,6 +2812,17 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libutils-default",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libutils-default.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libvendor.goodix.hardware.biometrics.fingerprint",
     owner: "google_devices",
     target: {
@@ -2902,6 +2925,19 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
+cc_prebuilt_library_shared {
+    name: "vendor.google.wireless_charger.service-V1-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.wireless_charger.service-V1-ndk.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
 prebuilt_etc_xml {
     name: "com.google.pixel.camera.services@1.0-service-google",
     owner: "google_devices",
@@ -2960,15 +2996,6 @@ prebuilt_etc_xml {
     name: "android.hardware.gnss@2.1-service-brcm__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-brcm.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "android.hardware.identity.strongbox",
-    owner: "google_devices",
-    src: "vendor/etc/vintf/manifest/android.hardware.identity.strongbox.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -3113,6 +3140,15 @@ prebuilt_etc_xml {
     name: "vendor.google.wireless_charger-default__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/vendor.google.wireless_charger-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "vendor.google.wireless_charger.service-default__2",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/vendor.google.wireless_charger.service-default.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,

@@ -1,5 +1,5 @@
 canonical_name: "kddi_jp"
-version: 57000000005
+version: 60000000006
 apns {
   apn {
     name: "5G NET"
@@ -292,7 +292,7 @@ configs {
   }
   config {
     key: "imsemergency.emergency_call_setup_timer_on_current_network_sec_int"
-    int_value: 0
+    int_value: 35
   }
   config {
     key: "imsemergency.emergency_domain_preference_int_array"
@@ -503,6 +503,10 @@ configs {
     int_value: 40
   }
   config {
+    key: "qns.xcap_transport_type_int"
+    int_value: 0
+  }
+  config {
     key: "read_only_apn_types_string_array"
     text_array {
       item: "dun"
@@ -541,5 +545,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1710391116
+  seconds: 1714533696
 }
