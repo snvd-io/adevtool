@@ -44,9 +44,7 @@ PRODUCT_PACKAGES += \
     ambient_volume \
     android.auto_generated_rro_product_adevtool__ \
     android.auto_generated_rro_vendor_adevtool__ \
-    android.frameworks.sensorservice-V1-ndk.vendor:32 \
     android.frameworks.stats-V1-cpp.vendor:64 \
-    android.frameworks.stats-V1-ndk.vendor:32 \
     android.hardware.authsecret-impl.nos \
     android.hardware.authsecret-service.citadel \
     android.hardware.authsecret-service.citadel__2 \
@@ -71,18 +69,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-impl-google \
     android.hardware.gnss@2.1-service-brcm \
     android.hardware.gnss@2.1-service-brcm__2 \
-    android.hardware.graphics.allocator-V2-ndk.vendor:32 \
-    android.hardware.graphics.allocator@2.0.vendor:32 \
-    android.hardware.graphics.allocator@3.0.vendor:32 \
-    android.hardware.graphics.allocator@4.0.vendor:32 \
-    android.hardware.graphics.bufferqueue@1.0.vendor \
-    android.hardware.graphics.bufferqueue@2.0.vendor \
-    android.hardware.graphics.common-V3-ndk.vendor:32 \
-    android.hardware.graphics.mapper@2.0.vendor:32 \
-    android.hardware.graphics.mapper@2.1.vendor:32 \
-    android.hardware.graphics.mapper@3.0.vendor:32 \
+    android.hardware.graphics.bufferqueue@1.0.vendor:64 \
+    android.hardware.graphics.bufferqueue@2.0.vendor:64 \
     android.hardware.gxp.logging@service-gxp-logging \
-    android.hardware.health-V1-ndk.vendor \
+    android.hardware.health-V1-ndk.vendor:64 \
     android.hardware.identity_credential.xml \
     android.hardware.identity-support-lib.vendor:64 \
     android.hardware.identity-V5-ndk.vendor:64 \
@@ -98,14 +88,14 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0.vendor:64 \
     android.hardware.keymaster@4.1-impl.nos \
     android.hardware.keymaster@4.1.vendor:64 \
-    android.hardware.media.bufferpool@2.0.vendor \
-    android.hardware.media.bufferpool2-V2-ndk.vendor \
-    android.hardware.media.c2-V1-ndk.vendor \
-    android.hardware.media.c2@1.0.vendor \
+    android.hardware.media.bufferpool@2.0.vendor:64 \
+    android.hardware.media.bufferpool2-V2-ndk.vendor:64 \
+    android.hardware.media.c2-V1-ndk.vendor:64 \
+    android.hardware.media.c2@1.0.vendor:64 \
     android.hardware.media.c2@1.1.vendor:64 \
     android.hardware.media.c2@1.2.vendor:64 \
-    android.hardware.media.omx@1.0.vendor \
-    android.hardware.media@1.0.vendor \
+    android.hardware.media.omx@1.0.vendor:64 \
+    android.hardware.media@1.0.vendor:64 \
     android.hardware.neuralnetworks-V4-ndk.vendor:64 \
     android.hardware.neuralnetworks@1.0.vendor:64 \
     android.hardware.neuralnetworks@1.1.vendor:64 \
@@ -121,44 +111,35 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.1.vendor:64 \
     android.hardware.power@1.2.vendor:64 \
     android.hardware.qorvo.uwb.service \
-    android.hardware.radio-V1-ndk.vendor \
-    android.hardware.radio.config-V1-ndk.vendor \
-    android.hardware.radio.config@1.0.vendor \
-    android.hardware.radio.config@1.1.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.data-V1-ndk.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.radio.messaging-V1-ndk.vendor \
-    android.hardware.radio.modem-V1-ndk.vendor \
-    android.hardware.radio.network-V1-ndk.vendor \
-    android.hardware.radio.sim-V1-ndk.vendor \
-    android.hardware.radio.voice-V1-ndk.vendor \
-    android.hardware.radio@1.2.vendor \
-    android.hardware.radio@1.3.vendor \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio@1.6.vendor \
-    android.hardware.secure_element.thales.libse:32 \
+    android.hardware.radio-V1-ndk.vendor:64 \
+    android.hardware.radio.config-V1-ndk.vendor:64 \
+    android.hardware.radio.config@1.0.vendor:64 \
+    android.hardware.radio.config@1.1.vendor:64 \
+    android.hardware.radio.config@1.2.vendor:64 \
+    android.hardware.radio.data-V1-ndk.vendor:64 \
+    android.hardware.radio.deprecated@1.0.vendor:64 \
+    android.hardware.radio.messaging-V1-ndk.vendor:64 \
+    android.hardware.radio.modem-V1-ndk.vendor:64 \
+    android.hardware.radio.network-V1-ndk.vendor:64 \
+    android.hardware.radio.sim-V1-ndk.vendor:64 \
+    android.hardware.radio.voice-V1-ndk.vendor:64 \
+    android.hardware.radio@1.2.vendor:64 \
+    android.hardware.radio@1.3.vendor:64 \
+    android.hardware.radio@1.4.vendor:64 \
+    android.hardware.radio@1.5.vendor:64 \
+    android.hardware.radio@1.6.vendor:64 \
     android.hardware.secure_element@1.2-uicc-service \
     android.hardware.security.keymint-impl.nos \
     android.hardware.security.keymint-service.citadel \
     android.hardware.security.keymint-service.citadel__2 \
-    android.hardware.sensors-V2-ndk.vendor:32 \
-    android.hardware.sensors@1.0.vendor:32 \
-    android.hardware.sensors@2.0-ScopedWakelock.vendor:32 \
-    android.hardware.sensors@2.0.vendor:32 \
-    android.hardware.sensors@2.1.vendor:32 \
-    android.hardware.thermal-V1-ndk.vendor:32 \
-    android.hardware.thermal@1.0.vendor:32 \
-    android.hardware.thermal@2.0.vendor:32 \
     android.hardware.weaver-bridge.nos \
     android.hardware.weaver-impl.nos \
     android.hardware.weaver-service.citadel \
     android.hardware.weaver-service.citadel__2 \
     android.hardware.weaver-V2-ndk.vendor:64 \
     android.hardware.weaver2-impl.nos \
-    android.hidl.token@1.0-utils.vendor \
-    android.hidl.token@1.0.vendor \
+    android.hidl.token@1.0-utils.vendor:64 \
+    android.hidl.token@1.0.vendor:64 \
     android.software.angle.xml \
     android.trusty.stats.nw.setter-cpp.vendor:64 \
     ANGLE \
@@ -218,7 +199,7 @@ PRODUCT_PACKAGES += \
     com.google.euiccpixel.auto_generated_rro_product_adevtool__ \
     com.google.hardware.biometrics.fingerprint.fingerprint-ext-V1-ndk \
     com.google.hardware.pixel.display-V4-ndk.vendor:64 \
-    com.google.hardware.pixel.display-V9-ndk.vendor \
+    com.google.hardware.pixel.display-V9-ndk.vendor:64 \
     com.google.input-V2-ndk \
     com.google.input-V3-ndk \
     com.google.pixel.camera.connectivity \
@@ -260,31 +241,28 @@ PRODUCT_PACKAGES += \
     lhd \
     lib_aion_buffer \
     lib_reader \
-    libacryl_hdr_plugin:32 \
-    libacryl:32 \
     libadaptedinfo \
     libAlgFx_HiFi3z \
     libamcsextfile \
     libaoc \
     libaoctuningdecoder \
     libaocx \
-    libaudioroutev2.vendor \
+    libaudioroutev2.vendor:64 \
     libavservices_minijail.vendor:64 \
     libbinder_trusty:64 \
-    libbinder.vendor:32 \
     libbo_av1 \
     libc2filterplugin \
     libcap.vendor:64 \
-    libcodec2_hal_common.vendor \
-    libcodec2_hidl_plugin \
-    libcodec2_hidl@1.0.vendor \
+    libcodec2_hal_common.vendor:64 \
+    libcodec2_hidl_plugin:64 \
+    libcodec2_hidl@1.0.vendor:64 \
     libcodec2_hidl@1.1.vendor:64 \
     libcodec2_hidl@1.2.vendor:64 \
     libcodec2_soft_common.vendor:64 \
     libcodec2_soft_ddpdec \
     libcodec2_store_dolby \
-    libcodec2_vndk.vendor \
-    libcodec2.vendor \
+    libcodec2_vndk.vendor:64 \
+    libcodec2.vendor:64 \
     libdapparamstorage \
     libdarwinn_dba_hal_runtime \
     libdarwinn_hal \
@@ -293,14 +271,13 @@ PRODUCT_PACKAGES += \
     libdisplaycolor \
     libdmengine__product \
     libdmjavaplugin__product \
-    libdrm.vendor:32 \
     libedgetpu_client.google \
     libedgetpu_dba.google__system_ext \
     libedgetpu_tachyon.google__system_ext \
     libedgetpu_tflite_compiler \
     libedgetpu_util \
-    libevent.vendor \
-    libexpat.vendor \
+    libevent.vendor:64 \
+    libexpat.vendor:64 \
     libExynosC2ComponentStore \
     libExynosC2H263Dec \
     libExynosC2H263Enc \
@@ -314,8 +291,8 @@ PRODUCT_PACKAGES += \
     libExynosC2Vp8Enc \
     libExynosC2Vp9Dec \
     libExynosC2Vp9Enc \
-    libexynosutils \
-    libexynosv4l2 \
+    libexynosutils:64 \
+    libexynosv4l2:64 \
     libfvsam_prm_parser \
     libgc2_av1_dec \
     libgc2_base \
@@ -331,24 +308,23 @@ PRODUCT_PACKAGES += \
     libgril_oem-google \
     libgxp \
     libhbmsvmanager_jni__system_ext \
-    libhidltransport.vendor \
-    libhidparser \
-    libhwbinder.vendor \
+    libhidltransport.vendor:64 \
+    libhidparser:64 \
+    libhwbinder.vendor:64 \
     libion_exynos \
-    libion.vendor \
+    libion.vendor:64 \
     libjson \
-    libjsoncpp.vendor:32 \
     libkeymaster4support.vendor:64 \
     libkeymint_support.vendor:64 \
     liblzma.vendor:64 \
     libmahalcontroller \
-    libmedia_ecoservice.vendor \
-    libmedia_omx.vendor \
+    libmedia_ecoservice.vendor:64 \
+    libmedia_omx.vendor:64 \
     libmediaadaptor__system_ext \
     libmetrics_logger \
     libminijail.vendor:64 \
     libmodem_svc_proto_legacy \
-    libnetutils.vendor \
+    libnetutils.vendor:64 \
     libnos_citadeld_proxy \
     libnos_client_citadel:64 \
     libnos_datagram_citadel:64 \
@@ -362,17 +338,14 @@ PRODUCT_PACKAGES += \
     liboffloadeffect \
     libOpenCL \
     libOpenCL-pixel \
-    libpower.vendor:32 \
     libpowerstatshaldataprovider__system_ext \
-    libprocessgroup.vendor:32 \
     libqorvo_uwb_params_nfcc \
     libril_gfeature \
     libril_sitril \
     libril-aidl \
     librtxproto_aidl-default \
-    libsensorndkbridge:32 \
     libsensorsuez \
-    libsfplugin_ccodec_utils.vendor \
+    libsfplugin_ccodec_utils.vendor:64 \
     libsit_oem \
     libsit_oem_proto \
     libsitril \
@@ -381,36 +354,31 @@ PRODUCT_PACKAGES += \
     libsitril-gps \
     libsitril-ims \
     libspatialaudio \
-    libsqlite.vendor \
-    libstagefright_aidl_bufferpool2.vendor \
-    libstagefright_bufferpool@2.0.1.vendor \
-    libstagefright_bufferqueue_helper.vendor \
-    libstagefright_omx_utils.vendor \
+    libsqlite.vendor:64 \
+    libstagefright_aidl_bufferpool2.vendor:64 \
+    libstagefright_bufferpool@2.0.1.vendor:64 \
+    libstagefright_bufferqueue_helper.vendor:64 \
+    libstagefright_omx_utils.vendor:64 \
     libstagefright_omx.vendor:64 \
-    libstagefright_xmlparser.vendor \
+    libstagefright_xmlparser.vendor:64 \
     libstpreprocess21 \
     libstreset21 \
     libsueznanoappclients \
     libtachyon_core \
     libteeui_hal_support.vendor:64 \
-    libtinycompress \
+    libtinycompress:64 \
     libtouchflow \
     libtrusty_metrics:64 \
-    libui.vendor:32 \
     libunwindstack.vendor:64 \
     libusf \
     libvendor.goodix.hardware.biometrics.fingerprint@2.1 \
-    libvendorgraphicbuffer:32 \
     libwlcproto_aidl-default \
-    libziparchive.vendor \
+    libziparchive.vendor:64 \
     manifest_input.processor-service \
     manifest_radioext \
     manifest_wifi_ext_aidl \
-    modem_android_property_manager_impl.vendor:32 \
-    modem_android_property_manager.vendor:32 \
-    modem_clock_manager_impl.vendor \
-    modem_clock_manager.vendor \
-    modem_log_constants.vendor:32 \
+    modem_clock_manager_impl.vendor:64 \
+    modem_clock_manager.vendor:64 \
     modem_logging_control \
     modem_svc_sit \
     motiondetector \
@@ -425,7 +393,6 @@ PRODUCT_PACKAGES += \
     OemRilService \
     PersistentBackgroundCameraServices \
     PersistentBackgroundServices \
-    pixel-power-ext-V1-ndk.vendor:32 \
     PixelCameraServices \
     PixelNfc \
     pixelpowerstats_provider_aidl_interface-cpp.vendor:64 \
@@ -437,7 +404,7 @@ PRODUCT_PACKAGES += \
     scd \
     sd \
     securedpud.slider \
-    sensors.dynamic_sensor_hal \
+    sensors.dynamic_sensor_hal:64 \
     sensors.usf \
     ShannonIms \
     ShannonRcs \
