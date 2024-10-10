@@ -186,7 +186,6 @@ PRODUCT_PACKAGES += \
     com.google.pixel.camera.services.lyricconfigprovider \
     com.google.pixel.camera.services@1.0-service-google \
     com.google.pixel.wifi.ext \
-    device_symlinks \
     drop \
     fake_gxp_telemetry_reader \
     fingerprint-fpc42 \

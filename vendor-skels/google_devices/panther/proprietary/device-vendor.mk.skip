@@ -216,7 +216,6 @@ PRODUCT_PACKAGES += \
     com.google.pixel.euicc.update \
     com.google.pixel.modem.logmasklibrary-V1-ndk \
     com.google.pixel.wifi.ext \
-    device_symlinks \
     dmd \
     dmd__2 \
     drop \

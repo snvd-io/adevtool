@@ -23,7 +23,8 @@ filters:
 
     match:
       - system/bin/app_process32
-      - system/bin/boringssl_self_test32
       - system/bin/bootstrap/linker
+      - system/bin/bootstrap/linker_asan
+      - system/bin/boringssl_self_test32
       - system/bin/linker
       - system/bin/linker_asan
