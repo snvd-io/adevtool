@@ -1,5 +1,5 @@
 canonical_name: "bouygues_fr"
-version: 56000000021
+version: 56000000022
 apns {
   apn {
     name: "Bouygues Telecom"
@@ -312,6 +312,12 @@ configs {
     bool_value: false
   }
 }
+vendor_configs {
+  client {
+    name: "modem"
+    value: "\nv\n\027OEM_GCONFIG_PARIS_MODEL\022XZzUzMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\"\001\000\n \n\025PSS.AIMS.EMC.SUB.SERV\022\004Aw==\"\001\000\n9\n.PSS.AIMS.NON-DETECTABLE-EMC.Checking-PAIheader\022\004Aw==\"\001\000\nx\n\031OEM_GCONFIG_PARIS_VERSION\022XZzUzMDBfYnlnXzE2MF8yMDI0MDgwMTE3MDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\"\001\001"
+  }
+}
 last_updated {
-  seconds: 1707299255
+  seconds: 1722909175
 }
