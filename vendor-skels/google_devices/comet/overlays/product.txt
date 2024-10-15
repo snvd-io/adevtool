@@ -121,8 +121,6 @@ Note: You can’t use your fingerprint to unlock this device. For more informati
 com.android.settings:string/security_settings_fingerprint_enroll_introduction_title = Set up Fingerprint Unlock
 com.android.settings:string/security_settings_fingerprint_enroll_introduction_title_unlock_disabled = Pixel Imprint
 com.android.settings:string/security_settings_fingerprint_preference_title = Fingerprint Unlock
-com.android.settings:string/setting_auto_rotate_folded = Auto-rotate when folded
-com.android.settings:string/setting_auto_rotate_unfolded = Auto-rotate when unfolded
 com.android.settings:string/suggested_fingerprint_lock_settings_summary = Use Pixel Imprint to unlock your phone
 com.android.settings:string-array/fingerprint_acquired_vendor = Reposition finger. You already touched with this area of your fingerprint.
 com.android.settings:bool/enrollment_message_display_controller_flag = true

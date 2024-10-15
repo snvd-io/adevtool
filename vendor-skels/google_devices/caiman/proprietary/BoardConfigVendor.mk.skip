@@ -25,7 +25,6 @@ AB_OTA_PARTITIONS += \
 TARGET_BOARD_INFO_FILE := vendor/google_devices/caiman/firmware/android-info.txt
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/google/zumapro-sepolicy/system_ext/private \
     hardware/google/pixel-sepolicy/connectivity_thermal_power_manager
 
 # Missing system_ext SELinux context: /metadata/repair-mode/config(/.*)? u:object_r:repair_mode_metadata_config_file:s0
@@ -38,9 +37,6 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 # Missing system_ext SELinux context: user=_app isPrivApp=true name=com.google.android.apps.pixel.dcservice domain=dcservice_app type=privapp_data_file levelFrom=user
 # Missing system_ext SELinux context: user=_app isPrivApp=true name=com.google.android.apps.pixel.dcservice.ui domain=dcservice_app type=privapp_data_file levelFrom=user
 
-PRODUCT_PRIVATE_SEPOLICY_DIRS += \
-    device/google/gs-common/recorder/sepolicy/product/private
-
 # Missing product SELinux context: user=_app isPrivApp=true seinfo=google name=com.google.android.GoogleCamera domain=google_camera_app type=app_data_file levelFrom=all
 # Missing product SELinux context: user=_app seinfo=CameraEng name=com.google.android.GoogleCameraEng domain=debug_camera_app type=app_data_file levelFrom=all
 # Missing product SELinux context: user=_app seinfo=CameraFishfood name=com.google.android.apps.googlecamera.fishfood domain=google_camera_app type=app_data_file levelFrom=all
@@ -48,17 +44,7 @@ PRODUCT_PRIVATE_SEPOLICY_DIRS += \
 
 BOARD_VENDOR_SEPOLICY_DIRS += \
     device/google/gs-common/gps/lsi/sepolicy \
-    device/google/gs-common/aoc/sepolicy \
-    device/google/zumapro-sepolicy/vendor \
-    device/google/gs-common/wireless_charger/sepolicy \
-    device/google/gs-common/storage/sepolicy \
-    device/google/gs-common/fingerprint/sepolicy \
-    device/google/gs-common/edgetpu/sepolicy \
-    device/google/zumapro-sepolicy/radio \
     device/google/gs-common/gps/pixel/sepolicy \
-    device/google/gs-common/audio/sepolicy/common \
-    device/google/gs-common/modem/shared_modem_platform/sepolicy \
-    device/google/gs-common/gpu/sepolicy \
     vendor/google_devices/caiman/sepolicy
 
 # Missing vendor SELinux context: /(vendor|system/vendor)/bin/hw/qorvo\.uci-daemon u:object_r:qorvo-uci-daemon_exec:s0

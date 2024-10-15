@@ -4,8 +4,6 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/google_devices/comet
 
-SYSTEM_EXT_MANIFEST_FILES += vendor/google_devices/comet/vintf/adevtool_manifest_system_ext.xml
-
 DEVICE_MANIFEST_FILE += vendor/google_devices/comet/vintf/adevtool_manifest_vendor.xml
 
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += vendor/google_devices/comet/proprietary/linker-config-adevtool.json
@@ -15,7 +13,6 @@ PRODUCT_SYSTEM_SERVER_JARS += \
 
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.settings.large_screen_opt.enabled=true \
-    dalvik.vm.enable_pr_dexopt=true \
     ro.scone.relay_metrics_default_enable=1 \
     ro.camerax.extensions.enabled=true
 
@@ -34,7 +31,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.product.manufacturer_for_attestation=Google \
     ro.quick_start.oem_id=00e0 \
     ro.quick_start.device_id=comet \
-    persist.wm.extensions.enabled=true \
     aoj.feature.contract=true \
     aoj.feature.node_logging=true \
     aoj.feature.dimension_logging= \
@@ -45,9 +41,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     pixel_legal_joint_permission_v2=true \
     charging_string.apply_v2=true \
     persist.wm.extensions.activity_embedding_guard_with_android_15=false \
-    bluetooth.server.automatic_turn_on=true \
-    ro.odm.build.media_performance_class=34 \
-    persist.bluetooth.thread_dispatcher.enabled=true \
     ro.vendor.camera.extensions.package=com.google.android.apps.camera.services \
     ro.vendor.camera.extensions.service=com.google.android.apps.camera.services.extensions.service.PixelExtensions
 
@@ -59,25 +52,20 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.product.manufacturer_for_attestation=Google \
     ro.build.expect.baseband=g5400c-240718-240719-B-12112834 \
     ro.build.expect.bootloader=ripcurrentpro-15.0-12152969 \
-    ro.board.api_frozen=true \
     persist.vendor.gps.hal.service.name=vendor \
     ro.vendor.build.svn=06 \
-    ro.vendor.gps.pps.enabled=true \
     ro.usb.uvc.enabled=true \
     ro.surface_flinger.game_default_frame_rate_override=60 \
     ro.vendor.dolby.dax.version=DAX3_G_3.7.3.0_r1 \
     drm.service.enabled=true \
     media.mediadrmservice.enable=true \
     persist.vendor.aoc.firmware.disable_monitor_mode=true \
-    persist.sys.hdcp_checking=always \
     persist.vendor.ril.use_radio_hal=2.1 \
     persist.vendor.ril.radioexternal_hal_type=hidl \
     vendor.rild.libpath=libsitril.so \
     persist.vendor.ril.support_nr_ds=1 \
     persist.vendor.ril.ecc.use.xml=1 \
-    vendor.battery_mitigation.aidl.enable=true \
-    media.c2.hal.selection=aidl \
-    persist.vendor.app.audio.gsenet.version=1
+    vendor.battery_mitigation.aidl.enable=true
 
 PRODUCT_VENDOR_DLKM_PROPERTIES += \
     ro.product.model_for_attestation=Pixel 9 Pro Fold \
@@ -100,7 +88,6 @@ PRODUCT_PACKAGES += \
     ambient_volume \
     android.auto_generated_rro_product_adevtool__ \
     android.auto_generated_rro_vendor_adevtool__ \
-    android.database.sqlite-aconfig-cc__system \
     android.frameworks.stats-V1-cpp.vendor \
     android.hardware.audio.common@5.0.vendor \
     android.hardware.audio.core-V2-ndk.vendor \
@@ -205,20 +192,13 @@ PRODUCT_PACKAGES += \
     android.hidl.token@1.0-utils.vendor \
     android.hidl.token@1.0.vendor \
     android.media.soundtrigger.types-V2-ndk.vendor \
-    android.os.flags-aconfig-cc__system \
-    android.os.flags-aconfig-cc-host__system \
     android.software.angle.xml \
     android.trusty.stats.nw.setter-cpp.vendor \
-    androidx.window.extensions \
-    androidx.window.extensions.xml \
-    androidx.window.sidecar \
-    androidx.window.sidecar.xml \
     ANGLE \
     aocd \
     aocx-ndk \
     aocxd \
     ar_bridge \
-    audio-permission-aidl-cpp__system \
     battery_mitigation \
     biometricsuez \
     bipchmgr \
@@ -226,15 +206,12 @@ PRODUCT_PACKAGES += \
     capo \
     cbd \
     cc \
-    chre_atoms_log \
+    chre_atoms_log:64 \
     chremetrics-cpp \
     citadel_updater \
     citadeld \
     columbus \
     columbus_lite \
-    com.android.hardware.biometrics.face.virtual \
-    com.android.hardware.biometrics.fingerprint.virtual \
-    com.android.media.audioclient-aconfig-cc__system \
     com.android.networkstack.tethering__TetheringConfig.auto_generated_rro_product_adevtool__ \
     com.android.phone.auto_generated_rro_product_adevtool__ \
     com.android.pixeldisplayservice.auto_generated_rro_product_adevtool__ \
@@ -243,7 +220,6 @@ PRODUCT_PACKAGES += \
     com.android.systemui.auto_generated_rro_product_adevtool__ \
     com.android.traceur.auto_generated_rro_product_adevtool__ \
     com.android.wifi.resources__WifiCustomization.auto_generated_rro_product_adevtool__ \
-    com.android.window.flags.window-aconfig_flags_c_lib__system \
     com.fingerprints42.extension@1.0 \
     com.google.android.camera.experimental2024 \
     com.google.android.camera.experimental2024_system \
@@ -264,7 +240,6 @@ PRODUCT_PACKAGES += \
     com.google.euiccpixel.auto_generated_rro_product_adevtool__ \
     com.google.hardware.biometrics.parcelable.fingerprint.PressToAuthParcelable-V1-ndk \
     com.google.hardware.biometrics.sidefps.fingerprint-ext-V1-ndk \
-    com.google.hardware.pixel.display-V12-ndk.vendor \
     com.google.hardware.pixel.display-V9-ndk.vendor \
     com.google.input-V2-ndk \
     com.google.input-V3-ndk \
@@ -281,7 +256,6 @@ PRODUCT_PACKAGES += \
     dmd \
     dmd__2 \
     drop \
-    dump_fingerprint \
     EuiccGoogle \
     EuiccGoogleOverlay \
     EuiccSupportPixel-P23 \
@@ -298,12 +272,12 @@ PRODUCT_PACKAGES += \
     gnssd \
     google-ril \
     google.hardware.media.c2@2.0-service \
-    graphicbuffersource-aidl-ndk__system \
     gxp_metrics_logger \
     gxp_telemetry_reader \
     hardware.google.bluetooth.bt_channel_avoidance@1.0.vendor \
     hardware.google.ril_ext-V1-ndk.vendor \
     health \
+    hfp_codec_capabilities_xml \
     imu_cal \
     init_citadel \
     init_uwb_calib \
@@ -315,15 +289,8 @@ PRODUCT_PACKAGES += \
     lib_android_keymaster_keymint_utils.vendor \
     lib_jpg_encoder \
     lib_reader \
-    libaconfig_device_paths.dylib__system \
-    libaconfig_storage_file:64 \
-    libaconfig_storage_protos:64 \
-    libaconfig_storage_read_api_cc \
-    libaconfig_storage_read_api_cc__system \
-    libaconfig_storage_read_api.dylib__system \
     libAlgFx_HiFi3z \
     libalsautilsv2 \
-    libandroid_gui.dylib__system \
     libaoc \
     libaptX_encoder__system_ext \
     libaptXHD_encoder__system_ext \
@@ -331,8 +298,6 @@ PRODUCT_PACKAGES += \
     libaudioroutev2.vendor \
     libaudioserviceexampleimpl \
     libavservices_minijail.vendor \
-    libbinder_ndk_sys:64 \
-    libbinder_rs:64 \
     libbinder_trusty \
     libbluetooth_audio_session_aidl:64 \
     libbw_av1dec \
@@ -351,22 +316,18 @@ PRODUCT_PACKAGES += \
     libcodec2_store_dolby \
     libcodec2_vndk.vendor \
     libcodec2.vendor \
-    libcppbor \
-    libcppbor__system \
+    libcppbor.vendor \
     libcppcose_rkp.vendor \
     libcurl.vendor \
-    libcxx:64 \
     libdapparamstorage \
     libdarwinn_dba_hal_runtime \
     libdarwinn_hal \
-    libdebugstore_cxx__system \
     libdeccfg \
     libdeeptouch \
     libdisplaycolor \
     libdisplaypanel \
     libdmengine__product \
     libdmjavaplugin__product \
-    libdowncast_rs:64 \
     libedgetpu_client.google \
     libedgetpu_dba.google__system_ext \
     libedgetpu_tachyon.google \
@@ -389,7 +350,6 @@ PRODUCT_PACKAGES += \
     libExynosC2Vp9Enc \
     libexynosutils \
     libexynosv4l2 \
-    libfastrand:64 \
     libflatbuffers-cpp.vendor \
     libfvsam_prm_parser \
     libgc2_bw_av1_dec \
@@ -404,9 +364,7 @@ PRODUCT_PACKAGES += \
     libgooglerilmemmonitor \
     libgpudataproducer \
     libgril_oem-google \
-    libgui_aidl_types_rs.dylib__system \
     libgxp \
-    libharfbuzz_subset:64 \
     libhidlmemory.vendor \
     libhidltransport.vendor \
     libhidparser:64 \
@@ -424,7 +382,6 @@ PRODUCT_PACKAGES += \
     libmedia_omx.vendor \
     libmediaadaptor__system_ext \
     libmediautils_vendor.vendor \
-    libmemmap2:64 \
     libmemunreachable.vendor \
     libmetrics_logger \
     libminijail.vendor \
@@ -451,7 +408,6 @@ PRODUCT_PACKAGES += \
     libpixelimsmedia__system_ext \
     libpowerstatshaldataprovider__system_ext \
     libpuresoftkeymasterdevice.vendor \
-    libremove_dir_all:64 \
     libril_gfeature \
     libril_sitril \
     libril-aidl \
@@ -468,36 +424,29 @@ PRODUCT_PACKAGES += \
     libsitril-ims \
     libsoft_attestation_cert.vendor \
     libspatialaudio \
-    libspeechenhancer \
     libsqlite.vendor \
     libstagefright_aidl_bufferpool2.vendor \
     libstagefright_bufferpool@2.0.1.vendor \
     libstagefright_bufferqueue_helper.vendor \
-    libstagefright_graphicbuffersource_aidl__system \
     libstagefright_omx_utils.vendor \
     libstagefright_omx.vendor \
     libstagefright_xmlparser.vendor \
-    libstatic_assertions:64 \
     libstreset24 \
     libsueznanoappclients \
     libtachyon_core \
     libtachyon_dsp_core \
-    libtempfile:64 \
     libthermal_tflite_wrapper \
     libtinyalsav2.vendor \
     libtinycompress \
     libtouchflow \
-    libtracing_perfetto__system \
     libtrusty_metrics \
     libunwindstack.vendor \
-    libusbhost.vendor \
     libusf \
     libutils-default \
     libwlcproto_aidl-default \
     libxml2.vendor \
     libziparchive.vendor \
     manifest_input.processor-service \
-    manifest_media_c2_software \
     manifest_radioext \
     manifest_wifi_ext_aidl \
     modem_clock_manager_impl.vendor \
@@ -508,7 +457,6 @@ PRODUCT_PACKAGES += \
     modemml-tflite-service-aidl-V1-ndk \
     motiondetector \
     nearby \
-    netd_aidl_interface-V15-cpp \
     nos_app_avb \
     nos_app_keymaster \
     nos_app_weaver \
@@ -525,7 +473,6 @@ PRODUCT_PACKAGES += \
     PixelNfc \
     pixelpowerstats_provider_aidl_interface-cpp.vendor \
     PixelQualifiedNetworksService \
-    product_keystore2_key_contexts \
     qm35_poll \
     rfsd \
     ril-extension \
@@ -542,14 +489,12 @@ PRODUCT_PACKAGES += \
     smartbatching \
     system_signal_hub \
     time_sync \
-    trace_redactor \
     trusty_metricsd \
     twoshay \
     usf_stats \
     uv_exposure \
     vendor_chre_atoms_log \
     vendor_chre_metrics-cpp \
-    vendor_keystore2_key_contexts \
     vendor-pixelatoms-cpp \
     vendor.dolby.media.c2@1.0-service \
     vendor.dolby.media.c2@1.0-service__2 \
@@ -605,9 +550,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung_slsi.telephony.hardware.radioExternal@1.0__system_ext \
     vendor.samsung_slsi.telephony.hardware.radioExternal@1.1 \
     vice \
-    vintf \
-    virtual_camera \
-    virtualizationservice \
     vulkan.mali \
     wallaby \
     wfc-pkt-router
@@ -989,11 +931,8 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/comet/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google_devices/comet/proprietary/system_ext/etc/init/vendor.google.whitechapel.audio.hal.parserservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.whitechapel.audio.hal.parserservice.rc \
     vendor/google_devices/comet/proprietary/system_ext/etc/public.libraries-google.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-google.txt \
-    vendor/google_devices/comet/proprietary/system_ext/etc/selinux/system_ext_keystore2_key_contexts:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/selinux/system_ext_keystore2_key_contexts \
     vendor/google_devices/comet/proprietary/system_ext/priv-app/EuiccSupportPixel-P23/esim-full-v1.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel-P23/esim-full-v1.img \
     vendor/google_devices/comet/proprietary/system_ext/priv-app/EuiccSupportPixel-P23/Felica_Tag_66_Changer.apdu:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel-P23/Felica_Tag_66_Changer.apdu \
-    vendor/google_devices/comet/proprietary/system/system/etc/init/kcmdlinectrl.rc:$(PRODUCT_OUT)/etc/init/kcmdlinectrl.rc \
-    vendor/google_devices/comet/proprietary/system/system/etc/perfetto/persistent_cfg.pbtxt:$(PRODUCT_OUT)/etc/perfetto/persistent_cfg.pbtxt \
     vendor/google_devices/comet/proprietary/vendor/etc/atc_profile.json:$(TARGET_COPY_OUT_VENDOR)/etc/atc_profile.json \
     vendor/google_devices/comet/proprietary/vendor/etc/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf \
     vendor/google_devices/comet/proprietary/vendor/etc/chre/activity.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/activity.napp_header \
@@ -1063,11 +1002,9 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/comet/proprietary/vendor/etc/init/google.hardware.media.c2@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/google.hardware.media.c2@2.0-service.rc \
     vendor/google_devices/comet/proprietary/vendor/etc/init/init_dauntless.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_dauntless.rc \
     vendor/google_devices/comet/proprietary/vendor/etc/init/init.camera.set-interrupts-ownership.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.camera.set-interrupts-ownership.rc \
-    vendor/google_devices/comet/proprietary/vendor/etc/init/init.fingerprint.dump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fingerprint.dump.rc \
     vendor/google_devices/comet/proprietary/vendor/etc/init/init.gnss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gnss.rc \
     vendor/google_devices/comet/proprietary/vendor/etc/init/init.liboemservice_proxy.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.liboemservice_proxy.rc \
     vendor/google_devices/comet/proprietary/vendor/etc/init/init.modem_logging_control.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.modem_logging_control.rc \
-    vendor/google_devices/comet/proprietary/vendor/etc/init/init.pixel-mm-gs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pixel-mm-gs.rc \
     vendor/google_devices/comet/proprietary/vendor/etc/init/init.shared_modem_platform.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.shared_modem_platform.rc \
     vendor/google_devices/comet/proprietary/vendor/etc/init/init.usf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.usf.rc \
     vendor/google_devices/comet/proprietary/vendor/etc/init/init.vendor_telephony.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor_telephony.rc \
@@ -1097,7 +1034,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/comet/proprietary/vendor/etc/libg3a_standalone_gabc_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_gabc_rc \
     vendor/google_devices/comet/proprietary/vendor/etc/libg3a_standalone_gaf_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_gaf_rc \
     vendor/google_devices/comet/proprietary/vendor/etc/libg3a_standalone_ghawb_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_ghawb_rc \
-    vendor/google_devices/comet/proprietary/vendor/etc/modem_ml_tflite_models.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem_ml_tflite_models.conf \
     vendor/google_devices/comet/proprietary/vendor/etc/modem_stat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem_stat.conf \
     vendor/google_devices/comet/proprietary/vendor/etc/open_carrier_info.dat:$(TARGET_COPY_OUT_VENDOR)/etc/open_carrier_info.dat \
     vendor/google_devices/comet/proprietary/vendor/etc/panel_ctrl_google-ct3b_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_ctrl_google-ct3b_cal0.pb \
@@ -3538,7 +3474,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/comet/proprietary/product/etc/appcompat/compat_framework_overrides.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/appcompat/compat_framework_overrides.xml \
     vendor/google_devices/comet/proprietary/product/etc/permissions/android.hardware.telephony.euicc.mep.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.mep.xml \
     vendor/google_devices/comet/proprietary/product/etc/permissions/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml \
-    vendor/google_devices/comet/proprietary/product/etc/permissions/android.hardware.telephony.satellite.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.satellite.xml \
     vendor/google_devices/comet/proprietary/product/etc/permissions/androidx.camera.extensions.impl.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/androidx.camera.extensions.impl.xml \
     vendor/google_devices/comet/proprietary/product/etc/permissions/com.google.pixel.camera.connectivity.impl.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.pixel.camera.connectivity.impl.xml \
     vendor/google_devices/comet/proprietary/product/etc/permissions/com.google.pixel.camera.services.cameraidremapper.impl.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.pixel.camera.services.cameraidremapper.impl.xml \
@@ -3561,8 +3496,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/comet/proprietary/system_ext/etc/permissions/com.shannon.rcsservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.shannon.rcsservice.xml \
     vendor/google_devices/comet/proprietary/system_ext/etc/permissions/google-ril.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/google-ril.xml \
     vendor/google_devices/comet/proprietary/system_ext/etc/permissions/oemrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/oemrilhook.xml \
-    vendor/google_devices/comet/proprietary/system/system/etc/permissions/android.software.credentials.xml:$(PRODUCT_OUT)/etc/permissions/android.software.credentials.xml \
-    vendor/google_devices/comet/proprietary/vendor/etc/aidl/hfp/hfp_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/hfp/hfp_codec_capabilities.xml \
     vendor/google_devices/comet/proprietary/vendor/etc/database/DbEcc_202.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_202.xml \
     vendor/google_devices/comet/proprietary/vendor/etc/database/DbEcc_204.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_204.xml \
     vendor/google_devices/comet/proprietary/vendor/etc/database/DbEcc_206.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_206.xml \
