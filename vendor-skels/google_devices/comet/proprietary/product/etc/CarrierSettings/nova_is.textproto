@@ -1,5 +1,5 @@
 canonical_name: "nova_is"
-version: 57000000005
+version: 60000000008
 apns {
   apn {
     name: "MMS Nova"
@@ -15,8 +15,8 @@ apns {
     type: DEFAULT
     type: SUPL
     type: XCAP
-    proxy: "10.10.2.60"
-    port: "8080"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
   }
   apn {
     name: "IMS"
@@ -71,5 +71,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715914019
+  seconds: 1722173420
 }

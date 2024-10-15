@@ -14,11 +14,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.uwb.enable_uci_stack=1 \
     ro.hotword.visual_query_service_enabled=true
 
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.product.name_for_attestation=tangorpro
-
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.product.name_for_attestation=tangorpro \
     aoj.feature.contract=true \
     aoj.feature.node_logging=true \
     aoj.feature.dimension_logging= \
@@ -31,7 +27,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     enable_one_pane_in_embedded_activity=true
 
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.product.name_for_attestation=tangorpro \
     ro.build.expect.bootloader=tangorpro-15.0-11920998 \
     dalvik.vm.isa.arm.variant=cortex-a53 \
     dalvik.vm.isa.arm.features=default \
@@ -42,10 +37,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.uwb.calibration.calibrationpaths=/vendor/etc/uwb/calib_paths \
     ro.vendor.dolby.dax.version=DAX3_G_3.7.3.0_r1
 
-PRODUCT_VENDOR_DLKM_PROPERTIES += \
-    ro.product.name_for_attestation=tangorpro
-
-PRODUCT_OVERRIDE_FINGERPRINT := google/tangorpro_beta/tangorpro:15/AP31.240617.015/12207491:user/release-keys
+PRODUCT_OVERRIDE_FINGERPRINT := google/tangorpro/tangorpro:15/AP3A.241005.015/12366759:user/release-keys
 
 PRODUCT_PACKAGES += \
     activity \
@@ -143,6 +135,7 @@ PRODUCT_PACKAGES += \
     battery_mitigation \
     biometricsuez \
     blue \
+    bluetooth_gci \
     boringssl_self_test32 \
     capo \
     cc \
@@ -373,6 +366,7 @@ PRODUCT_PACKAGES += \
     vulkan.mali
 
 PRODUCT_COPY_FILES += \
+    vendor/google_devices/tangorpro/proprietary/system_ext/etc/init/bluetooth_gci.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/bluetooth_gci.rc \
     vendor/google_devices/tangorpro/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google_devices/tangorpro/proprietary/system_ext/etc/public.libraries-google.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-google.txt \
     vendor/google_devices/tangorpro/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in \

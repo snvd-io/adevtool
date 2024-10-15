@@ -1,5 +1,5 @@
 canonical_name: "lum_ca"
-version: 60000000008
+version: 60000000009
 apns {
   apn {
     name: "Lum"
@@ -262,6 +262,10 @@ configs {
     text_value: "ca"
   }
   config {
+    key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_emergency_address_carrier_app_string"
     text_value: "com.android.imsserviceentitlement/.WfcActivationActivity"
   }
@@ -281,5 +285,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173409
+  seconds: 1725588961
 }

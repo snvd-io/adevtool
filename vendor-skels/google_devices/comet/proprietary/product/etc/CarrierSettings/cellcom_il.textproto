@@ -1,5 +1,5 @@
 canonical_name: "cellcom_il"
-version: 57000000004
+version: 60000000006
 apns {
   apn {
     name: "Cellcom Internet"
@@ -26,6 +26,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: false
+  }
   config {
     key: "cdma_3waycall_flash_delay_int"
     int_value: 0
@@ -100,5 +104,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709116039
+  seconds: 1718180316
 }

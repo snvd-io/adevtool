@@ -5,8 +5,10 @@ system/system/bin/oem-iptables-init.sh
 system_ext/app/OemRilHookService/OemRilHookService.apk
 system_ext/app/PersistentBackgroundCameraServices/PersistentBackgroundCameraServices.apk
 system_ext/app/PersistentBackgroundServices/PersistentBackgroundServices.apk
+system_ext/bin/bluetooth_gci
 system_ext/bin/hw/vendor.google.edgetpu_app_service@1.0-service
 system_ext/etc/default-permissions/default-permissions-euiccpixel.xml
+system_ext/etc/init/bluetooth_gci.rc
 system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc
 system_ext/etc/permissions/com.google.android.camera.experimental2022_system.xml
 system_ext/etc/permissions/com.google.android.camera.extensions.xml
@@ -499,8 +501,6 @@ vendor/etc/chre/activity.napp_header
 vendor/etc/chre/activity.so
 vendor/etc/chre/ambient_micro.napp_header
 vendor/etc/chre/ambient_micro.so
-vendor/etc/chre/ambient_volume.napp_header
-vendor/etc/chre/ambient_volume.so
 vendor/etc/chre/ambient.napp_header
 vendor/etc/chre/ambient.so
 vendor/etc/chre/ar_bridge.napp_header
@@ -537,8 +537,6 @@ vendor/etc/chre/smartbatching.napp_header
 vendor/etc/chre/smartbatching.so
 vendor/etc/chre/uv_exposure.napp_header
 vendor/etc/chre/uv_exposure.so
-vendor/etc/chre/vice.napp_header
-vendor/etc/chre/vice.so
 vendor/etc/database/DbEcc_202.xml
 vendor/etc/database/DbEcc_204.xml
 vendor/etc/database/DbEcc_206.xml

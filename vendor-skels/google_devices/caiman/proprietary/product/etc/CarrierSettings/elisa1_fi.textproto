@@ -1,5 +1,5 @@
 canonical_name: "elisa1_fi"
-version: 57000000009
+version: 60000000010
 apns {
   apn {
     name: "Saunalahti Internet"
@@ -73,6 +73,10 @@ configs {
   config {
     key: "hide_enhanced_4g_lte_bool"
     bool_value: true
+  }
+  config {
+    key: "ims.sip_timer_t4_millis_int"
+    int_value: 20000
   }
   config {
     key: "imsemergency.emergency_domain_preference_int_array"
@@ -179,5 +183,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1710391116
+  seconds: 1715154568
 }

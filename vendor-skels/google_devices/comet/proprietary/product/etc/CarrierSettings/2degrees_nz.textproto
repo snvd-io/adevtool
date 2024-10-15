@@ -1,5 +1,5 @@
 canonical_name: "2degrees_nz"
-version: 57000000005
+version: 60000000007
 apns {
   apn {
     name: "2Degrees Internet"
@@ -164,5 +164,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709116039
+  seconds: 1722173420
 }

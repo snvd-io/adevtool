@@ -1,5 +1,5 @@
 canonical_name: "o2_de"
-version: 57000000007
+version: 60000000009
 apns {
   apn {
     name: "o2 Internet"
@@ -309,5 +309,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1712551354
+  seconds: 1722173420
 }

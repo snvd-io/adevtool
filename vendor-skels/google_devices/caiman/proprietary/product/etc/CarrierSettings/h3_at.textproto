@@ -1,5 +1,5 @@
 canonical_name: "h3_at"
-version: 57000000007
+version: 60000000011
 apns {
   apn {
     name: "Planet3"
@@ -381,5 +381,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709116039
+  seconds: 1722173420
 }

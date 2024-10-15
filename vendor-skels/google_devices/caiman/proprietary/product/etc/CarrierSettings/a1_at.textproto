@@ -1,5 +1,5 @@
 canonical_name: "a1_at"
-version: 57000000008
+version: 60000000010
 apns {
   apn {
     name: "A1 Internet"
@@ -252,5 +252,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715228879
+  seconds: 1722173420
 }

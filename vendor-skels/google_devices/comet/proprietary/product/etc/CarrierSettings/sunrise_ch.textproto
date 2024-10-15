@@ -1,5 +1,5 @@
 canonical_name: "sunrise_ch"
-version: 57000000005
+version: 60000000008
 apns {
   apn {
     name: "IMS"
@@ -15,14 +15,6 @@ apns {
     value: "internet"
     type: DEFAULT
     type: SUPL
-  }
-  apn {
-    name: "Sunrise MMS"
-    value: "mms.sunrise.ch"
-    type: MMS
-    mmsc: "http://mmsc.sunrise.ch"
-    mmsc_proxy: "212.35.34.75"
-    mmsc_proxy_port: "8080"
   }
   apn {
     name: "XCAP"
@@ -76,6 +68,10 @@ configs {
   config {
     key: "editable_wfc_mode_bool"
     bool_value: true
+  }
+  config {
+    key: "enabledMMS"
+    bool_value: false
   }
   config {
     key: "ims.ipsec_authentication_algorithms_int_array"
@@ -229,5 +225,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690435
+  seconds: 1722173420
 }

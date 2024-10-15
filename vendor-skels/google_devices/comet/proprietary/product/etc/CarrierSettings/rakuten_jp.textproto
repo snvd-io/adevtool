@@ -1,11 +1,12 @@
 canonical_name: "rakuten_jp"
-version: 57000000005
+version: 60000000008
 apns {
   apn {
     name: "Internet"
     value: "rakuten.jp"
     type: DEFAULT
     type: SUPL
+    type: IA
     type: DUN
     protocol: IPV4V6
     roaming_protocol: IPV4V6
@@ -295,5 +296,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1712551354
+  seconds: 1722173420
 }

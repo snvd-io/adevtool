@@ -1,5 +1,5 @@
 canonical_name: "dtac_th"
-version: 57000000003
+version: 60000000006
 apns {
   apn {
     name: "dtac Internet"
@@ -56,7 +56,11 @@ configs {
       item: "520"
     }
   }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
 }
 last_updated {
-  seconds: 1710391116
+  seconds: 1722173420
 }

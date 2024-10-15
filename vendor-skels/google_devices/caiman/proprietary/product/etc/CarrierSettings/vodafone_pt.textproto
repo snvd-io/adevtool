@@ -1,11 +1,6 @@
 canonical_name: "vodafone_pt"
-version: 57000000006
+version: 60000000011
 apns {
-  apn {
-    name: "Vodafone Net2"
-    value: ""
-    type: IA
-  }
   apn {
     name: "Vodafone Net2"
     value: "net2.vodafone.pt"
@@ -100,6 +95,7 @@ configs {
     key: "ims_reasoninfo_mapping_string_array"
     text_array {
       item: "338|busy everywhere|1017"
+      item: "510|Call completed elsewhere|1014"
     }
   }
   config {
@@ -171,6 +167,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "smsToMmsTextThreshold"
+    int_value: 5
+  }
+  config {
     key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
     bool_value: true
   }
@@ -180,5 +180,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1716513306
+  seconds: 1722173420
 }

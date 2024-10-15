@@ -1,8 +1,8 @@
 canonical_name: "tracfonetmo_us"
-version: 57000000009
+version: 60000000010
 apns {
   apn {
-    name: "TFWAP"
+    name: "Tracfone"
     value: "wap.tracfone"
     type: DEFAULT
     type: MMS
@@ -31,6 +31,14 @@ apns {
   }
 }
 configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G,connected:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
+  }
+  config {
+    key: "5g_icon_display_grace_period_string"
+    text_value: "connected_mmwave,legacy,30;connected,legacy,30;not_restricted_rrc_idle,legacy,30;not_restricted_rrc_con,legacy,30"
+  }
   config {
     key: "bsf.bsf_server_fqdn_string"
     text_value: "bsf.msg.pc.t-mobile.com"
@@ -360,6 +368,10 @@ configs {
     int_value: 3
   }
   config {
+    key: "vonr_setting_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "wfc_operator_error_codes_string_array"
     text_array {
       item: "REG09|0"
@@ -371,5 +383,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715914019
+  seconds: 1720164602
 }

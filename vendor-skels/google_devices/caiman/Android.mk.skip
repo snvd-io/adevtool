@@ -18,7 +18,11 @@ LOCAL_MODULE_STEM := .device_symlinks
 LOCAL_SRC_FILES := Android.mk
 LOCAL_POST_INSTALL_CMD := \
     mkdir -p $(PRODUCT_OUT)/system_ext/priv-app/PixelDisplayService/lib/arm64; \
-    ln -sf /system_ext/lib64/libpixeldisplaymanager_jni.so $(PRODUCT_OUT)/system_ext/priv-app/PixelDisplayService/lib/arm64/libpixeldisplaymanager_jni.so;
+    mkdir -p $(PRODUCT_OUT)/system/bin; \
+    mkdir -p $(PRODUCT_OUT)/vendor/bin; \
+    ln -sf /system_ext/lib64/libpixeldisplaymanager_jni.so $(PRODUCT_OUT)/system_ext/priv-app/PixelDisplayService/lib/arm64/libpixeldisplaymanager_jni.so; \
+    ln -sf toybox $(PRODUCT_OUT)/system/bin/getopt; \
+    ln -sf toybox_vendor $(PRODUCT_OUT)/vendor/bin/getopt;
 include $(BUILD_PREBUILT)
 
 endif

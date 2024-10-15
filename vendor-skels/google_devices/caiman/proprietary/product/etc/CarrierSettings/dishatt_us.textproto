@@ -1,5 +1,5 @@
 canonical_name: "dishatt_us"
-version: 57000000009
+version: 60000000009
 apns {
   apn {
     name: "ereseller"
@@ -830,5 +830,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1716513306
+  seconds: 1716355933
 }

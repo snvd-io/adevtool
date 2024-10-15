@@ -1,5 +1,5 @@
 canonical_name: "tdc_dk"
-version: 57000000005
+version: 60000000007
 apns {
   apn {
     name: "TDC MMS"
@@ -219,5 +219,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715914019
+  seconds: 1722173420
 }

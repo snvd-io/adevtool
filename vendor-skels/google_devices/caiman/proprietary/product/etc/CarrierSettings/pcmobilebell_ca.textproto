@@ -1,5 +1,5 @@
 canonical_name: "pcmobilebell_ca"
-version: 57000000006
+version: 60000000006
 apns {
   apn {
     name: "PC Mobile"
@@ -362,5 +362,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715228879
+  seconds: 1715154568
 }

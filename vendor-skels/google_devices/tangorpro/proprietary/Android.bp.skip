@@ -31,6 +31,16 @@ android_app_import {
 }
 
 cc_prebuilt_binary {
+    name: "bluetooth_gci",
+    owner: "google_devices",
+    srcs: [ "system_ext/bin/bluetooth_gci" ],
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    system_ext_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "vendor.google.edgetpu_app_service@1.0-service",
     owner: "google_devices",
     srcs: [ "system_ext/bin/hw/vendor.google.edgetpu_app_service@1.0-service" ],

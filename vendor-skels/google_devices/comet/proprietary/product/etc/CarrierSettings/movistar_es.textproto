@@ -1,5 +1,5 @@
 canonical_name: "movistar_es"
-version: 57000000006
+version: 60000000008
 apns {
   apn {
     name: "Movistar"
@@ -340,5 +340,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519164
+  seconds: 1722173420
 }

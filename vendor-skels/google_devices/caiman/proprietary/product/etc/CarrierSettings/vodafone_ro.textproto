@@ -1,5 +1,5 @@
 canonical_name: "vodafone_ro"
-version: 57000000009
+version: 60000000011
 apns {
   apn {
     name: "Vodafone live!"
@@ -52,6 +52,10 @@ configs {
   config {
     key: "default_vm_number_string"
     text_value: "+40722033334"
+  }
+  config {
+    key: "enabledMMS"
+    bool_value: false
   }
   config {
     key: "hide_enhanced_4g_lte_bool"
@@ -195,5 +199,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715228879
+  seconds: 1718316577
 }

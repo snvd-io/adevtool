@@ -1,5 +1,5 @@
 canonical_name: "luckymobile_ca"
-version: 57000000006
+version: 60000000006
 apns {
   apn {
     name: "Lucky Mobile"
@@ -348,5 +348,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1712551354
+  seconds: 1712735214
 }

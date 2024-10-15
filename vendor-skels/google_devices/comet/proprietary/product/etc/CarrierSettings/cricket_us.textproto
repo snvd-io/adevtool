@@ -1,5 +1,5 @@
 canonical_name: "cricket_us"
-version: 57000000005
+version: 60000000007
 apns {
   apn {
     name: "internet"
@@ -681,5 +681,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1713418446
+  seconds: 1722173420
 }

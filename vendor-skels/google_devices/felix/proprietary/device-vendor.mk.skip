@@ -16,11 +16,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.camerax.extensions.enabled=true \
     persist.uwb.enable_uci_stack=1
 
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.product.name_for_attestation=felix
-
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.product.name_for_attestation=felix \
     aoj.feature.contract=true \
     aoj.feature.node_logging=true \
     aoj.feature.dimension_logging= \
@@ -33,12 +29,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.wm.extensions.activity_embedding_guard_with_android_15=false
 
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.product.name_for_attestation=felix \
-    ro.build.expect.baseband=g5300q-240704-240805-B-12182607 \
+    ro.build.expect.baseband=g5300q-240704-240912-B-12358532 \
     ro.build.expect.bootloader=felix-15.0-11920998 \
     dalvik.vm.isa.arm.variant=cortex-a53 \
     dalvik.vm.isa.arm.features=default \
-    ro.vendor.build.svn=98 \
+    ro.vendor.build.svn=56 \
     ro.surface_flinger.game_default_frame_rate_override=60 \
     drm.service.enabled=true \
     media.mediadrmservice.enable=true \
@@ -51,10 +46,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.ril.ecc.use.xml=1 \
     ro.vendor.uwb.calibration.calibrationpaths=/vendor/etc/uwb/calib_paths
 
-PRODUCT_VENDOR_DLKM_PROPERTIES += \
-    ro.product.name_for_attestation=felix
-
-PRODUCT_OVERRIDE_FINGERPRINT := google/felix_beta/felix:15/AP31.240617.015/12207491:user/release-keys
+PRODUCT_OVERRIDE_FINGERPRINT := google/felix/felix:15/AP3A.241005.015/12366759:user/release-keys
 
 PRODUCT_PACKAGES += \
     activity \
@@ -174,6 +166,7 @@ PRODUCT_PACKAGES += \
     biometricsuez \
     bipchmgr \
     blue \
+    bluetooth_gci \
     boringssl_self_test32 \
     capo \
     cbd \
@@ -847,6 +840,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/felix/proprietary/product/etc/felica/common.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/common.cfg \
     vendor/google_devices/felix/proprietary/product/etc/felica/mfm.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfm.cfg \
     vendor/google_devices/felix/proprietary/product/etc/felica/mfs.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfs.cfg \
+    vendor/google_devices/felix/proprietary/system_ext/etc/init/bluetooth_gci.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/bluetooth_gci.rc \
     vendor/google_devices/felix/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google_devices/felix/proprietary/system_ext/etc/public.libraries-google.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-google.txt \
     vendor/google_devices/felix/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in \
@@ -1097,7 +1091,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/28ae3c9cb89fa290f48b76c3f1afcb8a6895d1fc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/28ae3c9cb89fa290f48b76c3f1afcb8a6895d1fc \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/28e445a1626ba2e1e8ae1c70e97e2cfd8371755f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/28e445a1626ba2e1e8ae1c70e97e2cfd8371755f \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/2a349407e4a8f6b29e090908e4c2c18b8ec7c8b7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2a349407e4a8f6b29e090908e4c2c18b8ec7c8b7 \
-    vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/2a5ddcac19dabde427c8fcd2e6d3994c792189b0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2a5ddcac19dabde427c8fcd2e6d3994c792189b0 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/2ab7bd0a0d4f2795c1b90d29d0dfe824ceceaa23:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2ab7bd0a0d4f2795c1b90d29d0dfe824ceceaa23 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/2ad9c882fecbf5b6998bebf089aff3f43d5bddc8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2ad9c882fecbf5b6998bebf089aff3f43d5bddc8 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/2af03405877f4521d5d1bf9978c3ec8a0cd90e60:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/2af03405877f4521d5d1bf9978c3ec8a0cd90e60 \
@@ -1246,6 +1239,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/4e7ac0a9a8a583c8049a6c86cf025a769b3c8826:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4e7ac0a9a8a583c8049a6c86cf025a769b3c8826 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/4eaf80ecb6c85abe44bb8eb193205f05cabe96e3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4eaf80ecb6c85abe44bb8eb193205f05cabe96e3 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/4f11778323302a45b98633df1306144c039bed42:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4f11778323302a45b98633df1306144c039bed42 \
+    vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/4f4d03bbe2e0f0a912ec4a54923145532c50e54c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4f4d03bbe2e0f0a912ec4a54923145532c50e54c \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/500329abac100a953a7396b54b36be57d333022f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/500329abac100a953a7396b54b36be57d333022f \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/500d5a466a70545a202066dafaae66f72e967ec2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/500d5a466a70545a202066dafaae66f72e967ec2 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/50ab33ffafc267bdb3d0c5bc150a3ba50a875113:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/50ab33ffafc267bdb3d0c5bc150a3ba50a875113 \
@@ -1382,7 +1376,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/7b486f68b5519501a76101dd5dca0f156b6f40f4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7b486f68b5519501a76101dd5dca0f156b6f40f4 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/7b88b87f6eafa369777b438f960db698ad5596bd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7b88b87f6eafa369777b438f960db698ad5596bd \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/7ba6095fca2c586c5ad339ba13e42d334b0e2b89:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7ba6095fca2c586c5ad339ba13e42d334b0e2b89 \
-    vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/7bc386c6b5b805906e5592fb47bd707ee1b4a2c0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7bc386c6b5b805906e5592fb47bd707ee1b4a2c0 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/7c24f7d0963c54d77aba4845c811a8825e9d8ffa:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7c24f7d0963c54d77aba4845c811a8825e9d8ffa \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/7c29358b6efd159bba59200fb09075b1e64abff3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7c29358b6efd159bba59200fb09075b1e64abff3 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/7c31f9c1f3960ac8bc9c915e863c9a70792f54aa:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/7c31f9c1f3960ac8bc9c915e863c9a70792f54aa \
@@ -1525,6 +1518,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/a73f7de579bb6304473db135c5f829641eb3d477:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a73f7de579bb6304473db135c5f829641eb3d477 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/a796140124bbd9aa98de522a8990436a4b38eddc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a796140124bbd9aa98de522a8990436a4b38eddc \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/a7e022eb2d778392b656262432061435af69b978:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a7e022eb2d778392b656262432061435af69b978 \
+    vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/a88f5645f2a1aa1c69344bdcde2002d6a459fa21:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a88f5645f2a1aa1c69344bdcde2002d6a459fa21 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/a8c39b93757d65b8cee2713faf7cfccdfd33ce97:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a8c39b93757d65b8cee2713faf7cfccdfd33ce97 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/a8d3d60621b2bd733b975e04c8e22c46ae95a821:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a8d3d60621b2bd733b975e04c8e22c46ae95a821 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/a90728794dfadd069ac7c416a999b05475f182a0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a90728794dfadd069ac7c416a999b05475f182a0 \
@@ -1630,7 +1624,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/c92f68de2db80f34ed8a6a782ef85087c4c5b405:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c92f68de2db80f34ed8a6a782ef85087c4c5b405 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/c95e1cc9a767bfc0bf0e45d83110293db82e38e3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c95e1cc9a767bfc0bf0e45d83110293db82e38e3 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/c9b98478be6d78b3b060caacc07fdd61db5b6d48:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c9b98478be6d78b3b060caacc07fdd61db5b6d48 \
-    vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/c9c17c48e632bdef0db80b66c9845f7bd6f6af57:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/c9c17c48e632bdef0db80b66c9845f7bd6f6af57 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/ca0d69e4ada606a71be2236cc4c6b68fae6c09c2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ca0d69e4ada606a71be2236cc4c6b68fae6c09c2 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/ca17a505d425ec53f09080bf174fbdfcb79e4f1d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ca17a505d425ec53f09080bf174fbdfcb79e4f1d \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/ca3760ba63bf0a2c5dd0dc7fe897838cc58f12a3:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/ca3760ba63bf0a2c5dd0dc7fe897838cc58f12a3 \
@@ -1676,6 +1669,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/d50271b170c95232b86df92b103c901c530e93ed:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d50271b170c95232b86df92b103c901c530e93ed \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/d5ecf0d362daa7cbaeaa256a3542715bfdade6a0:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d5ecf0d362daa7cbaeaa256a3542715bfdade6a0 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/d5ed46811ce47c95a3a74d7862915118bfde9621:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d5ed46811ce47c95a3a74d7862915118bfde9621 \
+    vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/d664b49190300425039f11e7d15be1b893d591a9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d664b49190300425039f11e7d15be1b893d591a9 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/d6af881d2989e132d5837b8040adfc683ad552e6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d6af881d2989e132d5837b8040adfc683ad552e6 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/d793fa68ee6b3a9596bf55804660d96f3b61b004:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d793fa68ee6b3a9596bf55804660d96f3b61b004 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/confseqs/d7b576f1a433ed1b941debcaccfa6a1aac71453c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d7b576f1a433ed1b941debcaccfa6a1aac71453c \
@@ -1838,7 +1832,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/065d81ab283b8c1e3a285a8850993abbaba64d15:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/065d81ab283b8c1e3a285a8850993abbaba64d15 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/099367975a832526910788638bfa097d9e780f07:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/099367975a832526910788638bfa097d9e780f07 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/0b4b9207b2d096e9a1a44a4daadcdcfd7d011abc:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0b4b9207b2d096e9a1a44a4daadcdcfd7d011abc \
-    vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/0c5a2917b27799ec7cc13438ef279c8ea3c5f69e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0c5a2917b27799ec7cc13438ef279c8ea3c5f69e \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/10b8614edab466cc5db0954ba983cd9ccfe2e5c5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/10b8614edab466cc5db0954ba983cd9ccfe2e5c5 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/13eb903546bafbd399665110a26691a7d599047b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/13eb903546bafbd399665110a26691a7d599047b \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/1411f68b7fa274ec44cac1c38b4de73d6179d2d5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1411f68b7fa274ec44cac1c38b4de73d6179d2d5 \
@@ -1856,7 +1849,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/232cece939d17b537b15b9322369632fc6ac5fd1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/232cece939d17b537b15b9322369632fc6ac5fd1 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/23b54b89eb581685c385b65839596c74a592f334:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/23b54b89eb581685c385b65839596c74a592f334 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/252e4e694976347ab5aa6c4f3ba32751d1362fdd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/252e4e694976347ab5aa6c4f3ba32751d1362fdd \
-    vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/25f040cf552541605fa23a370d0e63ac514ae0ea:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/25f040cf552541605fa23a370d0e63ac514ae0ea \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/26de72d314430052565ad2a9864ef6f914f9d698:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/26de72d314430052565ad2a9864ef6f914f9d698 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/27a4400d55f0838e76bada4db5073f7d82207067:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/27a4400d55f0838e76bada4db5073f7d82207067 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/27d4a4b12171a875da55afac2df3385adb2fbcad:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/27d4a4b12171a875da55afac2df3385adb2fbcad \
@@ -1996,6 +1988,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/c72caadb4c4cc4c3634767f48220a490e21eeba6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c72caadb4c4cc4c3634767f48220a490e21eeba6 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/c873bb9d5057abb6662e91ff6c7afd786701b479:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c873bb9d5057abb6662e91ff6c7afd786701b479 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/c908be93969f567a61fa31727395b53ad0947026:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/c908be93969f567a61fa31727395b53ad0947026 \
+    vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/cd04b6a5b4c635037eb3e8a4df2b9c42114fd893:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/cd04b6a5b4c635037eb3e8a4df2b9c42114fd893 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/ce9d92a8b64f276b0aa89f71f288a3f3625beb7c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/ce9d92a8b64f276b0aa89f71f288a3f3625beb7c \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/cfedd339819f02386aabb82c8f5ac08dad16a199:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/cfedd339819f02386aabb82c8f5ac08dad16a199 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/d20ee9f7a37e5f52ae51b3b399e0a9514173fb1e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/d20ee9f7a37e5f52ae51b3b399e0a9514173fb1e \
@@ -2030,6 +2023,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/f9091bc53f6342f328713eff1444a73debb8a6ae:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f9091bc53f6342f328713eff1444a73debb8a6ae \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/f95e66946ddd42940ab37094eb7fd9cedc371bbd:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f95e66946ddd42940ab37094eb7fd9cedc371bbd \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/f9f059ae55794fe4b950eae8e36b82e829f74545:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/f9f059ae55794fe4b950eae8e36b82e829f74545 \
+    vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/faa2d85dc4c239e1d0deec4f7a5d7b24d101f287:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/faa2d85dc4c239e1d0deec4f7a5d7b24d101f287 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/fb68af076895659ebcfae2368b80fabacd643f95:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fb68af076895659ebcfae2368b80fabacd643f95 \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/fc1a5cc75b206afd69b0ecd6f5dc2b2e48a4d5ec:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fc1a5cc75b206afd69b0ecd6f5dc2b2e48a4d5ec \
     vendor/google_devices/felix/proprietary/vendor/firmware/carrierconfig/manifests/fc54c9e5681a4f00c5e9dcdf1e548a7422aee87c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fc54c9e5681a4f00c5e9dcdf1e548a7422aee87c \

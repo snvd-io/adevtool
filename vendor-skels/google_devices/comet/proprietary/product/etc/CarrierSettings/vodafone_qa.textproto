@@ -1,5 +1,5 @@
 canonical_name: "vodafone_qa"
-version: 57000000005
+version: 60000000005
 apns {
   apn {
     name: "Voda internet"
@@ -120,5 +120,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1712551354
+  seconds: 1712735214
 }

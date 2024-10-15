@@ -17,4 +17,5 @@
     <item>nr:2097152,6291456,16777216,512000,2097152,8388608</item>
     <item>nr_sa:2097152,6291456,16777216,512000,2097152,8388608</item>
   </string-array>
+  <integer name="config_wait_for_satellite_enabling_response_timeout_millis">240000</integer>
 </resources>

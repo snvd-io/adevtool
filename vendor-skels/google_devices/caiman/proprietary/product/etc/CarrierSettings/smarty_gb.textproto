@@ -1,5 +1,5 @@
 canonical_name: "smarty_gb"
-version: 57000000006
+version: 60000000008
 apns {
   apn {
     name: "SMARTY"
@@ -329,5 +329,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709116039
+  seconds: 1722173420
 }

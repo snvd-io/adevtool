@@ -1,5 +1,5 @@
 canonical_name: "sasktel_ca"
-version: 60000000014
+version: 60000000015
 apns {
   apn {
     name: "SaskTel"
@@ -66,10 +66,6 @@ configs {
   }
   config {
     key: "carrier_volte_available_bool"
-    bool_value: true
-  }
-  config {
-    key: "carrier_wfc_ims_available_bool"
     bool_value: true
   }
   config {
@@ -289,5 +285,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722374850
+  seconds: 1725588961
 }

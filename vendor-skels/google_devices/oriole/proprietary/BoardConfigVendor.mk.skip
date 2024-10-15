@@ -38,5 +38,6 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 BOARD_VENDOR_SEPOLICY_DIRS += \
     vendor/google_devices/oriole/sepolicy
 
+# Missing vendor SELinux context: /system_ext/bin/bluetooth_gci u:object_r:bluetooth_gci_exec:s0
 # Missing vendor SELinux context: user=_app isPrivApp=true seinfo=mds name=com.google.mds domain=modem_diagnostic_app type=app_data_file levelFrom=user
 # Missing vendor SELinux context: user=_app isPrivApp=true seinfo=platform name=com.google.mds domain=modem_diagnostic_app type=app_data_file levelFrom=user

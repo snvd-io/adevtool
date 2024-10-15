@@ -1,5 +1,5 @@
 canonical_name: "sprint_us"
-version: 57000000006
+version: 60000000006
 apns {
   apn {
     name: "Sprint"
@@ -364,5 +364,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721782969
+  seconds: 1721863480
 }

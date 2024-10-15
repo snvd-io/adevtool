@@ -1,5 +1,5 @@
 canonical_name: "simyo_es"
-version: 57000000004
+version: 60000000007
 apns {
   apn {
     name: "internet simyo"
@@ -71,10 +71,6 @@ configs {
   }
   config {
     key: "display_hd_plus_icon_bool"
-    bool_value: true
-  }
-  config {
-    key: "hide_enhanced_4g_lte_bool"
     bool_value: true
   }
   config {
@@ -398,5 +394,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519164
+  seconds: 1722173420
 }

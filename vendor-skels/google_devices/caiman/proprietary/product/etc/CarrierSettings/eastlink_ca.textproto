@@ -1,5 +1,5 @@
 canonical_name: "eastlink_ca"
-version: 57000000005
+version: 60000000007
 apns {
   apn {
     name: "Eastlink MMS"
@@ -138,5 +138,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690435
+  seconds: 1722173420
 }

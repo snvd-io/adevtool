@@ -1,5 +1,5 @@
 canonical_name: "vodafone_tr"
-version: 57000000005
+version: 60000000005
 apns {
   apn {
     name: "Vodafone Internet"
@@ -213,5 +213,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1714608598
+  seconds: 1715771975
 }

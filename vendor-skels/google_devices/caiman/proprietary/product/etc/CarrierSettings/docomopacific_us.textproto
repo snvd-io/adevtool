@@ -1,0 +1,35 @@
+canonical_name: "docomopacific_us"
+version: 60000000001
+apns {
+  apn {
+    name: "Docomo Pacific"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+    type: DUN
+    bearer_bitmask: "14"
+    user_editable: false
+  }
+  apn {
+    name: "DPAC IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14"
+    user_visible: false
+  }
+  apn {
+    name: "DPAC XCAP"
+    value: "xcap"
+    type: XCAP
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1720164602
+}

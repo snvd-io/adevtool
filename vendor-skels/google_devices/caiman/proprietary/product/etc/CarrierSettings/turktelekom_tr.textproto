@@ -1,5 +1,5 @@
 canonical_name: "turktelekom_tr"
-version: 57000000003
+version: 60000000005
 apns {
   apn {
     name: "AVEA INTERNET"
@@ -74,5 +74,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715228879
+  seconds: 1722173420
 }

@@ -1,5 +1,5 @@
 canonical_name: "tmobile_us"
-version: 60000000038
+version: 60000000040
 apns {
   apn {
     name: "T-Mobile Tethering"
@@ -742,5 +742,5 @@ vendor_configs {
   }
 }
 last_updated {
-  seconds: 1722173396
+  seconds: 1724208582
 }

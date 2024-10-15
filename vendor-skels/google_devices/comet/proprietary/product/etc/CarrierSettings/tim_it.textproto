@@ -1,5 +1,5 @@
 canonical_name: "tim_it"
-version: 57000000009
+version: 60000000011
 apns {
   apn {
     name: "WAP TIM"
@@ -280,5 +280,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1712551354
+  seconds: 1722173420
 }

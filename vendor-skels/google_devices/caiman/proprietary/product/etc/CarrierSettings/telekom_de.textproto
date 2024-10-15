@@ -1,5 +1,5 @@
 canonical_name: "telekom_de"
-version: 57000000004
+version: 60000000007
 apns {
   apn {
     name: "Telekom IMS"
@@ -252,6 +252,13 @@ configs {
     int_value: 64800
   }
   config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 15
+      item: 14
+    }
+  }
+  config {
     key: "iwlan.epdg_address_priority_int_array"
     int_array {
       item: 0
@@ -385,5 +392,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709116039
+  seconds: 1722173420
 }

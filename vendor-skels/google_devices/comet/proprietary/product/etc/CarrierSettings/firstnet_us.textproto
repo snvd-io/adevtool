@@ -1,5 +1,5 @@
 canonical_name: "firstnet_us"
-version: 57000000005
+version: 60000000008
 apns {
   apn {
     name: "ATT FirstNet-Phone"
@@ -110,7 +110,7 @@ configs {
   }
   config {
     key: "editable_wfc_mode_bool"
-    bool_value: false
+    bool_value: true
   }
   config {
     key: "emergency_number_prefix_string_array"
@@ -687,5 +687,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1713418446
+  seconds: 1722173420
 }

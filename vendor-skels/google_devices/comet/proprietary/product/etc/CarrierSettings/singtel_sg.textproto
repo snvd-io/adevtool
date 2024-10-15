@@ -1,5 +1,5 @@
 canonical_name: "singtel_sg"
-version: 57000000008
+version: 60000000007
 apns {
   apn {
     name: "Singtel (PostPaid)"
@@ -352,5 +352,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1713418446
+  seconds: 1713343964
 }

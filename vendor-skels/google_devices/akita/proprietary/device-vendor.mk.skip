@@ -43,10 +43,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.product.name_for_attestation=akita \
     ro.product.device_for_attestation=akita \
     ro.product.manufacturer_for_attestation=Google \
-    ro.build.expect.baseband=g5300o-240704-240805-B-12182607 \
+    ro.build.expect.baseband=g5300o-240704-240912-B-12358532 \
     ro.build.expect.bootloader=akita-15.0-12059390 \
     persist.vendor.gps.hal.service.name=vendor \
-    ro.vendor.build.svn=98 \
+    ro.vendor.build.svn=22 \
     ro.surface_flinger.game_default_frame_rate_override=60 \
     drm.service.enabled=true \
     media.mediadrmservice.enable=true \
@@ -56,7 +56,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.rild.libpath=libsitril.so \
     persist.vendor.ril.support_nr_ds=1 \
     persist.vendor.ril.ecc.use.xml=1 \
-    ro.vendor.fingerprint.ta.name=g7.app \
+    ro.vendor.fingerprint.ta.name=g7a.app \
     ro.vendor.dolby.dax.version=DAX3_G_3.7.3.0_r1
 
 PRODUCT_VENDOR_DLKM_PROPERTIES += \
@@ -66,7 +66,7 @@ PRODUCT_VENDOR_DLKM_PROPERTIES += \
     ro.product.device_for_attestation=akita \
     ro.product.manufacturer_for_attestation=Google
 
-PRODUCT_OVERRIDE_FINGERPRINT := google/akita_beta/akita:15/AP31.240617.015/12207491:user/release-keys
+PRODUCT_OVERRIDE_FINGERPRINT := google/akita/akita:15/AP3A.241005.015/12366759:user/release-keys
 
 PRODUCT_PACKAGES += \
     activity \
@@ -205,6 +205,7 @@ PRODUCT_PACKAGES += \
     biometricsuez \
     bipchmgr \
     blue \
+    bluetooth_gci \
     capo \
     cbd \
     cc \
@@ -902,6 +903,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/product/etc/felica/common.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/common.cfg \
     vendor/google_devices/akita/proprietary/product/etc/felica/mfm.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfm.cfg \
     vendor/google_devices/akita/proprietary/product/etc/felica/mfs.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfs.cfg \
+    vendor/google_devices/akita/proprietary/system_ext/etc/init/bluetooth_gci.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/bluetooth_gci.rc \
     vendor/google_devices/akita/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google_devices/akita/proprietary/system_ext/etc/public.libraries-google.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-google.txt \
     vendor/google_devices/akita/proprietary/system_ext/priv-app/EuiccSupportPixel-P23/esim-full-v1-m40.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel-P23/esim-full-v1-m40.img \
@@ -1044,6 +1046,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/0127a228f6f991466dddce335a4dd4f3300d4f6f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0127a228f6f991466dddce335a4dd4f3300d4f6f \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/018046ac7f4d6b9249efdb11aa46e9ce85faaffe:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/018046ac7f4d6b9249efdb11aa46e9ce85faaffe \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/01a086b6e56138258cdfb88f092cb9e4cfd1890d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/01a086b6e56138258cdfb88f092cb9e4cfd1890d \
+    vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/01a541615da9bb6331ec811372d112325ed8281a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/01a541615da9bb6331ec811372d112325ed8281a \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/026fe381212d553d82ad53288774e73f814ecd82:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/026fe381212d553d82ad53288774e73f814ecd82 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/0274343b9cb96a2f26995b1eb0b31bf57ca3a061:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0274343b9cb96a2f26995b1eb0b31bf57ca3a061 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/0283b1188126527601e82cbc2665853942b06276:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/0283b1188126527601e82cbc2665853942b06276 \
@@ -1279,6 +1282,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/4c9b943caecced7c9876ba4fe711d99c71e60d49:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4c9b943caecced7c9876ba4fe711d99c71e60d49 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/4ce6788f2eebfd29ccdf6705feb18e49b6dac7b9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4ce6788f2eebfd29ccdf6705feb18e49b6dac7b9 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/4d45c74520bb78899b6f9fd686ff0eaf9339d3d4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4d45c74520bb78899b6f9fd686ff0eaf9339d3d4 \
+    vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/4d7ae8feb0f6cc103adca06903788e897a336e8f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4d7ae8feb0f6cc103adca06903788e897a336e8f \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/4d86092d1a6451cb86c858ac0fea065539ffd8e4:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4d86092d1a6451cb86c858ac0fea065539ffd8e4 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/4d996fed2678e76dd60894589be382b5ffb42082:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4d996fed2678e76dd60894589be382b5ffb42082 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/4d9e6fc983d346e4f219910dabc376738eb0847b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/4d9e6fc983d346e4f219910dabc376738eb0847b \
@@ -1327,6 +1331,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/5d52b29dc6cc8726da765de814942a83bd80d5a5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5d52b29dc6cc8726da765de814942a83bd80d5a5 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/5d5804b87f0f69c94fdef6379ba18c34d4958f1c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5d5804b87f0f69c94fdef6379ba18c34d4958f1c \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/5e320faaddda115f294d58015c9fa9b33485486b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5e320faaddda115f294d58015c9fa9b33485486b \
+    vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/5e3c87d563c2a569ed5b7bd5e887b4493ea94aea:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5e3c87d563c2a569ed5b7bd5e887b4493ea94aea \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/5e44ebafed2a940f0a33b3a2d242afa519799261:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5e44ebafed2a940f0a33b3a2d242afa519799261 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/5ea9fbd090e4c3a9a675dafec8d92d484c7bfe18:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5ea9fbd090e4c3a9a675dafec8d92d484c7bfe18 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/5fa5686025829e95871097b1935cea9e04fc4928:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/5fa5686025829e95871097b1935cea9e04fc4928 \
@@ -1551,7 +1556,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/a36ae5b221838dfeb3edd1c7a75e1c8ff1d0a089:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a36ae5b221838dfeb3edd1c7a75e1c8ff1d0a089 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/a384a2ce96540999c4e74234d3c9e89dbbd95859:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a384a2ce96540999c4e74234d3c9e89dbbd95859 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/a3ab4566d9029f5099867ebec3cce2f8cd5ab4b8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a3ab4566d9029f5099867ebec3cce2f8cd5ab4b8 \
-    vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/a3afe4654e359630090c969abd95cc61286082eb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a3afe4654e359630090c969abd95cc61286082eb \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/a3beeef7221c90645e2495a5402018393fd84d6e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a3beeef7221c90645e2495a5402018393fd84d6e \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/a4d6701961d56d4d65b3154191128a8b400b3b11:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a4d6701961d56d4d65b3154191128a8b400b3b11 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/a4e884b1150e6cb7a6d91640999197a457c59f3f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/a4e884b1150e6cb7a6d91640999197a457c59f3f \
@@ -1733,7 +1737,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/d4813a46dc46c9b732ef7061563b65258ca41cbb:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d4813a46dc46c9b732ef7061563b65258ca41cbb \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/d48d6a4b66182d8ded0a790ac8a7d88e2b4982fa:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d48d6a4b66182d8ded0a790ac8a7d88e2b4982fa \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/d4d2ac1317eee82e9da8fadded5b4437992d57ac:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d4d2ac1317eee82e9da8fadded5b4437992d57ac \
-    vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/d592d4eb8cdc5edacb17e3b12d37d5f074b8cdb7:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d592d4eb8cdc5edacb17e3b12d37d5f074b8cdb7 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/d5ddab634d358e4f94ee5fa5c87e253c0cf202a1:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d5ddab634d358e4f94ee5fa5c87e253c0cf202a1 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/d66e416af90e35337ceb4bc32112bbede87bab4e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d66e416af90e35337ceb4bc32112bbede87bab4e \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/d6af881d2989e132d5837b8040adfc683ad552e6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/d6af881d2989e132d5837b8040adfc683ad552e6 \
@@ -1853,7 +1856,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/f5bd6b86dfe1ee38b5122eddb5fc35d227576458:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f5bd6b86dfe1ee38b5122eddb5fc35d227576458 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/f63ab6403202a95235b08bb41fede1f890621edf:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f63ab6403202a95235b08bb41fede1f890621edf \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/f647d4b2e4118334d105b74e9313a2672ef1648c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f647d4b2e4118334d105b74e9313a2672ef1648c \
-    vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/f671911dac4481fe443fb834ea275a32045e3f04:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f671911dac4481fe443fb834ea275a32045e3f04 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/f6e03dd86536fbd5ff9c4e5557ab177bfe0de86f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f6e03dd86536fbd5ff9c4e5557ab177bfe0de86f \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/f7159f38a210472491945a0cd35f9e79f59e3728:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f7159f38a210472491945a0cd35f9e79f59e3728 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/confseqs/f84a3359b8af6ea6abb8ad8425823ffb5cdd33d9:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/confseqs/f84a3359b8af6ea6abb8ad8425823ffb5cdd33d9 \
@@ -1903,7 +1905,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/0b4affc9c48c94dd0f3c8b5229a6cd428fc9ea9e:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0b4affc9c48c94dd0f3c8b5229a6cd428fc9ea9e \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/0e4dd73bb6ebf0b7bd86108ab95d2048ed6ca07a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0e4dd73bb6ebf0b7bd86108ab95d2048ed6ca07a \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/0ebb4e8ff2e3552aa0b0db9a8bae6d90308da4d8:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0ebb4e8ff2e3552aa0b0db9a8bae6d90308da4d8 \
-    vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/0f700a6f761448fbcf38d1f70ebda6f336672f72:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/0f700a6f761448fbcf38d1f70ebda6f336672f72 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/1072f7a91cfa298eaa799713afe2efb71303e87c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/1072f7a91cfa298eaa799713afe2efb71303e87c \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/109656760061af44ef30b88117646642d32513a5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/109656760061af44ef30b88117646642d32513a5 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/15013093ddbf341378f37cf510f24726cecabfb2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/15013093ddbf341378f37cf510f24726cecabfb2 \
@@ -2019,8 +2020,10 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/9999c28a4dd4683272862a3be28f88e8accf41b5:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9999c28a4dd4683272862a3be28f88e8accf41b5 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/9be13adae2ce57c2bdce28a9cd3949e1c5eed247:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9be13adae2ce57c2bdce28a9cd3949e1c5eed247 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/9c2fd3bdcc10422a53fc100c6c18fbdb0931c44a:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9c2fd3bdcc10422a53fc100c6c18fbdb0931c44a \
+    vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/9c705b6fe064584a12ad8cf5a41e67b6efc47700:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9c705b6fe064584a12ad8cf5a41e67b6efc47700 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/9cd069da8e97a4d78b48c59991ddce644a27508f:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9cd069da8e97a4d78b48c59991ddce644a27508f \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/9d04ffd6d7863048a8daa57ccabf3066c8598a4b:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9d04ffd6d7863048a8daa57ccabf3066c8598a4b \
+    vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/9d81525dc73ab039ce4e97d2b820df653aa5b3df:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9d81525dc73ab039ce4e97d2b820df653aa5b3df \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/9f6a2f6f4ed4b1543b3c7a3e22336aa4b7d711e6:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/9f6a2f6f4ed4b1543b3c7a3e22336aa4b7d711e6 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/a0518b3b39425bb20f8718afecbc85f75a222725:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a0518b3b39425bb20f8718afecbc85f75a222725 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/a163e713981eb0103c3736130c2a53f7c11f3020:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/a163e713981eb0103c3736130c2a53f7c11f3020 \
@@ -2099,7 +2102,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/fa97b70e3bb033ecfe17ee5d1498d933d7f47b64:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fa97b70e3bb033ecfe17ee5d1498d933d7f47b64 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/fbe88f61163a08fb5ca14f7de60e7fe04a300336:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fbe88f61163a08fb5ca14f7de60e7fe04a300336 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/fc76a296cc221963178d68e4f3819788f11dc0ca:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fc76a296cc221963178d68e4f3819788f11dc0ca \
-    vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/fc820bf75476fa73049307cc44d1dec848397847:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fc820bf75476fa73049307cc44d1dec848397847 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/manifests/fd59268f589769a3bfb3b39df88855b7021fd496:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fd59268f589769a3bfb3b39df88855b7021fd496 \
     vendor/google_devices/akita/proprietary/vendor/firmware/carrierconfig/release-label:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/release-label \
     vendor/google_devices/akita/proprietary/vendor/firmware/cs40l26-calib.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l26-calib.bin \
@@ -2119,7 +2121,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/firmware/fw_bcmdhd.map_4383_a0:$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcmdhd.map_4383_a0 \
     vendor/google_devices/akita/proprietary/vendor/firmware/fw_bcmdhd.map_4383_a1:$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcmdhd.map_4383_a1 \
     vendor/google_devices/akita/proprietary/vendor/firmware/fw_bcmdhd.map_4383_a3:$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcmdhd.map_4383_a3 \
-    vendor/google_devices/akita/proprietary/vendor/firmware/g7.app:$(TARGET_COPY_OUT_VENDOR)/firmware/g7.app \
+    vendor/google_devices/akita/proprietary/vendor/firmware/g7a.app:$(TARGET_COPY_OUT_VENDOR)/firmware/g7a.app \
     vendor/google_devices/akita/proprietary/vendor/firmware/goodix_firmware_ak3a.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_firmware_ak3a.bin \
     vendor/google_devices/akita/proprietary/vendor/firmware/goodix_firmware_ak3b.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_firmware_ak3b.bin \
     vendor/google_devices/akita/proprietary/vendor/firmware/goodix_test_limits_ak3a.csv:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_test_limits_ak3a.csv \

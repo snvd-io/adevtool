@@ -1,5 +1,5 @@
 canonical_name: "skinny_nz"
-version: 57000000007
+version: 60000000007
 apns {
   apn {
     name: "Data"
@@ -209,5 +209,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709690435
+  seconds: 1709714845
 }

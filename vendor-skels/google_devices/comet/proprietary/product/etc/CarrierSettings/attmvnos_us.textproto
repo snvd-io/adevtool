@@ -1,8 +1,8 @@
 canonical_name: "attmvnos_us"
-version: 57000000007
+version: 60000000008
 apns {
   apn {
-    name: "ATT Nextgenphone"
+    name: "MVNO Reseller"
     value: "ereseller"
     type: DEFAULT
     type: MMS
@@ -824,5 +824,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1713418446
+  seconds: 1715771975
 }

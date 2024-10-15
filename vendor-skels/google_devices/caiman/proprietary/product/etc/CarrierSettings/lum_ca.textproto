@@ -1,5 +1,5 @@
 canonical_name: "lum_ca"
-version: 57000000005
+version: 60000000007
 apns {
   apn {
     name: "Lum"
@@ -97,6 +97,13 @@ configs {
     int_array {
       item: 2
       item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -289,5 +296,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718943642
+  seconds: 1722173420
 }
