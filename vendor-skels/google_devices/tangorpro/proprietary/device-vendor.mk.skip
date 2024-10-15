@@ -135,7 +135,6 @@ PRODUCT_PACKAGES += \
     battery_mitigation \
     biometricsuez \
     blue \
-    bluetooth_gci \
     boringssl_self_test32 \
     capo \
     cc \
@@ -366,7 +365,6 @@ PRODUCT_PACKAGES += \
     vulkan.mali
 
 PRODUCT_COPY_FILES += \
-    vendor/google_devices/tangorpro/proprietary/system_ext/etc/init/bluetooth_gci.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/bluetooth_gci.rc \
     vendor/google_devices/tangorpro/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google_devices/tangorpro/proprietary/system_ext/etc/public.libraries-google.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-google.txt \
     vendor/google_devices/tangorpro/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in \

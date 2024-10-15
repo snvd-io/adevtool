@@ -77,10 +77,10 @@ overlays/product_com.google.euiccpixel/res: dir
 overlays/product_com.google.euiccpixel/res/values: dir
 overlays/product_com.google.euiccpixel/res/values/values.xml: 9739e4b8d137756076471c4770b63bf4811be367f23202bc6c8240f88b38d48c
 proprietary: dir
-proprietary-files.txt: 5d9071be891bb4effaf8536d14b46413c3dae22b5be7a2f28160a01d70710d55
-proprietary/Android.bp: 30cceed946f3f385d8b6a602b540a59ce10e1132e716667a7f348be7b013abc9
+proprietary-files.txt: 8549fc53a529b1f193c7898e8d9ab5121417ed7828a068d783db55d0079abfba
+proprietary/Android.bp: 38427d6b9d2ee84ca7d8a62f18f6147b7cacca14f753a94ea53d99c4cfea6c64
 proprietary/BoardConfigVendor.mk: 305db4985e8c55d6355b4a27f1a21e6551dbe0fd04fa061f3a703bc51d595fd6
-proprietary/device-vendor.mk: 1672fd4a6c90db9971a8f46721d59baec3b2c8376c1c5c0b1d09d65c3d0041af
+proprietary/device-vendor.mk: 95aa9291112554bf52a7f3abc2a8f5f4e0646837028b1704356c62a16dfabb30
 proprietary/linker-config-adevtool.json: 6b3c6b57416c259790eb479ca3bf9575437bc060fd7439a96b2826785f73bcfc
 proprietary/product: dir
 proprietary/product/etc: dir
@@ -108,12 +108,10 @@ proprietary/system_ext/app/PersistentBackgroundCameraServices/PersistentBackgrou
 proprietary/system_ext/app/PersistentBackgroundServices: dir
 proprietary/system_ext/app/PersistentBackgroundServices/PersistentBackgroundServices.apk: 4c832d1dd6b0ff9e5f3d51292e7c7009eea68f140e2d2fbc94235a7bb3a5b2fe
 proprietary/system_ext/bin: dir
-proprietary/system_ext/bin/bluetooth_gci: 0725c67f377b63746b6ed5dd4b9a22037606ff086db07b497a9bd220c9dfda1d
 proprietary/system_ext/bin/hw: dir
 proprietary/system_ext/bin/hw/vendor.google.edgetpu_app_service@1.0-service: d09815bd71ed22d73ddb6382275b42d7e74b5da2aa6fda0e7dfb2c5065186609
 proprietary/system_ext/etc: dir
 proprietary/system_ext/etc/init: dir
-proprietary/system_ext/etc/init/bluetooth_gci.rc: 3dc5b98a4e5ce8930d8337c8364a154c387659801c44e6adacc1b97f29a1c802
 proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc: 8963b8d7da2cca37074f0cd93b4c370e3f75ec0d9df2dcf6cf29fb9448978fc2
 proprietary/system_ext/etc/permissions: dir
 proprietary/system_ext/etc/permissions/android.software.freeform_window_management.xml: 7437ae88332d6ae95214f7df29e9910ee41dc6f062bc46af1641a48dbd26e764

@@ -89,10 +89,10 @@ overlays/vendor_android/res: dir
 overlays/vendor_android/res/values: dir
 overlays/vendor_android/res/values/values.xml: b44e7b4537fa43d07426c34b8d3f1d38cb0ee595806ee80544418ea8d0984dfb
 proprietary: dir
-proprietary-files.txt: 29323a9a58bcc4f1304577c27a7edaecdc2329be3b6da32cddecee271ba83cdf
-proprietary/Android.bp: e81c3d1ffc641e7fe41c3e08382e849b3b8687057edfed1ecfb6e9d44684fc6f
+proprietary-files.txt: 45a90be6c968ed81ff45c8d220ebf3ebd07371f418db1d4e763b527b9a4f17cf
+proprietary/Android.bp: c2b25a4ec7509fb7c2064d7424febabeb2cdb4a5eeef5dd826ffce2ec78e6a9c
 proprietary/BoardConfigVendor.mk: d0d9a9ada55eee0087922ca64818e875dd1c573b2b5122d930e65488f14b3b22
-proprietary/device-vendor.mk: 303f92dfc826d2792ba9391b1558688936fadc19cbb504be4155b0e162bd307b
+proprietary/device-vendor.mk: 43fbc0e158fb650aeca7cad6ef1182928be606e7a1c41b50de9ff0ac4af60b1c
 proprietary/linker-config-adevtool.json: 6b3c6b57416c259790eb479ca3bf9575437bc060fd7439a96b2826785f73bcfc
 proprietary/product: dir
 proprietary/product/etc: dir
@@ -534,7 +534,6 @@ proprietary/system_ext/app/PersistentBackgroundCameraServices/PersistentBackgrou
 proprietary/system_ext/app/PersistentBackgroundServices: dir
 proprietary/system_ext/app/PersistentBackgroundServices/PersistentBackgroundServices.apk: 83a06c8e4678bfd5c797319842414a7fe9614a6c47d8513c2c53d2e89ea9534c
 proprietary/system_ext/bin: dir
-proprietary/system_ext/bin/bluetooth_gci: d3eb9ff04ff2bef2a32d0c1c589c0f437c33c7b0f8cc8df9440c2769461f899d
 proprietary/system_ext/bin/hw: dir
 proprietary/system_ext/bin/hw/vendor.google.edgetpu_app_service@1.0-service: 31d8190b522392a9a63f3e47285ed9f0b8f6fc98194d0a692506afdd6d0ee6db
 proprietary/system_ext/bin/hw/vendor.google.whitechapel.audio.hal.parserservice: 39ed6f207dd5e7d1f9a2687944f530bdb888046724c59e7d99f2f4d68162fdeb
@@ -542,7 +541,6 @@ proprietary/system_ext/etc: dir
 proprietary/system_ext/etc/default-permissions: dir
 proprietary/system_ext/etc/default-permissions/default-permissions-euiccpixel.xml: 3d7b210f1631b79a2089c5af3fb38bd468a865480d836da16028ecd18d2f0bb5
 proprietary/system_ext/etc/init: dir
-proprietary/system_ext/etc/init/bluetooth_gci.rc: 3dc5b98a4e5ce8930d8337c8364a154c387659801c44e6adacc1b97f29a1c802
 proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc: 8e304f455c5485fd10b6cb5d3682e78d09d269cd3a76022b35a1086479b0f282
 proprietary/system_ext/etc/init/vendor.google.whitechapel.audio.hal.parserservice.rc: d7c8d7d32258e2d46df30265b7b4522e40529d4ddcff7c197ac1c3c0639c71cf
 proprietary/system_ext/etc/permissions: dir
