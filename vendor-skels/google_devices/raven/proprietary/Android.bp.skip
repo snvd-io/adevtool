@@ -314,6 +314,16 @@ android_app_import {
 }
 
 android_app_import {
+    name: "PixelIwlan",
+    owner: "google_devices",
+    apk: "system_ext/priv-app/PixelIwlan/PixelIwlan.apk",
+    certificate: "platform",
+    privileged: true,
+    dex_preopt: { enabled: false },
+    system_ext_specific: true,
+}
+
+android_app_import {
     name: "PixelNfc",
     owner: "google_devices",
     apk: "system_ext/priv-app/PixelNfc/PixelNfc.apk",
@@ -489,17 +499,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.confirmationui-service.trusty.vendor",
-    owner: "google_devices",
-    srcs: [ "vendor/bin/hw/android.hardware.confirmationui-service.trusty.vendor" ],
-    relative_install_path: "hw",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "android.hardware.contexthub-service.generic",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/android.hardware.contexthub-service.generic" ],
@@ -602,6 +601,17 @@ cc_prebuilt_binary {
     name: "android.hardware.weaver-service.citadel",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/android.hardware.weaver-service.citadel" ],
+    relative_install_path: "hw",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "battery_mitigation",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/hw/battery_mitigation" ],
     relative_install_path: "hw",
     check_elf_files: false,
     prefer: true,
@@ -866,16 +876,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "securedpud.slider",
-    owner: "google_devices",
-    srcs: [ "vendor/bin/securedpud.slider" ],
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "trusty_metricsd",
     owner: "google_devices",
     srcs: [ "vendor/bin/trusty_metricsd" ],
@@ -919,24 +919,6 @@ prebuilt_etc {
     name: "activity",
     owner: "google_devices",
     src: "vendor/etc/chre/activity.so",
-    filename_from_src: true,
-    sub_dir: "chre",
-    soc_specific: true,
-}
-
-prebuilt_etc {
-    name: "ambient_micro",
-    owner: "google_devices",
-    src: "vendor/etc/chre/ambient_micro.so",
-    filename_from_src: true,
-    sub_dir: "chre",
-    soc_specific: true,
-}
-
-prebuilt_etc {
-    name: "ambient",
-    owner: "google_devices",
-    src: "vendor/etc/chre/ambient.so",
     filename_from_src: true,
     sub_dir: "chre",
     soc_specific: true,
@@ -1069,6 +1051,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "sensorcollector",
+    owner: "google_devices",
+    src: "vendor/etc/chre/sensorcollector.so",
+    filename_from_src: true,
+    sub_dir: "chre",
+    soc_specific: true,
+}
+
+prebuilt_etc {
     name: "smartbatching",
     owner: "google_devices",
     src: "vendor/etc/chre/smartbatching.so",
@@ -1122,11 +1113,11 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "aocx-ndk",
+    name: "aocx-V1-ndk",
     owner: "google_devices",
     target: {
-        android_arm: { srcs: [ "vendor/lib/aocx-ndk.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/aocx-ndk.so" ] }
+        android_arm: { srcs: [ "vendor/lib/aocx-V1-ndk.so" ] },
+        android_arm64: { srcs: [ "vendor/lib64/aocx-V1-ndk.so" ] }
     },
     compile_multilib: "both",
     check_elf_files: false,
@@ -1982,20 +1973,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libOpenCL",
-    owner: "google_devices",
-    target: {
-        android_arm: { srcs: [ "vendor/lib/libOpenCL.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/libOpenCL.so" ] }
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libqorvo_uwb_params_nfcc",
     owner: "google_devices",
     target: {
@@ -2236,6 +2213,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.google.battery_mitigation-V1-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm: { srcs: [ "vendor/lib/vendor.google.battery_mitigation-V1-ndk.so" ] },
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.battery_mitigation-V1-ndk.so" ] }
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.google.battery_mitigation.service_static",
+    owner: "google_devices",
+    target: {
+        android_arm: { srcs: [ "vendor/lib/vendor.google.battery_mitigation.service_static.so" ] },
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.battery_mitigation.service_static.so" ] }
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.google.whitechapel.audio.audioext@4.0",
     owner: "google_devices",
     target: {
@@ -2250,11 +2255,11 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.google.whitechapel.audio.extension-V2-ndk",
+    name: "vendor.google.whitechapel.audio.extension-V3-ndk",
     owner: "google_devices",
     target: {
-        android_arm: { srcs: [ "vendor/lib/vendor.google.whitechapel.audio.extension-V2-ndk.so" ] },
-        android_arm64: { srcs: [ "vendor/lib64/vendor.google.whitechapel.audio.extension-V2-ndk.so" ] }
+        android_arm: { srcs: [ "vendor/lib/vendor.google.whitechapel.audio.extension-V3-ndk.so" ] },
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.whitechapel.audio.extension-V3-ndk.so" ] }
     },
     compile_multilib: "both",
     check_elf_files: false,
@@ -2377,19 +2382,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.confirmationui.secure_input_citadel",
-    owner: "google_devices",
-    target: {
-        android_arm64: { srcs: [ "vendor/lib64/android.hardware.confirmationui.secure_input_citadel.so" ] }
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "android.hardware.oemlock-impl.nos",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/android.hardware.oemlock-impl.nos.so" ] } },
@@ -2439,6 +2431,17 @@ cc_prebuilt_library_shared {
     name: "android.hardware.weaver2-impl.nos",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/android.hardware.weaver2-impl.nos.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "aoc_aconfig_flags_c_lib",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/aoc_aconfig_flags_c_lib.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -2713,6 +2716,17 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libgxp",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libgxp.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libjson",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libjson.so" ] } },
@@ -2926,10 +2940,10 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.google.wireless_charger.service-V1-ndk",
+    name: "vendor.google.wireless_charger.service-V2-ndk",
     owner: "google_devices",
     target: {
-        android_arm64: { srcs: [ "vendor/lib64/vendor.google.wireless_charger.service-V1-ndk.so" ] }
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.wireless_charger.service-V2-ndk.so" ] }
     },
     compile_multilib: "64",
     check_elf_files: false,
@@ -2969,15 +2983,6 @@ prebuilt_etc_xml {
     name: "android.hardware.camera.provider@2.7-service-google-apex",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/android.hardware.camera.provider@2.7-service-google-apex.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "android.hardware.confirmationui-service.trusty.vendor__2",
-    owner: "google_devices",
-    src: "vendor/etc/vintf/manifest/android.hardware.confirmationui-service.trusty.vendor.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -3032,6 +3037,15 @@ prebuilt_etc_xml {
     name: "android.hardware.weaver-service.citadel__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/android.hardware.weaver-service.citadel.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "com.google.android.imageprocessing.hal-default",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/com.google.android.imageprocessing.hal-default.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -3113,6 +3127,15 @@ prebuilt_etc_xml {
     name: "vendor.dolby.media.c2@1.0-service__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "vendor.google.battery_mitigation-default",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/vendor.google.battery_mitigation-default.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,

@@ -14,7 +14,9 @@ system_ext/etc/permissions/com.google.pixel.camera.services.cameraidremapper.xml
 system_ext/etc/permissions/com.google.pixel.camera.services.lyricconfigprovider.xml
 system_ext/etc/permissions/google-ril.xml
 system_ext/etc/permissions/privapp-permissions-qorvo.xml
+system_ext/etc/permissions/privapp-permlist_com.google.pixel.iwlan.xml
 system_ext/etc/public.libraries-google.txt
+system_ext/etc/sysconfig/sysconfig_com.google.pixel.iwlan.xml
 system_ext/etc/vintf/manifest/com.google.pixel.camera.services@1.0-service-google.xml
 system_ext/etc/vintf/manifest/vendor.google.edgetpu_app_service@1.0-service.xml
 system_ext/framework/com.google.android.camera.extensions.jar
@@ -36,8 +38,10 @@ system_ext/priv-app/EuiccSupportPixel/DKA_RC7_P22_DVT.up
 system_ext/priv-app/EuiccSupportPixel/DKA_RC7_P22_EVT.in
 system_ext/priv-app/EuiccSupportPixel/DKA_RC7_P22_EVT.up
 system_ext/priv-app/EuiccSupportPixel/esim-full-ofl-v1.img
+system_ext/priv-app/EuiccSupportPixel/esim-full-v0-security.img
 system_ext/priv-app/EuiccSupportPixel/esim-full-v0.img
 system_ext/priv-app/EuiccSupportPixel/esim-full-v1.img
+system_ext/priv-app/PixelIwlan/PixelIwlan.apk
 system_ext/priv-app/PixelNfc/PixelNfc.apk
 system_ext/priv-app/PixelQualifiedNetworksService/PixelQualifiedNetworksService.apk
 system_ext/priv-app/UwbVendorService/UwbVendorService.apk;PRESIGNED
@@ -49,6 +53,7 @@ product/etc/permissions/com.google.pixel.camera.connectivity.impl.xml
 product/etc/permissions/com.google.pixel.camera.services.cameraidremapper.impl.xml
 product/etc/permissions/com.google.pixel.camera.services.lyricconfigprovider.impl.xml
 product/etc/sysconfig/component-overrides.xml
+product/etc/sysconfig/contextual_search.xml
 product/etc/sysconfig/google-nest-hiddenapi-package-whitelist.xml
 product/etc/sysconfig/pixel_tablet-initial-package-stopped-states.xml
 product/priv-app/PixelCameraServices/PixelCameraServices.apk;PRESIGNED
@@ -61,7 +66,6 @@ vendor/bin/boringssl_self_test32
 vendor/bin/hw/android.hardware.authsecret-service.citadel
 vendor/bin/hw/android.hardware.biometrics.fingerprint-service.fpc42
 vendor/bin/hw/android.hardware.bluetooth@1.1-service.synabtlinux
-vendor/bin/hw/android.hardware.confirmationui-service.trusty.vendor
 vendor/bin/hw/android.hardware.contexthub-service.generic
 vendor/bin/hw/android.hardware.edgetpu.logging@service-edgetpu-logging
 vendor/bin/hw/android.hardware.gxp.logging@service-gxp-logging
@@ -85,7 +89,6 @@ vendor/bin/hw/vendor.google.edgetpu_vendor_service@1.0-service
 vendor/bin/hw/vendor.google.google_battery-service
 vendor/bin/hw/vendor.google.radioext@1.0-service
 vendor/bin/init.camera.set-interrupts-ownership
-vendor/bin/securedpud.slider
 vendor/bin/trusty_metricsd
 vendor/bin/twoshay
 vendor/bin/umfw_stat_tool
@@ -94,12 +97,8 @@ vendor/etc/aoc/waveform_aec_graph.tflite
 vendor/etc/atc_profile.json
 vendor/etc/chre/activity.napp_header
 vendor/etc/chre/activity.so
-vendor/etc/chre/ambient_micro.napp_header
-vendor/etc/chre/ambient_micro.so
 vendor/etc/chre/ambient_volume.napp_header
 vendor/etc/chre/ambient_volume.so
-vendor/etc/chre/ambient.napp_header
-vendor/etc/chre/ambient.so
 vendor/etc/chre/ar_bridge.napp_header
 vendor/etc/chre/ar_bridge.so
 vendor/etc/chre/blue.napp_header
@@ -139,7 +138,6 @@ vendor/etc/displayconfig/display_id_4619827677550801152.xml
 vendor/etc/init/android.hardware.authsecret-service.citadel.rc
 vendor/etc/init/android.hardware.bluetooth@1.1-service.synabtlinux.rc
 vendor/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc
-vendor/etc/init/android.hardware.confirmationui-service.trusty.vendor.rc
 vendor/etc/init/android.hardware.contexthub-service.generic.rc
 vendor/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc
 vendor/etc/init/android.hardware.gxp.logging@service-gxp-logging.rc
@@ -166,7 +164,6 @@ vendor/etc/init/libg3a_ghawb.rc
 vendor/etc/init/qorvo.uwb-calib.rc
 vendor/etc/init/qorvo.uwb-service.rc
 vendor/etc/init/samsung.hardware.media.c2@1.2-service.rc
-vendor/etc/init/securedpud.slider.rc
 vendor/etc/init/trusty_metricsd.rc
 vendor/etc/init/twoshay.rc
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
@@ -176,6 +173,7 @@ vendor/etc/init/vendor.google.edgetpu_vendor_service@1.0-service.rc
 vendor/etc/init/vendor.google.google_battery-default.rc
 vendor/etc/init/vendor.google.radioext@1.0-service.rc
 vendor/etc/input_classifier_model.pb
+vendor/etc/Khronos/OpenCL/vendors/ARM.icd
 vendor/etc/libg3a_standalone_gabc_rc
 vendor/etc/libg3a_standalone_gaf_rc
 vendor/etc/libg3a_standalone_ghawb_rc
@@ -202,12 +200,12 @@ vendor/etc/uwb/calib_paths
 vendor/etc/uwb/libuwb-uci.conf
 vendor/etc/vintf/manifest/android.hardware.authsecret-service.citadel.xml
 vendor/etc/vintf/manifest/android.hardware.camera.provider@2.7-service-google-apex.xml
-vendor/etc/vintf/manifest/android.hardware.confirmationui-service.trusty.vendor.xml
 vendor/etc/vintf/manifest/android.hardware.contexthub-service.generic.xml
 vendor/etc/vintf/manifest/android.hardware.neuralnetworks@service-darwinn-aidl.xml
 vendor/etc/vintf/manifest/android.hardware.oemlock-service.citadel.xml
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service.citadel.xml
 vendor/etc/vintf/manifest/android.hardware.weaver-service.citadel.xml
+vendor/etc/vintf/manifest/com.google.android.imageprocessing.hal-default.xml
 vendor/etc/vintf/manifest/com.google.edgetpu.dba-service.xml
 vendor/etc/vintf/manifest/com.google.edgetpu.tachyon-service.xml
 vendor/etc/vintf/manifest/fingerprint-fpc42.xml
@@ -242,8 +240,10 @@ vendor/firmware/gxp_fw_core1
 vendor/firmware/gxp_fw_core2
 vendor/firmware/gxp_fw_core3
 vendor/firmware/logstrs.bin
+vendor/firmware/mali_csffw-r48p0.bin
 vendor/firmware/mali_csffw-r49p0.bin
-vendor/firmware/mali_csffw.bin
+vendor/firmware/mali_csffw-r50p0.bin
+vendor/firmware/mali_csffw-r51p0.bin
 vendor/firmware/mfc_fw.bin
 vendor/firmware/novatek_ts_fw_csot.bin
 vendor/firmware/novatek_ts_fw.bin
@@ -254,15 +254,15 @@ vendor/firmware/syna/BTFW_B.hcd
 vendor/firmware/syna/BTFW.hcd
 vendor/framework/com.google.android.camera.experimental2022.jar
 vendor/lib64/android.hardware.authsecret-impl.nos.so
-vendor/lib64/android.hardware.confirmationui.secure_input_citadel.so
 vendor/lib64/android.hardware.oemlock-impl.nos.so
 vendor/lib64/android.hardware.security.keymint-impl.nos.so
 vendor/lib64/android.hardware.weaver-bridge.nos.so
 vendor/lib64/android.hardware.weaver-impl.nos.so
 vendor/lib64/android.hardware.weaver2-impl.nos.so
+vendor/lib64/aoc_aconfig_flags_c_lib.so
 vendor/lib64/aoc_aud_ext.so
 vendor/lib64/aoc_audio_stereo_spatializer.so
-vendor/lib64/aocx-ndk.so
+vendor/lib64/aocx-V1-ndk.so
 vendor/lib64/audio_adapted_info_features.so
 vendor/lib64/audio_amcs_ext.so
 vendor/lib64/audio_apmg3_aoc.so
@@ -351,7 +351,6 @@ vendor/lib64/libmetrics_logger.so
 vendor/lib64/libnos_citadeld_proxy.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libOpenCL-pixel.so
-vendor/lib64/libOpenCL.so
 vendor/lib64/libqorvo_uwb_params_nfcc.so
 vendor/lib64/libsensorsuez.so
 vendor/lib64/libsit_oem_proto.so
